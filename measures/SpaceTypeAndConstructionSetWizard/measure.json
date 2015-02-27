@@ -1,0 +1,76 @@
+{
+  "classname": "SpaceTypeAndConstructionSetWizard",
+  "name": "space_type_and_construction_set_wizard",
+  "display_name": "Space Type And Construction Set Wizard",
+  "measure_type": "RubyMeasure",
+  "arguments": [
+    {
+      "local_variable": "buildingType",
+      "variable_type": "Choice",
+      "name": "buildingType",
+      "display_name": "Building Type",
+      "units": null,
+      "description": null,
+      "choices": [
+
+      ]
+    },
+    {
+      "local_variable": "template",
+      "variable_type": "Choice",
+      "name": "template",
+      "display_name": "Template",
+      "units": null,
+      "description": null,
+      "choices": [
+
+      ]
+    },
+    {
+      "local_variable": "climateZone",
+      "variable_type": "Choice",
+      "name": "climateZone",
+      "display_name": "ASHRAE Climate Zone",
+      "units": null,
+      "description": null,
+      "choices": [
+
+      ]
+    },
+    {
+      "local_variable": "createSpaceTypes",
+      "variable_type": "Bool",
+      "name": "createSpaceTypes",
+      "display_name": "Create Space Types",
+      "units": null,
+      "description": null,
+      "default_value": true
+    },
+    {
+      "local_variable": "createConstructionSet",
+      "variable_type": "Bool",
+      "name": "createConstructionSet",
+      "display_name": "Create Construction Set",
+      "units": null,
+      "description": null,
+      "default_value": true
+    },
+    {
+      "local_variable": "setBuildingDefaults",
+      "variable_type": "Bool",
+      "name": "setBuildingDefaults",
+      "display_name": "Set Building Defaults Using New Objects",
+      "units": null,
+      "description": null,
+      "default_value": true
+    }
+  ],
+  "name_xml": "space_type_and_construction_set_wizard",
+  "uid": "9f8b4a61-ef75-42b6-8cb9-b73fad1f794a",
+  "version_id": "2d52eb56-4f98-4fa9-ac62-a6f7e743d03e",
+  "modeler_description": "These are created from the same JSON file that was used to make the OpenStudio templates. Optionally this will also set the building default space type and construction set.",
+  "description": "Create space types and or construction sets for the requested building type, climate zone, and target.",
+  "tags": [
+    "Whole Building.Space Types"
+  ]
+}

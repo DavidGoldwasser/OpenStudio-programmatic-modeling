@@ -1,0 +1,664 @@
+{
+  "analysis": {
+    "display_name": "Office_DOE Ref 2004_ASHRAE 169-2006-5B",
+    "name": "office_doe_ref_2004_ashrae_169-2006-5b",
+    "output_variables": [
+      {
+        "units": "",
+        "objective_function": false,
+        "objective_function_index": 0,
+        "objective_function_target": null,
+        "objective_function_group": null,
+        "scaling_factor": null
+      }
+    ],
+    "problem": {
+      "analysis_type": "single_run",
+      "algorithm": {
+        "objective_functions": [
+
+        ]
+      },
+      "workflow": [
+        {
+          "name": "space_type_and_construction_set_wizard",
+          "display_name": "Space Type And Construction Set Wizard",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "SpaceTypeAndConstructionSetWizard",
+          "measure_definition_directory": "./measures/SpaceTypeAndConstructionSetWizard",
+          "measure_definition_directory_local": "measures/SpaceTypeAndConstructionSetWizard",
+          "measure_definition_display_name": "Space Type And Construction Set Wizard",
+          "measure_definition_name": "space_type_and_construction_set_wizard",
+          "measure_definition_name_xml": "space_type_and_construction_set_wizard",
+          "measure_definition_uuid": "9f8b4a61-ef75-42b6-8cb9-b73fad1f794a",
+          "measure_definition_version_uuid": "2d52eb56-4f98-4fa9-ac62-a6f7e743d03e",
+          "arguments": [
+            {
+              "display_name": "Building Type",
+              "display_name_short": "Building Type",
+              "name": "buildingType",
+              "value_type": "string",
+              "default_value": null,
+              "value": "Office"
+            },
+            {
+              "display_name": "Template",
+              "display_name_short": "Template",
+              "name": "template",
+              "value_type": "string",
+              "default_value": null,
+              "value": "DOE Ref 2004"
+            },
+            {
+              "display_name": "ASHRAE Climate Zone",
+              "display_name_short": "ASHRAE Climate Zone",
+              "name": "climateZone",
+              "value_type": "string",
+              "default_value": null,
+              "value": "ASHRAE 169-2006-5B"
+            },
+            {
+              "display_name": "Create Space Types",
+              "display_name_short": "Create Space Types",
+              "name": "createSpaceTypes",
+              "value_type": "bool",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Create Construction Set",
+              "display_name_short": "Create Construction Set",
+              "name": "createConstructionSet",
+              "value_type": "bool",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Set Building Defaults Using New Objects",
+              "display_name_short": "Set Building Defaults Using New Objects",
+              "name": "setBuildingDefaults",
+              "value_type": "bool",
+              "default_value": true,
+              "value": true
+            }
+          ],
+          "variables": [
+
+          ],
+          "workflow_index": 0
+        },
+        {
+          "name": "bar_aspect_ratio_study",
+          "display_name": "Bar Aspect Ratio Study",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "BarAspectRatioStudy",
+          "measure_definition_directory": "./measures/BarAspectRatioStudy",
+          "measure_definition_directory_local": "measures/BarAspectRatioStudy",
+          "measure_definition_display_name": "Bar Aspect Ratio Study",
+          "measure_definition_name": "bar_aspect_ratio_study",
+          "measure_definition_name_xml": "bar_aspect_ratio_study",
+          "measure_definition_uuid": "3dcac94d-8a2e-43b6-8698-a3a4e8f3903f",
+          "measure_definition_version_uuid": "5e4cd215-d3ca-4920-981e-3fbfcfec5b7d",
+          "arguments": [
+            {
+              "display_name": "Total Building Floor Area",
+              "display_name_short": "Total Building Floor Area",
+              "name": "total_bldg_area_ip",
+              "value_type": "double",
+              "default_value": 10000.0,
+              "value": null
+            },
+            {
+              "display_name": "Surface Matching",
+              "display_name_short": "Surface Matching",
+              "name": "surface_matching",
+              "value_type": "bool",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Make Thermal Zones from Spaces",
+              "display_name_short": "Make Thermal Zones from Spaces",
+              "name": "make_zones",
+              "value_type": "bool",
+              "default_value": true,
+              "value": true
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Ratio of North/South Facade Length Relative to East/West Facade Length",
+                "display_name_short": "Ratio of North/South Facade Length Relative to East/West Facade Length",
+                "name": "ns_to_ew_ratio",
+                "value_type": "double",
+                "default_value": 2.0,
+                "value": 2.0
+              },
+              "display_name": "Ratio of North/South Facade Length Relative to East/West Facade Length.",
+              "display_name_short": "Ratio of North/South Facade Length Relative to East/West Facade Length.",
+              "units": null,
+              "minimum": 0.2,
+              "maximum": 5.0,
+              "relation_to_output": null,
+              "static_value": 2.0,
+              "uuid": "784cde3f-8b22-46d7-8d30-011059024302",
+              "version_uuid": "f64acdcf-e3e0-4ef9-9fc2-283695e61aa6",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 0.2
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 5.0
+                  },
+                  {
+                    "name": "modes",
+                    "value": 2.0
+                  }
+                ]
+              },
+              "workflow_index": 0
+            },
+            {
+              "argument": {
+                "display_name": "Number of Floors",
+                "display_name_short": "Number of Floors",
+                "name": "num_floors",
+                "value_type": "integer",
+                "default_value": 2,
+                "value": 2
+              },
+              "display_name": "Number of Floors.",
+              "display_name_short": "Number of Floors.",
+              "units": null,
+              "minimum": 1,
+              "maximum": 10,
+              "relation_to_output": null,
+              "static_value": 2,
+              "uuid": "69344b61-298c-403f-b4da-fa1b9b357f23",
+              "version_uuid": "0fa1c0dd-85b5-4b28-8c41-891c4db68586",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 1
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 10
+                  },
+                  {
+                    "name": "modes",
+                    "value": 2
+                  }
+                ]
+              },
+              "workflow_index": 1
+            },
+            {
+              "argument": {
+                "display_name": "Floor to Floor Height",
+                "display_name_short": "Floor to Floor Height",
+                "name": "floor_to_floor_height_ip",
+                "value_type": "double",
+                "default_value": 10.0,
+                "value": 10.0
+              },
+              "display_name": "Floor to Floor Height.",
+              "display_name_short": "Floor to Floor Height.",
+              "units": null,
+              "minimum": 8,
+              "maximum": 20,
+              "relation_to_output": null,
+              "static_value": 10,
+              "uuid": "d54d8690-e075-4c8b-babf-3415269cacc3",
+              "version_uuid": "29992096-86bc-4445-81f9-406ae396ef95",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 8
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 20
+                  },
+                  {
+                    "name": "modes",
+                    "value": 10
+                  }
+                ]
+              },
+              "workflow_index": 2
+            }
+          ],
+          "workflow_index": 1
+        },
+        {
+          "name": "north|set_window_to_wall_ratio_by_facade",
+          "display_name": "North|Set Window to Wall Ratio by Facade",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "SetWindowToWallRatioByFacade",
+          "measure_definition_directory": "./measures/SetWindowToWallRatioByFacade",
+          "measure_definition_directory_local": "measures/SetWindowToWallRatioByFacade",
+          "measure_definition_display_name": "Set Window to Wall Ratio by Facade",
+          "measure_definition_name": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_name_xml": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_uuid": "f347ae80-48b4-4c40-bfd4-6c5139b38136",
+          "measure_definition_version_uuid": "3d87b010-b6b9-4182-b986-4e145ffe6231",
+          "arguments": [
+            {
+              "display_name": "Sill Height",
+              "display_name_short": "Sill Height",
+              "name": "sillHeight",
+              "value_type": "double",
+              "default_value": 30.0,
+              "value": 30.0
+            },
+            {
+              "display_name": "Cardinal Direction",
+              "display_name_short": "Cardinal Direction",
+              "name": "facade",
+              "value_type": "string",
+              "default_value": "South",
+              "value": "North"
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Window to Wall Ratio",
+                "display_name_short": "Window to Wall Ratio",
+                "name": "wwr",
+                "value_type": "double",
+                "default_value": 0.4,
+                "value": 0.4
+              },
+              "display_name": "North|Window to Wall Ratio (fraction)",
+              "display_name_short": "North|Window to Wall Ratio (fraction)",
+              "units": null,
+              "minimum": 0,
+              "maximum": 0.6,
+              "relation_to_output": null,
+              "static_value": 0.4,
+              "uuid": "837b01f1-dd02-4df1-927f-91837a52a48f",
+              "version_uuid": "50ab1012-36d3-425d-b2b0-9b236e128dcd",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 0
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 0.6
+                  },
+                  {
+                    "name": "modes",
+                    "value": 0.4
+                  }
+                ]
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 2
+        },
+        {
+          "name": "east|set_window_to_wall_ratio_by_facade",
+          "display_name": "East|Set Window to Wall Ratio by Facade",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "SetWindowToWallRatioByFacade",
+          "measure_definition_directory": "./measures/SetWindowToWallRatioByFacade",
+          "measure_definition_directory_local": "measures/SetWindowToWallRatioByFacade",
+          "measure_definition_display_name": "Set Window to Wall Ratio by Facade",
+          "measure_definition_name": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_name_xml": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_uuid": "f347ae80-48b4-4c40-bfd4-6c5139b38136",
+          "measure_definition_version_uuid": "3d87b010-b6b9-4182-b986-4e145ffe6231",
+          "arguments": [
+            {
+              "display_name": "Sill Height",
+              "display_name_short": "Sill Height",
+              "name": "sillHeight",
+              "value_type": "double",
+              "default_value": 30.0,
+              "value": 30.0
+            },
+            {
+              "display_name": "Cardinal Direction",
+              "display_name_short": "Cardinal Direction",
+              "name": "facade",
+              "value_type": "string",
+              "default_value": "South",
+              "value": "East"
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Window to Wall Ratio",
+                "display_name_short": "Window to Wall Ratio",
+                "name": "wwr",
+                "value_type": "double",
+                "default_value": 0.4,
+                "value": 0.4
+              },
+              "display_name": "East|Window to Wall Ratio (fraction)",
+              "display_name_short": "East|Window to Wall Ratio (fraction)",
+              "units": null,
+              "minimum": 0,
+              "maximum": 0.6,
+              "relation_to_output": null,
+              "static_value": 0.15,
+              "uuid": "91140384-2528-4a5e-8413-5f765b7ebaa6",
+              "version_uuid": "03ec3cfc-22a0-4048-8666-1d32f19519d2",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 0
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 0.6
+                  },
+                  {
+                    "name": "modes",
+                    "value": 0.15
+                  }
+                ]
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 3
+        },
+        {
+          "name": "south|set_window_to_wall_ratio_by_facade",
+          "display_name": "South|Set Window to Wall Ratio by Facade",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "SetWindowToWallRatioByFacade",
+          "measure_definition_directory": "./measures/SetWindowToWallRatioByFacade",
+          "measure_definition_directory_local": "measures/SetWindowToWallRatioByFacade",
+          "measure_definition_display_name": "Set Window to Wall Ratio by Facade",
+          "measure_definition_name": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_name_xml": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_uuid": "f347ae80-48b4-4c40-bfd4-6c5139b38136",
+          "measure_definition_version_uuid": "3d87b010-b6b9-4182-b986-4e145ffe6231",
+          "arguments": [
+            {
+              "display_name": "Sill Height",
+              "display_name_short": "Sill Height",
+              "name": "sillHeight",
+              "value_type": "double",
+              "default_value": 30.0,
+              "value": 30.0
+            },
+            {
+              "display_name": "Cardinal Direction",
+              "display_name_short": "Cardinal Direction",
+              "name": "facade",
+              "value_type": "string",
+              "default_value": "South",
+              "value": "South"
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Window to Wall Ratio",
+                "display_name_short": "Window to Wall Ratio",
+                "name": "wwr",
+                "value_type": "double",
+                "default_value": 0.4,
+                "value": 0.4
+              },
+              "display_name": "South|Window to Wall Ratio (fraction)",
+              "display_name_short": "South|Window to Wall Ratio (fraction)",
+              "units": null,
+              "minimum": 0,
+              "maximum": 0.6,
+              "relation_to_output": null,
+              "static_value": 0.4,
+              "uuid": "407e6960-f3b2-481e-86f2-fa2daae9b3e5",
+              "version_uuid": "e03bc14c-130c-45a6-9e77-16a2493fc563",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 0
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 0.6
+                  },
+                  {
+                    "name": "modes",
+                    "value": 0.4
+                  }
+                ]
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 4
+        },
+        {
+          "name": "west|set_window_to_wall_ratio_by_facade",
+          "display_name": "West|Set Window to Wall Ratio by Facade",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "SetWindowToWallRatioByFacade",
+          "measure_definition_directory": "./measures/SetWindowToWallRatioByFacade",
+          "measure_definition_directory_local": "measures/SetWindowToWallRatioByFacade",
+          "measure_definition_display_name": "Set Window to Wall Ratio by Facade",
+          "measure_definition_name": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_name_xml": "set_window_to_wall_ratio_by_facade",
+          "measure_definition_uuid": "f347ae80-48b4-4c40-bfd4-6c5139b38136",
+          "measure_definition_version_uuid": "3d87b010-b6b9-4182-b986-4e145ffe6231",
+          "arguments": [
+            {
+              "display_name": "Sill Height",
+              "display_name_short": "Sill Height",
+              "name": "sillHeight",
+              "value_type": "double",
+              "default_value": 30.0,
+              "value": 30.0
+            },
+            {
+              "display_name": "Cardinal Direction",
+              "display_name_short": "Cardinal Direction",
+              "name": "facade",
+              "value_type": "string",
+              "default_value": "South",
+              "value": "West"
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Window to Wall Ratio",
+                "display_name_short": "Window to Wall Ratio",
+                "name": "wwr",
+                "value_type": "double",
+                "default_value": 0.4,
+                "value": 0.4
+              },
+              "display_name": "West|Window to Wall Ratio (fraction)",
+              "display_name_short": "West|Window to Wall Ratio (fraction)",
+              "units": null,
+              "minimum": 0,
+              "maximum": 0.6,
+              "relation_to_output": null,
+              "static_value": 0.15,
+              "uuid": "447aa955-b9b3-4e19-9799-ca1df0c7e48f",
+              "version_uuid": "6281c60b-d541-41ef-a1e9-998470f9fc65",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "uniform_uncertain",
+                "attributes": [
+                  {
+                    "name": "lower_bounds",
+                    "value": 0
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 0.6
+                  },
+                  {
+                    "name": "modes",
+                    "value": 0.15
+                  }
+                ]
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 5
+        },
+        {
+          "name": "assign_thermostats_basedon_standards_building_typeand_standards_space_type",
+          "display_name": "Assign Thermostats Basedon Standards Building Typeand Standards Space Type",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType",
+          "measure_definition_directory": "./measures/AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType",
+          "measure_definition_directory_local": "measures/AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType",
+          "measure_definition_display_name": "Assign Thermostats Basedon Standards Building Typeand Standards Space Type",
+          "measure_definition_name": "assign_thermostats_basedon_standards_building_typeand_standards_space_type",
+          "measure_definition_name_xml": "assign_thermostats_basedon_standards_building_typeand_standards_space_type",
+          "measure_definition_uuid": "b46cc68b-bf5b-474f-a11f-32137864b513",
+          "measure_definition_version_uuid": "86db2e4a-a3c8-494b-bc79-af48cdf1c325",
+          "arguments": [
+
+          ],
+          "variables": [
+
+          ],
+          "workflow_index": 6
+        },
+        {
+          "name": "aedg_office_hvac_ashp_doas",
+          "display_name": "AEDG Office Hvac Ashp Doas",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "AedgOfficeHvacAshpDoas",
+          "measure_definition_directory": "./measures/AedgOfficeHvacAshpDoas",
+          "measure_definition_directory_local": "measures/AedgOfficeHvacAshpDoas",
+          "measure_definition_display_name": "AEDG Office Hvac Ashp Doas",
+          "measure_definition_name": "aedg_office_hvac_ashp_doas",
+          "measure_definition_name_xml": "AEDG Office HVAC ASHP with DOAS",
+          "measure_definition_uuid": "18c59c3c-d994-46a9-b3eb-39b983b93ef8",
+          "measure_definition_version_uuid": "ebcf72d2-14c3-4a99-a745-239ef5f4e4b3",
+          "arguments": [
+            {
+              "display_name": "This space type should be part of a ceiling return air plenum",
+              "display_name_short": "This space type should be part of a ceiling return air plenum",
+              "name": "ceilingReturnPlenumSpaceType",
+              "value_type": "string",
+              "default_value": "We dont want a default, this is an optional argument",
+              "value": null
+            },
+            {
+              "display_name": "Total Cost for HVAC System",
+              "display_name_short": "Total Cost for HVAC System",
+              "name": "costTotalHVACSystem",
+              "value_type": "double",
+              "default_value": 0.0,
+              "value": 0.0
+            },
+            {
+              "display_name": "Apply recommended availability and ventilation schedules for air handlers",
+              "display_name_short": "Apply recommended availability and ventilation schedules for air handlers",
+              "name": "remake_schedules",
+              "value_type": "bool",
+              "default_value": true,
+              "value": true
+            }
+          ],
+          "variables": [
+
+          ],
+          "workflow_index": 7
+        },
+        {
+          "name": "change_building_location",
+          "display_name": "Change Building Location And Design Days",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "ChangeBuildingLocation",
+          "measure_definition_directory": "./measures/ChangeBuildingLocation",
+          "measure_definition_directory_local": "measures/ChangeBuildingLocation",
+          "measure_definition_display_name": "Change Building Location",
+          "measure_definition_name": "change_building_location",
+          "measure_definition_name_xml": "Change Building Location",
+          "measure_definition_uuid": "d4db4971-f5ba-11e3-a3ac-0800200c9a66",
+          "measure_definition_version_uuid": "74b18b7a-0476-45da-8e8a-0304e83c0208",
+          "arguments": [
+            {
+              "display_name": "Weather Directory",
+              "display_name_short": "Weather Directory",
+              "name": "weather_directory",
+              "value_type": "string",
+              "default_value": null,
+              "value": "../../weather"
+            },
+            {
+              "display_name": "Weather File Name",
+              "display_name_short": "Weather File Name",
+              "name": "weather_file_name",
+              "value_type": "string",
+              "default_value": null,
+              "value": "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
+            }
+          ],
+          "variables": [
+
+          ],
+          "workflow_index": 8
+        },
+        {
+          "name": "annual_end_use_breakdown",
+          "display_name": "Annual End Use Breakdown",
+          "measure_type": "ReportingMeasure",
+          "measure_definition_class_name": "AnnualEndUseBreakdown",
+          "measure_definition_directory": "./measures/AnnualEndUseBreakdown",
+          "measure_definition_directory_local": "measures/AnnualEndUseBreakdown",
+          "measure_definition_display_name": "Annual End Use Breakdown",
+          "measure_definition_name": "annual_end_use_breakdown",
+          "measure_definition_name_xml": "Annual End Use Breakdown",
+          "measure_definition_uuid": "f032a1a6-e58f-4c39-bb41-5a7d53f03378",
+          "measure_definition_version_uuid": "09d5578f-9086-4173-8f3f-2564a07ca386",
+          "arguments": [
+
+          ],
+          "variables": [
+
+          ],
+          "workflow_index": 9
+        }
+      ]
+    },
+    "seed": {
+      "file_type": "OSM",
+      "path": "./seed/empty_seed.osm"
+    },
+    "weather_file": {
+      "file_type": "EPW",
+      "path": "./weather/USA_CO_Denver.Intl.AP.725650_TMY3.epw"
+    },
+    "file_format_version": 1
+  }
+}

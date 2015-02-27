@@ -244,7 +244,7 @@ def create_json(building_type, template, climate_zone, total_bldg_area_ip,settin
     measures.each do |m|
 
       # load the measure
-      require_relative (Dir.pwd + "../" + m[:path] + "/measure.rb")
+      require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
 
       # infer class from name
       name_without_prefix = m[:name].split("|")
@@ -339,7 +339,7 @@ end
 namespace :test_models do
 
   # set constants
-  MEASURES_ROOT_DIRECTORY = "../OpenStudio-measures/NREL working measures"
+  MEASURES_ROOT_DIRECTORY = "measures"
   WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
   WEATHER_FILES_DIRECTORY = "weather"
   SEED_FILE_NAME = "empty_seed.osm"
