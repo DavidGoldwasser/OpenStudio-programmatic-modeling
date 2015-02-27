@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03cbe948-c2ff-4d04-8ae9-a7bfa82a2e51" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\largehotel_doe_ref_2004_ashrae_169-2006-5b.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\largehotel_doe_ref_2004_ashrae_169-2006-5b.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\office_doe_ref_2004_ashrae_169-2006-5b.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\office_doe_ref_2004_ashrae_169-2006-5b.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\secondaryschool_doe_ref_1980-2004_ashrae_169-2006-3a.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\secondaryschool_doe_ref_1980-2004_ashrae_169-2006-3a.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\warehouse_doe_ref_1980-2004_ashrae_169-2006-5b.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis\warehouse_doe_ref_1980-2004_ashrae_169-2006-5b.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis_local\LargeHotel_DOE Ref 2004_ASHRAE 169-2006-5B.osm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis_local\Office_DOE Ref 2004_ASHRAE 169-2006-5B.osm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis_local\SecondarySchool_DOE Ref 1980-2004_ASHRAE 169-2006-3A.osm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\analysis_local\Warehouse_DOE Ref 1980-2004_ASHRAE 169-2006-5B.osm" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/run.rake" afterPath="$PROJECT_DIR$/lib/tasks/run.rake" />
     </list>
     <ignored path="OpenStudio-programmatic-modeling.iws" />
@@ -27,12 +39,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Rakefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8755">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="run.rake" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5870536" vertical-offset="4606" max-vertical-offset="6783">
-              <caret line="240" column="94" selection-start-line="240" selection-start-column="7" selection-end-line="240" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="0.30357143" vertical-offset="0" max-vertical-offset="1411">
+              <caret line="351" column="29" selection-start-line="351" selection-start-column="19" selection-end-line="351" selection-end-column="29" />
+              <folding>
+                <element signature="n#populate_workflow#0;n#!!top" expanded="false" />
+                <element signature="n#create_json#0;n#!!top" expanded="false" />
+                <element signature="n#create_model#0;n#!!top" expanded="false" />
+                <element signature="n#populate_value_sets#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,11 +213,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8755">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5870536" vertical-offset="4606" max-vertical-offset="6783">
-          <caret line="240" column="94" selection-start-line="240" selection-start-column="7" selection-end-line="240" selection-end-column="7" />
-          <folding />
+        <state vertical-scroll-proportion="0.30357143" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="351" column="29" selection-start-line="351" selection-start-column="19" selection-end-line="351" selection-end-column="29" />
+          <folding>
+            <element signature="n#populate_workflow#0;n#!!top" expanded="false" />
+            <element signature="n#create_json#0;n#!!top" expanded="false" />
+            <element signature="n#create_model#0;n#!!top" expanded="false" />
+            <element signature="n#populate_value_sets#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

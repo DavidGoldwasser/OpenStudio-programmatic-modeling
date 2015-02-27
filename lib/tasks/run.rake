@@ -1,5 +1,4 @@
-def create_json(building_type, template, climate_zone, total_bldg_area_ip,settings,seed_model)
-
+def populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
   # setup
   measures = []
 
@@ -147,167 +146,175 @@ def create_json(building_type, template, climate_zone, total_bldg_area_ip,settin
       :arguments => []
   }
 
-  # create analysis if requested
-  if settings[:make_json]
-    # populate outputs
-    outputs = [
-        {}
-    ]
+  return measures
 
-    weather_files = [
-        "#{WEATHER_FILES_DIRECTORY}/*"
-    ]
-    default_weather_file = "#{WEATHER_FILES_DIRECTORY}/#{WEATHER_FILE_NAME}"
+end
 
-    # define path to seed model
-    seed_model = seed_model
+def create_json(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
 
-    # save path
-    save_string = "#{building_type}_#{template}_#{climate_zone}"
+  measures = populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
 
-    # configure analysis
-    a = OpenStudio::Analysis.create(save_string)
+  # populate outputs
+  outputs = [
+      {}
+  ]
 
-    # add measures to analysis
-    measures.each do |m|
-      measure = a.workflow.add_measure_from_path(m[:name], m[:desc], m[:path])
-      m[:arguments].each do |a|
-        measure.argument_value(a[:name], a[:value])
-      end
-      m[:variables].each do |v|
-        measure.make_variable(v[:name], v[:desc], v[:value])
-      end
+  weather_files = [
+      "#{WEATHER_FILES_DIRECTORY}/*"
+  ]
+  default_weather_file = "#{WEATHER_FILES_DIRECTORY}/#{WEATHER_FILE_NAME}"
+
+  # define path to seed model
+  seed_model = seed_model
+
+  # save path
+  save_string = "#{building_type}_#{template}_#{climate_zone}"
+
+  # configure analysis
+  a = OpenStudio::Analysis.create(save_string)
+
+  # add measures to analysis
+  measures.each do |m|
+    measure = a.workflow.add_measure_from_path(m[:name], m[:desc], m[:path])
+    m[:arguments].each do |a|
+      measure.argument_value(a[:name], a[:value])
     end
-
-    # add output to analysis
-    outputs.each do |o|
-      a.add_output(o)
+    m[:variables].each do |v|
+      measure.make_variable(v[:name], v[:desc], v[:value])
     end
-
-    # add weather files to analysis
-    weather_files.each do |p|
-      a.weather_files.add_files(p)
-    end
-
-    # make sure to set the default weather file as well
-    a.weather_file(default_weather_file)
-
-    # seed model
-    a.seed_model(seed_model)
-
-    # add in the other libraries
-    # use this if the measures have shared resources
-    #a.libraries.add("#{MEASURES_ROOT_DIRECTORY}/lib", { library_name: 'lib'})
-
-    # Save the analysis JSON
-    formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
-    zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
-
-    # set the analysis type here as well.
-    a.analysis_type = ANALYSIS_TYPE
-
-    # save files
-    a.save formulation_file
-    a.save_zip zip_file
   end
 
-  # create analysis if requested
-  if settings[:make_osm]
+  # add output to analysis
+  outputs.each do |o|
+    a.add_output(o)
+  end
 
-    # todo - to accommodate measures with string/path arguments it would be better for this section to run on the contents of the zip file. Then paths would match what happens on the server.
+  # add weather files to analysis
+  weather_files.each do |p|
+    a.weather_files.add_files(p)
+  end
 
-    # define path to seed model
-    seed_model = seed_model
+  # make sure to set the default weather file as well
+  a.weather_file(default_weather_file)
 
-    # add in necessary requires (these used to be at the top but should work here)
-    require 'openstudio'
-    require 'openstudio/ruleset/ShowRunnerOutput'
+  # seed model
+  a.seed_model(seed_model)
 
-    # create an instance of a runner
-    runner = OpenStudio::Ruleset::OSRunner.new
+  # add in the other libraries
+  # use this if the measures have shared resources
+  #a.libraries.add("#{MEASURES_ROOT_DIRECTORY}/lib", { library_name: 'lib'})
 
-    # load the test model
-    translator = OpenStudio::OSVersion::VersionTranslator.new
-    path = OpenStudio::Path.new("#{Dir.pwd}/#{seed_model}")
-    model = translator.loadModel(path)
+  # Save the analysis JSON
+  formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
+  zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
 
-    # confirm that model was opened
-    if not model.empty?
-      model = model.get
-      puts "Opening #{seed_model}"
-    else
-      puts "Couldn't open seed model, creating a new empty model"
-      model = OpenStudio::Model::Model.new
+  # set the analysis type here as well.
+  a.analysis_type = ANALYSIS_TYPE
+
+  # save files
+  a.save formulation_file
+  a.save_zip zip_file
+
+end
+
+def create_model(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+
+  measures = populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+
+  # todo - to accommodate measures with string/path arguments it would be better for this section to run on the contents of the zip file. Then paths would match what happens on the server.
+
+  # define path to seed model
+  seed_model = seed_model
+
+  # add in necessary requires (these used to be at the top but should work here)
+  require 'openstudio'
+  require 'openstudio/ruleset/ShowRunnerOutput'
+
+  # create an instance of a runner
+  runner = OpenStudio::Ruleset::OSRunner.new
+
+  # load the test model
+  translator = OpenStudio::OSVersion::VersionTranslator.new
+  path = OpenStudio::Path.new("#{Dir.pwd}/#{seed_model}")
+  model = translator.loadModel(path)
+
+  # confirm that model was opened
+  if not model.empty?
+    model = model.get
+    puts "Opening #{seed_model}"
+  else
+    puts "Couldn't open seed model, creating a new empty model"
+    model = OpenStudio::Model::Model.new
+  end
+
+  # add measures to analysis
+  measures.each do |m|
+
+    # load the measure
+    require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
+
+    # infer class from name
+    name_without_prefix = m[:name].split("|")
+    measure_class = "#{name_without_prefix.last}".split('_').collect(&:capitalize).join
+
+    # create an instance of the measure
+    measure = eval(measure_class).new
+
+    # skip from this loop if it is an E+ or Reporting measure
+    if not measure.is_a?(OpenStudio::Ruleset::ModelUserScript)
+      puts "Skipping #{measure.name}. It isn't a model measure."
+      next
     end
 
-    # add measures to analysis
-    measures.each do |m|
+    # get arguments
+    arguments = measure.arguments(model)
+    argument_map = OpenStudio::Ruleset.convertOSArgumentVectorToMap(arguments)
 
-      # load the measure
-      require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
-
-      # infer class from name
-      name_without_prefix = m[:name].split("|")
-      measure_class = "#{name_without_prefix.last}".split('_').collect(&:capitalize).join
-
-      # create an instance of the measure
-      measure = eval(measure_class).new
-
-      # skip from this loop if it is an E+ or Reporting measure
-      if not measure.is_a?(OpenStudio::Ruleset::ModelUserScript)
-        puts "Skipping #{measure.name}. It isn't a model measure."
-        next
+    # todo - could be better to just run on contents of zip file instead of doing this
+    # adjust path of arguments using shared resources to work on local run
+    m[:arguments].each do |a|
+      if a[:value].to_s.include? "../../weather"
+        a[:value] = a[:value].gsub("../../weather","../../../OpenStudio-analysis-spreadsheet/weather")
       end
-
-      # get arguments
-      arguments = measure.arguments(model)
-      argument_map = OpenStudio::Ruleset.convertOSArgumentVectorToMap(arguments)
-
-      # todo - could be better to just run on contents of zip file instead of doing this
-      # adjust path of arguments using shared resources to work on local run
-      m[:arguments].each do |a|
-        if a[:value].to_s.include? "../../weather"
-          a[:value] = a[:value].gsub("../../weather","../../../OpenStudio-analysis-spreadsheet/weather")
-        end
-        if a[:value].to_s.include? "../../lib"
-          a[:value] = a[:value].gsub("../../lib","../../../OpenStudio-analysis-spreadsheet/lib")
-        end
+      if a[:value].to_s.include? "../../lib"
+        a[:value] = a[:value].gsub("../../lib","../../../OpenStudio-analysis-spreadsheet/lib")
       end
-      m[:variables].each do |v|
-        if v[:value][:static_value].to_s.include? "../../weather"
-          v[:value][:static_value] = v[:value][:static_value].gsub("../../weather","../../../OpenStudio-analysis-spreadsheet/weather")
-        end
-        if v[:value][:static_value].to_s.include? "../../lib"
-          v[:value][:static_value] = v[:value][:static_value].gsub("../../lib","../../../OpenStudio-analysis-spreadsheet/lib")
-        end
+    end
+    m[:variables].each do |v|
+      if v[:value][:static_value].to_s.include? "../../weather"
+        v[:value][:static_value] = v[:value][:static_value].gsub("../../weather","../../../OpenStudio-analysis-spreadsheet/weather")
       end
-
-      # get argument values
-      args_hash = {}
-      m[:arguments].each do |a|
-        args_hash[a[:name]] = a[:value]
+      if v[:value][:static_value].to_s.include? "../../lib"
+        v[:value][:static_value] = v[:value][:static_value].gsub("../../lib","../../../OpenStudio-analysis-spreadsheet/lib")
       end
-      m[:variables].each do |v|
-        # todo - add logic to use something other than static value when argument is variable
-        args_hash[v[:name]] = v[:value][:static_value]
+    end
+
+    # get argument values
+    args_hash = {}
+    m[:arguments].each do |a|
+      args_hash[a[:name]] = a[:value]
+    end
+    m[:variables].each do |v|
+      # todo - add logic to use something other than static value when argument is variable
+      args_hash[v[:name]] = v[:value][:static_value]
+    end
+
+    # populate argument with specified hash value if specified
+    arguments.each do |arg|
+      temp_arg_var = arg.clone
+      if args_hash[arg.name]
+        temp_arg_var.setValue(args_hash[arg.name])
       end
+      argument_map[arg.name] = temp_arg_var
+    end
 
-      # populate argument with specified hash value if specified
-      arguments.each do |arg|
-        temp_arg_var = arg.clone
-        if args_hash[arg.name]
-          temp_arg_var.setValue(args_hash[arg.name])
-        end
-        argument_map[arg.name] = temp_arg_var
-      end
+    # just added as test of where measure is running from
+    #puts "Measure is running from #{Dir.pwd}"
 
-      # just added as test of where measure is running from
-      #puts "Measure is running from #{Dir.pwd}"
-
-      # run the measure
-      measure.run(model, runner, argument_map)
-      result = runner.result
-      show_output(result)
+    # run the measure
+    measure.run(model, runner, argument_map)
+    result = runner.result
+    show_output(result)
 
     end
 
@@ -320,8 +327,6 @@ def create_json(building_type, template, climate_zone, total_bldg_area_ip,settin
     # todo - look at ChnageBuildingLocation, it things it is in files, not weather? Can I save the folder like app does
 
     # todo - add support for E+ and reporting measures (will require E+ run)
-
-  end
 
 end
 
@@ -336,7 +341,7 @@ def populate_value_sets()
   return value_sets
 end
 
-namespace :test_models do
+namespace :workflow_test do
 
   # set constants
   MEASURES_ROOT_DIRECTORY = "measures"
@@ -348,19 +353,33 @@ namespace :test_models do
   HOSTNAME = 'http://localhost:8080'
 
   #create_json(structure_id, building_type, year, system_type)
-  desc 'run create analysis.json scripts'
+  desc 'run create_json script'
   task :jsons do
 
     # jobs to run
     value_sets = populate_value_sets
-    settings = {:make_json => true, :make_osm => true, :osm_logic => "static"} # osm_logic options are: static, min, max, mean, random_in_range, random_below_range random_above_range, random
     seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
 
     value_sets.each do |value_set|
-      create_json(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],settings,seed_model)
+      create_json(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
     end
 
   end
+
+  #create_json(structure_id, building_type, year, system_type)
+  desc 'run create_model script'
+  task :models do
+
+    # jobs to run
+    value_sets = populate_value_sets
+    seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
+
+    value_sets.each do |value_set|
+      create_model(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
+    end
+
+  end
+
 
   desc 'queue the jsons'
   task :queue do
