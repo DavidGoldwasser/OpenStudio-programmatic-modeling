@@ -123,7 +123,6 @@ def populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../weather"}
-  #arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../../OpenStudio-analysis-spreadsheet/weather"}
   arguments << {:name => 'weather_file_name', :desc => 'Weather File Name', :value => WEATHER_FILE_NAME}
   measures << {
       :name => 'change_building_location',
@@ -269,25 +268,6 @@ def create_model(building_type, template, climate_zone, total_bldg_area_ip,seed_
     # get arguments
     arguments = measure.arguments(model)
     argument_map = OpenStudio::Ruleset.convertOSArgumentVectorToMap(arguments)
-
-    # todo - could be better to just run on contents of zip file instead of doing this
-    # adjust path of arguments using shared resources to work on local run
-    m[:arguments].each do |a|
-      if a[:value].to_s.include? "../../weather"
-        a[:value] = a[:value].gsub("../../weather","../../../OpenStudio-analysis-spreadsheet/weather")
-      end
-      if a[:value].to_s.include? "../../lib"
-        a[:value] = a[:value].gsub("../../lib","../../../OpenStudio-analysis-spreadsheet/lib")
-      end
-    end
-    m[:variables].each do |v|
-      if v[:value][:static_value].to_s.include? "../../weather"
-        v[:value][:static_value] = v[:value][:static_value].gsub("../../weather","../../../OpenStudio-analysis-spreadsheet/weather")
-      end
-      if v[:value][:static_value].to_s.include? "../../lib"
-        v[:value][:static_value] = v[:value][:static_value].gsub("../../lib","../../../OpenStudio-analysis-spreadsheet/lib")
-      end
-    end
 
     # get argument values
     args_hash = {}
