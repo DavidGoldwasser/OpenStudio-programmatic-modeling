@@ -321,16 +321,57 @@ def populate_value_sets()
   return value_sets
 end
 
+# Command-line arguments in Rake: http://viget.com/extend/protip-passing-parameters-to-your-rake-tasks
+def get_scripts(script = '')
+  # If excel_file is not pre-specified, request it as input
+  unless script && !script.empty?
+    # Determine the project file to run.  This will list out all the xlsx files and give you a
+    # choice from which to choose
+    puts
+    puts 'Select which project to run from the list below:'.cyan.underline
+    puts 'Note: if this list is too long, simply remove .rb files from the ./projects directory'.cyan
+    projects = Dir.glob('./projects/*.rb').reject { |i| i =~ /~\$.*/ }
+    projects.each_index do |i|
+      puts "  #{i + 1}) #{File.basename(projects[i])}".green
+    end
+    puts
+    print "Selection (1-#{projects.size}): ".cyan
+    n = $stdin.gets.chomp
+    n_i = n.to_i
+    if n_i == 0 || n_i > projects.size
+      puts "Could not process your selection. You entered '#{n}'".red
+      exit
+    end
+
+    script = projects[n_i - 1]
+  end
+
+  # run it
+  path = "../../#{script}"
+  puts "Running #{path}"
+  require_relative("#{path}")
+
+end
+
 namespace :workflow_test do
 
-  # set constants
+  # set constants (remove these once we are using the project dir)
   MEASURES_ROOT_DIRECTORY = "measures"
   WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
   WEATHER_FILES_DIRECTORY = "weather"
   SEED_FILE_NAME = "empty_seed.osm"
   SEED_FILES_DIRECTORY = "seeds"
+
+  # set constants
   ANALYSIS_TYPE = 'single_run'
   HOSTNAME = 'http://localhost:8080'
+
+  desc 'make analysis jsons from workflow script'
+  task :make_jsons do
+    script = get_scripts
+    #excel.save_analysis
+    #run_analysis(excel, 'vagrant')
+  end
 
   #create_json(structure_id, building_type, year, system_type)
   desc 'run create_json script'
@@ -359,7 +400,6 @@ namespace :workflow_test do
     end
 
   end
-
 
   desc 'queue the jsons'
   task :queue do
