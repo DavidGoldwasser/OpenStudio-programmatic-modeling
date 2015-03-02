@@ -198,7 +198,7 @@ namespace :workflow do
   HOSTNAME = 'http://localhost:8080'
 
   desc 'make analysis jsons from specified workflow script'
-  task :make_jsons_from_scripts do
+  task :make_jsons do
     script = get_scripts
   end
 
@@ -219,7 +219,7 @@ namespace :workflow do
 =end
 
   desc 'make models locally from the jsons already in the analysis directory'
-  task :make_models_from_jsons do
+  task :make_models do
 
     analysis_jsons = Dir["analysis/**/*.json"]
     puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
@@ -232,9 +232,8 @@ namespace :workflow do
       zip_file = "#{save_string}.zip"
       if File.exist?(formulation_file) && File.exist?(zip_file)
         puts "Making model from #{save_string}"
-
-        # todo make model
-
+        # todo - figure out how this works
+        model = OpenStudio::Analysis::Formulation.save_static_data_point(json, version = 1)
       else
         puts "Could not file JSON or ZIP for #{save_string}"
       end
