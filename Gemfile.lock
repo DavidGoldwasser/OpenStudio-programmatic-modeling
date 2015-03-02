@@ -78,7 +78,6 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bcl (~> 0.5.5)
   colored (~> 1.2)
   git
   openstudio-analysis!
