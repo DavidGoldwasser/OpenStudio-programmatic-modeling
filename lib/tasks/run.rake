@@ -1,3 +1,4 @@
+# this will create json and zip file from scripts in projects directory
 def create_json(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
 
   measures = populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
@@ -65,6 +66,8 @@ def create_json(building_type, template, climate_zone, total_bldg_area_ip,seed_m
 
 end
 
+# this will create model (eventually IDF and sim run) from script in projects directory
+# todo - this will eventually be replaced with method to make models from json files in the analysis directory
 def create_model(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
 
   measures = populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
@@ -201,22 +204,6 @@ namespace :workflow do
   task :make_jsons do
     script = get_scripts
   end
-
-  #create_json(structure_id, building_type, year, system_type)
-=begin
-  desc 'run create_model script'
-  task :models do
-
-    # jobs to run
-    value_sets = populate_value_sets
-    seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
-
-    value_sets.each do |value_set|
-      create_model(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
-    end
-
-  end
-=end
 
   desc 'make models locally from the jsons already in the analysis directory'
   task :make_models do

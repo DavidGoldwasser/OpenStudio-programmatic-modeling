@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="03cbe948-c2ff-4d04-8ae9-a7bfa82a2e51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/run.rake" afterPath="$PROJECT_DIR$/lib/tasks/run.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/workflow_option_a.rb" afterPath="$PROJECT_DIR$/projects/workflow_option_a.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/workflow_option_b.rb" afterPath="$PROJECT_DIR$/projects/workflow_option_b.rb" />
     </list>
     <ignored path="OpenStudio-programmatic-modeling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,22 +42,26 @@
       <file leaf-file-name="Rakefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.153846" vertical-offset="492" max-vertical-offset="8755">
+            <state vertical-scroll-proportion="241.8077" vertical-offset="7069" max-vertical-offset="8755">
               <caret line="46" column="32" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.rake" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.rake" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22209822" vertical-offset="634" max-vertical-offset="1530">
-              <caret line="235" column="89" selection-start-line="235" selection-start-column="89" selection-end-line="235" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
-                <element signature="n#create_json#0;n#!!top" expanded="false" />
-                <element signature="n#create_model#0;n#!!top" expanded="false" />
-                <element signature="n#get_scripts#0;n#!!top" expanded="false" />
+                <element signature="e#72#1788#0" expanded="false" />
+                <element signature="e#1989#5049#0" expanded="false" />
+                <element signature="e#5154#6129#0" expanded="false" />
+                <element signature="e#6321#6354#0" expanded="false" />
+                <element signature="e#6454#7162#0" expanded="false" />
+                <element signature="e#7237#7936#0" expanded="false" />
+                <element signature="e#7981#8124#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -64,18 +70,18 @@
       <file leaf-file-name="workflow_option_a.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/workflow_option_a.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3179">
-              <caret line="171" column="66" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3247">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workflow_option_b.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="workflow_option_b.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects/workflow_option_b.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="2567">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.27901787" vertical-offset="1671" max-vertical-offset="2635">
+              <caret line="113" column="19" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -91,10 +97,10 @@
       <list>
         <option value="$PROJECT_DIR$/projects/workflow_a.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/projects/workflow_option_b.rb" />
-        <option value="$PROJECT_DIR$/projects/workflow_option_a.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/projects/workflow_option_a.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/run.rake" />
+        <option value="$PROJECT_DIR$/projects/workflow_option_b.rb" />
       </list>
     </option>
   </component>
@@ -250,27 +256,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projects/workflow_option_b.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="2567">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/workflow_option_a.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3179">
-          <caret line="171" column="66" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -281,7 +271,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.153846" vertical-offset="492" max-vertical-offset="8755">
+        <state vertical-scroll-proportion="241.8077" vertical-offset="7069" max-vertical-offset="8755">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="32" />
           <folding />
         </state>
@@ -289,13 +279,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22209822" vertical-offset="634" max-vertical-offset="1530">
-          <caret line="235" column="89" selection-start-line="235" selection-start-column="89" selection-end-line="235" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding>
-            <element signature="n#create_json#0;n#!!top" expanded="false" />
-            <element signature="n#create_model#0;n#!!top" expanded="false" />
-            <element signature="n#get_scripts#0;n#!!top" expanded="false" />
+            <element signature="e#72#1788#0" expanded="false" />
+            <element signature="e#1989#5049#0" expanded="false" />
+            <element signature="e#5154#6129#0" expanded="false" />
+            <element signature="e#6321#6354#0" expanded="false" />
+            <element signature="e#6454#7162#0" expanded="false" />
+            <element signature="e#7237#7936#0" expanded="false" />
+            <element signature="e#7981#8124#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/workflow_option_a.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3247">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/workflow_option_b.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27901787" vertical-offset="1671" max-vertical-offset="2635">
+          <caret line="113" column="19" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

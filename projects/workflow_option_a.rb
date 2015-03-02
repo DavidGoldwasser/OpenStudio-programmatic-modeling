@@ -177,5 +177,9 @@ value_sets = populate_value_sets
 seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
 
 value_sets.each do |value_set|
+  # create json files
   create_json(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
+
+  # run measures and create model
+  create_model(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
 end
