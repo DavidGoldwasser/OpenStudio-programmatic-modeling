@@ -18,7 +18,13 @@ def populate_value_sets()
 end
 
 # this defines the measures, and their argument values. It pulls from populate_value_sets as well as the constants defined at the beginning of the script
-def populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+def populate_workflow(value_set,seed_model)
+
+  # break out value_set
+  building_type = value_set[:building_type]
+  template = value_set[:template]
+  climate_zone = value_set[:climate_zone]
+  total_bldg_area_ip = value_set[:total_bldg_area_ip]
 
   # setup
   measures = []
@@ -178,8 +184,8 @@ seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
 
 value_sets.each do |value_set|
   # create json files
-  create_json(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
+  create_json(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
 
   # run measures and create model
-  create_model(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
+  create_model(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
 end

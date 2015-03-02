@@ -1,7 +1,7 @@
 # this will create json and zip file from scripts in projects directory
-def create_json(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+def create_json(value_set,seed_model,save_string)
 
-  measures = populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+  measures = populate_workflow(value_set,seed_model)
 
   # populate outputs
   outputs = [
@@ -12,12 +12,6 @@ def create_json(building_type, template, climate_zone, total_bldg_area_ip,seed_m
       "#{WEATHER_FILES_DIRECTORY}/*"
   ]
   default_weather_file = "#{WEATHER_FILES_DIRECTORY}/#{WEATHER_FILE_NAME}"
-
-  # define path to seed model
-  seed_model = seed_model
-
-  # save path
-  save_string = "#{building_type}_#{template}_#{climate_zone}"
 
   # configure analysis
   a = OpenStudio::Analysis.create(save_string)
@@ -68,14 +62,11 @@ end
 
 # this will create model (eventually IDF and sim run) from script in projects directory
 # todo - this will eventually be replaced with method to make models from json files in the analysis directory
-def create_model(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+def create_model(value_set,seed_model,save_string)
 
-  measures = populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,seed_model)
+  measures = populate_workflow(value_set,seed_model)
 
-  # todo - to accommodate measures with string/path arguments it would be better for this section to run on the contents of the zip file. Then paths would match what happens on the server.
-
-  # define path to seed model
-  seed_model = seed_model
+  # todo - accommodate measures with string/path arguments it would be better for this section to run on the contents of the zip file. Then paths would match what happens on the server.
 
   # add in necessary requires (these used to be at the top but should work here)
   require 'openstudio'
@@ -151,12 +142,11 @@ def create_model(building_type, template, climate_zone, total_bldg_area_ip,seed_
     end
 
     # save path
-    save_string = "#{building_type}_#{template}_#{climate_zone}"
     output_file_path = OpenStudio::Path.new("analysis_local/#{save_string}.osm")
     puts "Saving #{output_file_path}"
     model.save(output_file_path,true)
 
-    # todo - look at ChnageBuildingLocation, it things it is in files, not weather? Can I save the folder like app does
+    # todo - look at ChangeBuildingLocation, it things it is in files, not weather? Can I save the folder like app does
 
     # todo - add support for E+ and reporting measures (will require E+ run)
 

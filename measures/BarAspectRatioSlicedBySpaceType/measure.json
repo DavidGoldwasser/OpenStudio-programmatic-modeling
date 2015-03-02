@@ -1,0 +1,60 @@
+{
+  "classname": "BarAspectRatioSlicedBySpaceType",
+  "name": "bar_aspect_ratio_sliced_by_space_type",
+  "display_name": "Bar Aspect Ratio Sliced by Space Type",
+  "measure_type": "RubyMeasure",
+  "arguments": [
+    {
+      "local_variable": "total_bldg_area_ip",
+      "variable_type": "Double",
+      "name": "total_bldg_area_ip",
+      "display_name": "Total Building Floor Area",
+      "units": "ft^2",
+      "description": null,
+      "default_value": 10000.0
+    },
+    {
+      "local_variable": "ns_to_ew_ratio",
+      "variable_type": "Double",
+      "name": "ns_to_ew_ratio",
+      "display_name": "Ratio of North/South Facade Length Relative to East/West Facade Length",
+      "units": null,
+      "description": null,
+      "default_value": 2.0
+    },
+    {
+      "local_variable": "num_floors",
+      "variable_type": "Integer",
+      "name": "num_floors",
+      "display_name": "Number of Floors",
+      "units": null,
+      "description": null,
+      "default_value": 2
+    },
+    {
+      "local_variable": "floor_to_floor_height_ip",
+      "variable_type": "Double",
+      "name": "floor_to_floor_height_ip",
+      "display_name": "Floor to Floor Height",
+      "units": "ft",
+      "description": null,
+      "default_value": 10.0
+    },
+    {
+      "local_variable": "spaceTypeHashString",
+      "variable_type": "String",
+      "name": "spaceTypeHashString",
+      "display_name": "Hash of Space Types with Name as Key and Fraction as value",
+      "units": null,
+      "description": null
+    }
+  ],
+  "name_xml": "Bar Aspect Ratio Study Sliced By Space Type",
+  "uid": "3e988765-9673-46f8-9b65-99d5b86c2b22",
+  "version_id": "7c0557e5-6b21-4dae-ac4d-b915a98c7936",
+  "modeler_description": "This is based on the SketchUp Plugin user script to create a rectangular building, but just uses different inputs. The resulting building will have a core and perimeter zoning, unless it is too small, in which case eac floor will have a single zone. This uses a floor multiplier for buildings taller than three stories. Below is an example of what the space tyep hash might look like. Sum of hash values should equal 1.0. \"{:189.1-2009 - Office - Corridor - CZ1-3 => '0.3', :189.1-2009 - Office - Conference - CZ1-3 => '0.2', :189.1-2009 - Office - ClosedOffice - CZ1-3 => '0.5' }\"",
+  "description": "This measure will create a building envelope based on a target floor area, aspect ratio, floor to floor height, and a collectin of space types and fraction of building using that space type.",
+  "tags": [
+    "Envelope.Form"
+  ]
+}
