@@ -5,18 +5,6 @@ WEATHER_FILES_DIRECTORY = "weather"
 SEED_FILE_NAME = "empty_seed.osm"
 SEED_FILES_DIRECTORY = "seeds"
 
-puts "running workflow option a"
-# todo - run method to make jsons using data from this script
-
-# jobs to run
-value_sets = populate_value_sets
-seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
-
-value_sets.each do |value_set|
-  create_json(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
-  # todo when create_json runs it needs to use the workflow from this script
-end
-
 # each entry here creates its own analysis. The values here are passed into populate_workflow
 def populate_value_sets()
   # jobs to run
@@ -24,7 +12,7 @@ def populate_value_sets()
   value_sets << {:building_type => "Office", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
   value_sets << {:building_type => "LargeHotel", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
   value_sets << {:building_type => "Warehouse", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  #value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
+  value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
 
   return value_sets
 end
@@ -182,3 +170,12 @@ def populate_workflow(building_type, template, climate_zone, total_bldg_area_ip,
 
 end
 
+puts "running workflow option a"
+
+# jobs to run
+value_sets = populate_value_sets
+seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
+
+value_sets.each do |value_set|
+  create_json(value_set[:building_type], value_set[:template], value_set[:climate_zone], value_set[:total_bldg_area_ip],seed_model)
+end
