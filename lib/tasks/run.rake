@@ -191,19 +191,6 @@ def get_scripts(script = '')
 
 end
 
-# todo - for now this is needed for workflow:queue, but ideally we can get rid of that.
-def populate_value_sets()
-  # jobs to run
-  value_sets = []
-  value_sets << {:building_type => "Office", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "LargeHotel", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "Warehouse", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
-
-  return value_sets
-end
-
-
 namespace :workflow do
 
   # set constants
@@ -234,23 +221,21 @@ namespace :workflow do
   desc 'queue the jsons'
   task :queue do
 
-    # todo - update this to loop through jsons in the analysis directory instead of replying on populate_value_sets
+    analysis_jsons = Dir["analysis/**/*.json"]
+    puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
 
-    # jobs to run
-    value_sets = populate_value_sets
+    # loop through jsons found in the directory
+    analysis_jsons.each do |json|
+      save_string = json.downcase.gsub('.json','') # remove the extension
 
-    value_sets.each do |value_set|
-      save_string = "#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}"
-      save_string_cleaned = save_string.downcase.gsub(' ','_')
-
-      formulation_file = "analysis/#{save_string_cleaned}.json"
-      zip_file = "analysis/#{save_string_cleaned}.zip"
+      formulation_file = "#{save_string}.json"
+      zip_file = "#{save_string}.zip"
       if File.exist?(formulation_file) && File.exist?(zip_file)
-        puts "Running #{save_string_cleaned}"
+        puts "Running #{save_string}"
         api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
         api.queue_single_run(formulation_file, zip_file, ANALYSIS_TYPE)
       else
-        puts "Could not file JSON or ZIP for #{save_string_cleaned}"
+        puts "Could not file JSON or ZIP for #{save_string}"
       end
     end
 
