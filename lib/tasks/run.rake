@@ -89,7 +89,7 @@ def create_model(value_set,seed_model,save_string)
     model = OpenStudio::Model::Model.new
   end
 
-  # add measures to analysis
+  # add model measures to analysis
   measures.each do |m|
 
     # load the measure
@@ -139,16 +139,79 @@ def create_model(value_set,seed_model,save_string)
     result = runner.result
     show_output(result)
 
+  end
+
+  # save path
+  output_file_path = OpenStudio::Path.new("analysis_local/#{save_string}.osm")
+  puts "Saving #{output_file_path}"
+  model.save(output_file_path,true)
+
+  # forward translate to IDF
+  puts "Forward translating #{output_file_path} to an IDF model"
+  # forward translate OSM file to IDF file
+  ft = OpenStudio::EnergyPlus::ForwardTranslator.new
+  workspace = ft.translateModel(model)
+
+  # add energy plus measures to analysis
+  measures.each do |m|
+
+    # load the measure
+    require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
+
+    # infer class from name
+    name_without_prefix = m[:name].split("|")
+    measure_class = "#{name_without_prefix.last}".split('_').collect(&:capitalize).join
+
+    # create an instance of the measure
+    measure = eval(measure_class).new
+
+    # skip from this loop if it is an E+ or Reporting measure
+    if not measure.is_a?(OpenStudio::Ruleset::WorkspaceUserScript)
+      puts "Skipping #{measure.name}. It isn't an EnergyPlus measure."
+      next
     end
 
-    # save path
-    output_file_path = OpenStudio::Path.new("analysis_local/#{save_string}.osm")
-    puts "Saving #{output_file_path}"
-    model.save(output_file_path,true)
+    # get arguments
+    arguments = measure.arguments(workspace)
+    argument_map = OpenStudio::Ruleset.convertOSArgumentVectorToMap(arguments)
 
-    # todo - look at ChangeBuildingLocation, it things it is in files, not weather? Can I save the folder like app does
+    # get argument values
+    args_hash = {}
+    m[:arguments].each do |a|
+      args_hash[a[:name]] = a[:value]
+    end
+    m[:variables].each do |v|
+      # todo - add logic to use something other than static value when argument is variable
+      args_hash[v[:name]] = v[:value][:static_value]
+    end
 
-    # todo - add support for E+ and reporting measures (will require E+ run)
+    # populate argument with specified hash value if specified
+    arguments.each do |arg|
+      temp_arg_var = arg.clone
+      if args_hash[arg.name]
+        temp_arg_var.setValue(args_hash[arg.name])
+      end
+      argument_map[arg.name] = temp_arg_var
+    end
+
+    # just added as test of where measure is running from
+    #puts "Measure is running from #{Dir.pwd}"
+
+    # run the measure
+    measure.run(model, runner, argument_map)
+    result = runner.result
+    show_output(result)
+
+  end
+
+  # save path
+  output_file_path = OpenStudio::Path.new("analysis_local/#{save_string}.idf")
+  puts "Saving #{output_file_path}"
+  workspace.save(output_file_path,true)
+
+  # todo - look at ChangeBuildingLocation, it things it is in files, not weather? Can I save the folder like app does
+
+  # todo - add support for E+ and reporting measures (will require E+ run)
 
 end
 

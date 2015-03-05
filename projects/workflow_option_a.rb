@@ -187,6 +187,19 @@ def populate_workflow(value_set,seed_model)
 
   # start of energy plus measures
 
+  # adding xcel_eda_tariff_selectionand_model_setup
+  arguments = [] # :value is just a value
+  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
+  arguments << {:name => 'elec_tar', :desc => 'Select an Electricity Tariff.', :value => "Secondary General"}
+  arguments << {:name => 'gas_tar', :desc => 'Select a Gas Tariff.', :value => "Large CG"}
+  measures << {
+      :name => 'xcel_eda_tariff_selectionand_model_setup',
+      :desc => 'Xcel EDA Tariff Selectionand Model Setup',
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEdaTariffSelectionandModelSetup')}",
+      :arguments => arguments,
+      :variables => variables
+  }
+
   # start of reporting measures
 
   # adding annual_end_use_breakdown
