@@ -210,7 +210,9 @@ namespace :workflow do
       if File.exist?(formulation_file) && File.exist?(zip_file)
         puts "Making model from #{save_string}"
         # todo - figure out how this works
-        model = OpenStudio::Analysis::Formulation.save_static_data_point(formulation_file, version = 1)
+        workflow = OpenStudio::Analysis::Workflow.new()
+        formulation = OpenStudio::Analysis::Formulation.new("Hi")
+        model = formulation.save_static_data_point(formulation_file, version = 1)
       else
         puts "Could not file JSON or ZIP for #{save_string}"
       end
