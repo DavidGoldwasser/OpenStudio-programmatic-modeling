@@ -193,30 +193,13 @@ namespace :workflow do
   desc 'make analysis jsons from specified workflow script'
   task :make_jsons do
     script = get_scripts
+    workflow_create_jsons()
   end
 
-  desc 'make models locally from the jsons already in the analysis directory'
+  desc 'make analysis models from specified workflow script'
   task :make_models do
-
-    analysis_jsons = Dir["analysis/**/*.json"]
-    puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
-
-    # loop through jsons found in the directory
-    analysis_jsons.each do |json|
-      save_string = json.downcase.gsub('.json','') # remove the extension
-
-      formulation_file = "#{save_string}.json"
-      zip_file = "#{save_string}.zip"
-      if File.exist?(formulation_file) && File.exist?(zip_file)
-        puts "Making model from #{save_string}"
-        # todo - figure out how this works
-        workflow = OpenStudio::Analysis::Workflow.new()
-        formulation = OpenStudio::Analysis::Formulation.new("Hi")
-        model = formulation.save_static_data_point(formulation_file, version = 1)
-      else
-        puts "Could not file JSON or ZIP for #{save_string}"
-      end
-    end
+    script = get_scripts
+    workflow_create_models()
   end
 
   desc 'queue the jsons already in the analysis directory'

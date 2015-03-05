@@ -5,6 +5,32 @@ WEATHER_FILES_DIRECTORY = "weather"
 SEED_FILE_NAME = "empty_seed.osm"
 SEED_FILES_DIRECTORY = "seeds"
 
+def workflow_create_jsons()
+  puts "Creating JSON and zip file for workflow option a"
+
+  # jobs to run
+  value_sets = populate_value_sets
+  seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
+
+  value_sets.each do |value_set|
+    # create json files
+    create_json(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
+  end
+end
+
+def workflow_create_models()
+  puts "Creating JSON and zip file for workflow option a"
+
+  # jobs to run
+  value_sets = populate_value_sets
+  seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
+
+  value_sets.each do |value_set|
+    # run measures and create model
+    create_model(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
+  end
+end
+
 # each entry here creates its own analysis. The values here are passed into populate_workflow
 def populate_value_sets()
   # jobs to run
@@ -174,18 +200,4 @@ def populate_workflow(value_set,seed_model)
 
   return measures
 
-end
-
-puts "running workflow option a"
-
-# jobs to run
-value_sets = populate_value_sets
-seed_model = "#{SEED_FILES_DIRECTORY}/#{SEED_FILE_NAME}"
-
-value_sets.each do |value_set|
-  # create json files
-  create_json(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
-
-  # run measures and create model
-  create_model(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
 end
