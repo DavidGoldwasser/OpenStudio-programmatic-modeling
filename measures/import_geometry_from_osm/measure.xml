@@ -1,0 +1,117 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>import_geometry_from_osm</name>
+  <uid>79726ba6-5752-4636-af04-5e8cf53028e9</uid>
+  <version_id>ce6a826a-0af1-44a5-a8f1-d10450ac85ca</version_id>
+  <xml_checksum>AFECFDDF</xml_checksum>
+  <class_name>ImportGeometryFromOsm</class_name>
+  <display_name>ImportGeometryFromOsm</display_name>
+  <description>I think this will just import raw geometry, but need to consider if it should have space types, constructions, or anything else</description>
+  <modeler_description></modeler_description>
+  <arguments>
+    <argument>
+      <name>structure</name>
+      <display_name>Choose Envelope to Import.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>SchoolGeometryOnly</default_value>
+      <choices>
+        <choice>
+          <value>SchoolGeometryOnly</value>
+          <display_name>SchoolGeometryOnly</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Form</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Analysis Spreadsheet</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>New Construction EE</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>os_lib_helper_methods.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B910F964</checksum>
+    </file>
+    <file>
+      <filename>import_geometry_from_osm_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>200741CF</checksum>
+    </file>
+    <file>
+      <filename>SchoolGeometryOnly.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>DA754571</checksum>
+    </file>
+    <file>
+      <filename>test_input.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>115D1C01</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.6.3</identifier>
+        <min_compatible>1.6.3</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>1B54706C</checksum>
+    </file>
+    <file>
+      <filename>os_lib_geometry.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>FB1F305E</checksum>
+    </file>
+    <file>
+      <filename>test.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>BA7DADFE</checksum>
+    </file>
+  </files>
+</measure>

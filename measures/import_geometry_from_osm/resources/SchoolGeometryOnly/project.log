@@ -1,0 +1,161 @@
+[RunManager.ConfigOptions] <-1> Tools list in QSettings is from a previous version of OpenStudio, ignoring
+[RunManager.ConfigOptions] <-1> RunManager settings in QSettings is from a previous version of OpenStudio, ignoring
+[openstudio.LocalLibraryController] <-2> Creating LocalLibraryController with base app 000000000018FAE0
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[utilities.bcl.BCLMeasure] <-2> Loading measures in path: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/CalibrationReports
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/CalibrationReports
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReplaceModel
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReplaceModel
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReportRequest
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReportRequest
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/StandardReports
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/StandardReports
+[utilities.bcl.BCLMeasure] <-2> Loading measures in path: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AddOverhangsByProjectionFactor
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AddOverhangsByProjectionFactor
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AddSimplePvToShadingSurfacesByType
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AddSimplePvToShadingSurfacesByType
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/add_component_to_model
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/add_component_to_model
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AedgK12HvacDualDuctDoas
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AedgK12HvacDualDuctDoas
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AedgOfficeHvacAshpDoas
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AedgOfficeHvacAshpDoas
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AnnualEndUseBreakdown
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AnnualEndUseBreakdown
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/BarAspectRatioSlicedBySpaceType
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/BarAspectRatioSlicedBySpaceType
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/BarAspectRatioStudy
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/BarAspectRatioStudy
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/ChangeBuildingLocation
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/ChangeBuildingLocation
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/EnableIdealAirLoadsForAllZones
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/EnableIdealAirLoadsForAllZones
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_materia_from_bcl
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_materia_from_bcl
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/SetWindowToWallRatioByFacade
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/SetWindowToWallRatioByFacade
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/SpaceTypeAndConstructionSetWizard
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/SpaceTypeAndConstructionSetWizard
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/XcelEDATariffSelectionandModelSetup
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/XcelEDATariffSelectionandModelSetup
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
+[openstudio.runmanager.Workflow] <-2> creating workflow
+[openstudio.runmanager.Job_Impl] <-2> Returning previously saved outputfiles
+[openstudio.runmanager.RunManager] <-2> (C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run.db) Persisting job status for {e2147f3e-cde7-4f88-9d7f-a0e4015c226c}
+[openstudio.runmanager.RunManager] <-2> Deleted previous data job status for {e2147f3e-cde7-4f88-9d7f-a0e4015c226c}
+[openstudio.runmanager.RunManager] <-2> Not persisting, job has not actually finished {e2147f3e-cde7-4f88-9d7f-a0e4015c226c}
+[openstudio.runmanager.Job_Impl] <-2> Returning previously saved outputfiles
+[openstudio.runmanager.RunManager] <-2> (C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run.db) Persisting job status for {fdaa1eb5-b2e7-4156-8bbe-3be40669c58a}
+[openstudio.runmanager.RunManager] <-2> Deleted previous data job status for {fdaa1eb5-b2e7-4156-8bbe-3be40669c58a}
+[openstudio.runmanager.RunManager] <-2> Not persisting, job has not actually finished {fdaa1eb5-b2e7-4156-8bbe-3be40669c58a}
+[openstudio.runmanager.Job_Impl] <-2> Returning previously saved outputfiles
+[openstudio.runmanager.RunManager] <-2> (C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run.db) Persisting job status for {4f80bdf8-a9f2-495b-93ba-f347aa0f366f}
+[openstudio.runmanager.RunManager] <-2> Deleted previous data job status for {4f80bdf8-a9f2-495b-93ba-f347aa0f366f}
+[openstudio.runmanager.RunManager] <-2> Not persisting, job has not actually finished {4f80bdf8-a9f2-495b-93ba-f347aa0f366f}
+[openstudio.runmanager.Job_Impl] <-2> Returning previously saved outputfiles
+[openstudio.runmanager.RunManager] <-2> (C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run.db) Persisting job status for {34f471ad-f9a8-4716-b10d-af3bab038ba5}
+[openstudio.runmanager.RunManager] <-2> Deleted previous data job status for {34f471ad-f9a8-4716-b10d-af3bab038ba5}
+[openstudio.runmanager.RunManager] <-2> Not persisting, job has not actually finished {34f471ad-f9a8-4716-b10d-af3bab038ba5}
+[openstudio.runmanager.Job_Impl] <-2> Returning previously saved outputfiles
+[openstudio.runmanager.RunManager] <-2> (C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run.db) Persisting job status for {dd0592e1-9560-4d72-b4b0-2ff84a9450b7}
+[openstudio.runmanager.RunManager] <-2> Deleted previous data job status for {dd0592e1-9560-4d72-b4b0-2ff84a9450b7}
+[openstudio.runmanager.RunManager] <-2> Not persisting, job has not actually finished {dd0592e1-9560-4d72-b4b0-2ff84a9450b7}
+[openstudio.project.ProjectDatabase] <-1> DB Message: cannot start a transaction within a transaction Unable to begin transaction
+[saveModel] <-2> Saved model to 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/in.osm'
+[saveModelTempDir] <-2> Copying C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources to C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly'
+[copyDir] <-1> Creating directory named = 'SchoolGeometryOnly' in parentDstDir = 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources'
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/files' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/files'
+[copyDir] <-1> Creating directory named = 'files' in parentDstDir = 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/files'
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/run'
+[copyDir] <-1> Creating directory named = 'run' in parentDstDir = 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/run' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run'
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/scripts' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/scripts'
+[copyDir] <-1> Creating directory named = 'scripts' in parentDstDir = 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/scripts' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/scripts'
+[openstudio.project.ProjectDatabase] <-1> DB Message: cannot start a transaction within a transaction Unable to begin transaction
+[saveModel] <-2> Saved model to 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/in.osm'
+[saveModelTempDir] <-2> Copying C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources to C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/files'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/run' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/run'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/scripts' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/scripts'
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/files' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/files'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/measures/import_geometry_from_osm/resources/SchoolGeometryOnly/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.tR9944/resources/files'

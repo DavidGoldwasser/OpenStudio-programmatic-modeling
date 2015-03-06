@@ -1,0 +1,26 @@
+
+OS:Version,
+  {26a212ef-de42-4d57-a882-2330dd605142}, !- Handle
+  1.6.0;                                  !- Version Identifier
+
+OS:Construction,
+  {f45c0ea1-5f90-4dc0-bfbb-59768c563ff5}, !- Handle
+  Interior Partition,                     !- Name
+  ;                                       !- Surface Rendering Name
+
+OS:StandardsInformation:Construction,
+  {d07dfbdb-404a-408c-95d9-85a30da3a346}, !- Handle
+  {f45c0ea1-5f90-4dc0-bfbb-59768c563ff5}, !- Construction Name
+  InteriorPartition,                      !- Intended Surface Type
+  SteelFramed;                            !- Standards Construction Type
+
+OS:ComponentData,
+  {f03e7955-2ae6-41dc-92ab-ebfb5c46f045}, !- Handle
+  Component Data 1,                       !- Name
+  {827d9485-7cf5-4911-802a-ddae8bae5bfe}, !- UUID
+  {80369386-f32c-4843-b960-e01e5cc921eb}, !- Version UUID
+  1425408148,                             !- Creation Timestamp
+  1425408148,                             !- Version Timestamp
+  {f45c0ea1-5f90-4dc0-bfbb-59768c563ff5}, !- Name of Object 1
+  {d07dfbdb-404a-408c-95d9-85a30da3a346}; !- Name of Object 2
+

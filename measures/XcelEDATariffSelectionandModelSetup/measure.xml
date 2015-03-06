@@ -1,9 +1,107 @@
 <measure>
-  <name>Xcel EDA Tariff Selection and Model Setup</name>
+  <schema_version>3.0</schema_version>
+  <name>xcel_eda_tariff_selectionand_model_setup</name>
   <uid>c5ab60e9-b8e5-4653-a502-5ed030f1335d</uid>
-  <version_id>f7934c86-9bb0-45c5-8a96-0de5c2ac2bc5</version_id>
+  <version_id>e419214f-1b63-49da-be3d-16b3f6d2231e</version_id>
+  <xml_checksum>4FA703D1</xml_checksum>
+  <class_name>XcelEdaTariffSelectionandModelSetup</class_name>
+  <display_name>XcelEdaTariffSelectionandModelSetup</display_name>
   <description>Add the selected Xcel utility rate, as well as set the timestep and lifecycle costing parameters as required by the Xcel EDA program.</description>
   <modeler_description>Adds the .idf text for the selected Xcel Energy tariffs, sets the timestep to 15min so that the demand window and the timestep align, and sets the lifecycle costing parameters to use NIST 2012 inflation and fuel escalation numbers.  These NIST numbers will not affect the Xcel EDA results.</modeler_description>
+  <arguments>
+    <argument>
+      <name>elec_tar</name>
+      <display_name>Select an Electricity Tariff.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Secondary General</default_value>
+      <choices>
+        <choice>
+          <value>Residential General</value>
+          <display_name>Residential General</display_name>
+        </choice>
+        <choice>
+          <value>Commercial</value>
+          <display_name>Commercial</display_name>
+        </choice>
+        <choice>
+          <value>Primary General</value>
+          <display_name>Primary General</display_name>
+        </choice>
+        <choice>
+          <value>Secondary General Low Load Factor</value>
+          <display_name>Secondary General Low Load Factor</display_name>
+        </choice>
+        <choice>
+          <value>Secondary General</value>
+          <display_name>Secondary General</display_name>
+        </choice>
+        <choice>
+          <value>Secondary Photovoltaic Time-of-Use</value>
+          <display_name>Secondary Photovoltaic Time-of-Use</display_name>
+        </choice>
+        <choice>
+          <value>Transmission General</value>
+          <display_name>Transmission General</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Commercial</value>
+          <display_name>Non-Xcel Commercial</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Primary General</value>
+          <display_name>Non-Xcel Primary General</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Secondary General Low Load Factor</value>
+          <display_name>Non-Xcel Secondary General Low Load Factor</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Secondary General</value>
+          <display_name>Non-Xcel Secondary General</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Transmission General</value>
+          <display_name>Non-Xcel Transmission General</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>gas_tar</name>
+      <display_name>Select a Gas Tariff.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Large CG</default_value>
+      <choices>
+        <choice>
+          <value>Residential Gas</value>
+          <display_name>Residential Gas</display_name>
+        </choice>
+        <choice>
+          <value>Small CG</value>
+          <display_name>Small CG</display_name>
+        </choice>
+        <choice>
+          <value>Large CG</value>
+          <display_name>Large CG</display_name>
+        </choice>
+        <choice>
+          <value>Interruptible Industrial G</value>
+          <display_name>Interruptible Industrial G</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Gas Firm</value>
+          <display_name>Non-Xcel Gas Firm</display_name>
+        </choice>
+        <choice>
+          <value>Non-Xcel Gas Interruptible</value>
+          <display_name>Non-Xcel Gas Interruptible</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
   <provenances/>
   <tags>
     <tag>Economics.Life Cycle Cost Analysis</tag>
@@ -36,22 +134,6 @@
       <filetype>osm</filetype>
       <usage_type>test</usage_type>
       <checksum>E11F67BD</checksum>
-    </file>
-    <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>0.11.3</identifier>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>805C6011</checksum>
-    </file>
-    <file>
-      <filename>XcelEdaTariffSelectionandModelSetup_Test.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>test</usage_type>
-      <checksum>6B6EA958</checksum>
     </file>
     <file>
       <filename>Interruptible Industrial G.idf</filename>
@@ -160,6 +242,29 @@
       <filetype>idf</filetype>
       <usage_type>resource</usage_type>
       <checksum>0A6DA536</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.3</identifier>
+        <min_compatible>0.11.3</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>8A358C41</checksum>
+    </file>
+    <file>
+      <filename>XcelEdaTariffSelectionandModelSetup_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>37AD976E</checksum>
+    </file>
+    <file>
+      <filename>XcelEDATariffSelectionandModelSetup_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>37AD976E</checksum>
     </file>
   </files>
 </measure>

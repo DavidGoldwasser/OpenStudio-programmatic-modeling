@@ -1,0 +1,84 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>add_component_to_model</name>
+  <uid>9d066804-85a4-436e-addd-3e7e27ccfa16</uid>
+  <version_id>e89bee57-4a46-45da-b91c-69ed8ebae4c9</version_id>
+  <xml_checksum>D8922A73</xml_checksum>
+  <class_name>AddComponentToModel</class_name>
+  <display_name>AddComponentToModel</display_name>
+  <description>This is a proof of concept to pull a component into the model from the resources directory of the measure. Not sure if it will just pull the component in, or if wl attempt to hook it up.</description>
+  <modeler_description>Once I figure out what kind of component I'll rename and update the description, will probably </modeler_description>
+  <arguments>
+    <argument>
+      <name>space_name</name>
+      <display_name>New space name</display_name>
+      <description>This name will be used as the name of the new space.</description>
+      <type>String</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>Whole Building.Space Types</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.6.3</identifier>
+        <min_compatible>1.6.3</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>D03A857E</checksum>
+    </file>
+    <file>
+      <filename>add_component_to_model_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>A2C0A742</checksum>
+    </file>
+    <file>
+      <filename>Interior Partition.osc</filename>
+      <filetype>osc</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B98F7F51</checksum>
+    </file>
+    <file>
+      <filename>Interior Wall.osc</filename>
+      <filetype>osc</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>98637C1E</checksum>
+    </file>
+    <file>
+      <filename>Interior Window.osc</filename>
+      <filetype>osc</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>59E3B337</checksum>
+    </file>
+  </files>
+</measure>

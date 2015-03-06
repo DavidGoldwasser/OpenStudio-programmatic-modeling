@@ -1,0 +1,79 @@
+
+OS:Version,
+  {41540664-8d00-4a85-a8e7-c26369b62603}, !- Handle
+  1.6.0;                                  !- Version Identifier
+
+OS:ClimateZones,
+  {7917a81b-1dd4-4d86-906d-c09b8b620a5c}, !- Handle
+  ,                                       !- Active Institution
+  ,                                       !- Active Year
+  ASHRAE,                                 !- Climate Zone Institution Name 1
+  ANSI/ASHRAE Standard 169,               !- Climate Zone Document Name 1
+  2006,                                   !- Climate Zone Document Year 1
+  ,                                       !- Climate Zone Value 1
+  CEC,                                    !- Climate Zone Institution Name 2
+  California Climate Zone Descriptions,   !- Climate Zone Document Name 2
+  1995,                                   !- Climate Zone Document Year 2
+  ;                                       !- Climate Zone Value 2
+
+OS:LifeCycleCost:Parameters,
+  {48e78797-8c4c-45c4-9452-55cfa4a39745}, !- Handle
+  FEMP,                                   !- Analysis Type
+  ,                                       !- Discounting Convention
+  ,                                       !- Inflation Approach
+  ,                                       !- Real Discount Rate
+  ,                                       !- Nominal Discount Rate
+  ,                                       !- Inflation
+  ,                                       !- Base Date Month
+  ,                                       !- Base Date Year
+  ,                                       !- Service Date Month
+  ,                                       !- Service Date Year
+  ,                                       !- Length of Study Period in Years
+  ,                                       !- Tax Rate
+  ,                                       !- Depreciation Method
+  Yes;                                    !- Use NIST Fuel Escalation Rates
+
+OS:YearDescription,
+  {0c17469c-e7f2-45ec-8b27-3c04221cb870}; !- Handle
+
+OS:Building,
+  {15e6849d-d670-4429-bf40-dfce6eeb5938}, !- Handle
+  Building 1,                             !- Name
+  ,                                       !- Building Sector Type
+  ,                                       !- North Axis {deg}
+  ,                                       !- Nominal Floor to Floor Height {m}
+  ,                                       !- Space Type Name
+  ,                                       !- Default Construction Set Name
+  ;                                       !- Default Schedule Set Name
+
+OS:Facility,
+  {481186c9-00e1-473c-ad17-6de3586419df}; !- Handle
+
+OS:SpaceType,
+  {153326b7-27c8-4e00-8d28-3b3ea8758177}, !- Handle
+  Space Type 3,                           !- Name
+  ,                                       !- Default Construction Set Name
+  ,                                       !- Default Schedule Set Name
+  {92d71cb4-770a-48fa-be70-047d8761fe15}; !- Group Rendering Name
+
+OS:Rendering:Color,
+  {92d71cb4-770a-48fa-be70-047d8761fe15}, !- Handle
+  Rendering Color 1,                      !- Name
+  0,                                      !- Rendering Red Value
+  206,                                    !- Rendering Green Value
+  209;                                    !- Rendering Blue Value
+
+OS:SpaceType,
+  {51bd7737-905e-4f4c-bd78-949da7d3ea9b}, !- Handle
+  Space Type 2,                           !- Name
+  ,                                       !- Default Construction Set Name
+  ,                                       !- Default Schedule Set Name
+  {b81c8a5c-aa16-4b0f-9b89-5fac59fedd2b}; !- Group Rendering Name
+
+OS:Rendering:Color,
+  {b81c8a5c-aa16-4b0f-9b89-5fac59fedd2b}, !- Handle
+  Rendering Color 2,                      !- Name
+  255,                                    !- Rendering Red Value
+  255,                                    !- Rendering Green Value
+  240;                                    !- Rendering Blue Value
+

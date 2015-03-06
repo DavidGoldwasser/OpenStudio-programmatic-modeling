@@ -1,0 +1,47 @@
+
+OS:Version,
+  {82c97b82-6604-4ee3-bc87-4f139d8fdc4a}, !- Handle
+  1.6.0;                                  !- Version Identifier
+
+OS:Construction,
+  {7c16863d-bbf8-43d4-99a8-3b82c01dd462}, !- Handle
+  Interior Window,                        !- Name
+  ,                                       !- Surface Rendering Name
+  {fd363eb8-ba7b-4145-838e-19632a3028bb}; !- Layer 1
+
+OS:WindowMaterial:Glazing,
+  {fd363eb8-ba7b-4145-838e-19632a3028bb}, !- Handle
+  Clear 3mm,                              !- Name
+  SpectralAverage,                        !- Optical Data Type
+  ,                                       !- Window Glass Spectral Data Set Name
+  0.00299999999999999,                    !- Thickness {m}
+  0.837,                                  !- Solar Transmittance at Normal Incidence
+  0.075,                                  !- Front Side Solar Reflectance at Normal Incidence
+  0,                                      !- Back Side Solar Reflectance at Normal Incidence
+  0.898,                                  !- Visible Transmittance at Normal Incidence
+  0.081,                                  !- Front Side Visible Reflectance at Normal Incidence
+  0,                                      !- Back Side Visible Reflectance at Normal Incidence
+  0,                                      !- Infrared Transmittance at Normal Incidence
+  0.84,                                   !- Front Side Infrared Hemispherical Emissivity
+  0.84,                                   !- Back Side Infrared Hemispherical Emissivity
+  0.9,                                    !- Conductivity {W/m-K}
+  1,                                      !- Dirt Correction Factor for Solar and Visible Transmittance
+  No;                                     !- Solar Diffusing
+
+OS:StandardsInformation:Construction,
+  {8beebc95-5afd-4b78-86b4-a3d0c786a579}, !- Handle
+  {7c16863d-bbf8-43d4-99a8-3b82c01dd462}, !- Construction Name
+  InteriorWindow,                         !- Intended Surface Type
+  View;                                   !- Standards Construction Type
+
+OS:ComponentData,
+  {7bd6d2e2-6272-4853-b47c-02785c3a300f}, !- Handle
+  Component Data 1,                       !- Name
+  {9b00f7db-dfbb-4589-918b-49c0841387b6}, !- UUID
+  {35355221-4559-41f7-ae51-525cfde98291}, !- Version UUID
+  1425408148,                             !- Creation Timestamp
+  1425408148,                             !- Version Timestamp
+  {7c16863d-bbf8-43d4-99a8-3b82c01dd462}, !- Name of Object 1
+  {fd363eb8-ba7b-4145-838e-19632a3028bb}, !- Name of Object 2
+  {8beebc95-5afd-4b78-86b4-a3d0c786a579}; !- Name of Object 3
+

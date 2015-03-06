@@ -1,0 +1,33 @@
+
+OS:Version,
+  {408db30c-3b1e-470a-a293-7276f5f21987}, !- Handle
+  1.6.0;                                  !- Version Identifier
+
+OS:Construction,
+  {5b0b417d-b0d3-4cd4-b1e3-9236cd16ff38}, !- Handle
+  Interior Wall,                          !- Name
+  ,                                       !- Surface Rendering Name
+  {4413eb73-0b14-4b15-be3d-687c07f8433a}; !- Layer 1
+
+OS:Material:AirGap,
+  {4413eb73-0b14-4b15-be3d-687c07f8433a}, !- Handle
+  F04 Wall air space resistance,          !- Name
+  0.15;                                   !- Thermal Resistance {m2-K/W}
+
+OS:StandardsInformation:Construction,
+  {03fd088e-bded-47da-a412-126c2da6cf28}, !- Handle
+  {5b0b417d-b0d3-4cd4-b1e3-9236cd16ff38}, !- Construction Name
+  InteriorWall,                           !- Intended Surface Type
+  WoodFramed;                             !- Standards Construction Type
+
+OS:ComponentData,
+  {7ff40f2b-06fd-43a2-9d36-aa5ac0489035}, !- Handle
+  Component Data 1,                       !- Name
+  {82c9442d-2ff1-40c2-b7f2-738c095714ab}, !- UUID
+  {6f14ab43-2849-4608-8501-b098cf9a5e2d}, !- Version UUID
+  1425408148,                             !- Creation Timestamp
+  1425408148,                             !- Version Timestamp
+  {5b0b417d-b0d3-4cd4-b1e3-9236cd16ff38}, !- Name of Object 1
+  {4413eb73-0b14-4b15-be3d-687c07f8433a}, !- Name of Object 2
+  {03fd088e-bded-47da-a412-126c2da6cf28}; !- Name of Object 3
+
