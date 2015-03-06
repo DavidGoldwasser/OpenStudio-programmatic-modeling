@@ -6,7 +6,7 @@ SEED_FILE_NAME = "secondary_school_geometry_only.osm"
 SEED_FILES_DIRECTORY = "seeds"
 
 def workflow_create_jsons()
-  puts "Creating JSON and zip file for workflow option a"
+  puts "Creating JSON and zip file for workflow option c"
 
   # jobs to run
   value_sets = populate_value_sets
