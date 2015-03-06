@@ -21,9 +21,9 @@
       "description": null
     }
   ],
-  "name_xml": "Change Building Location",
+  "name_xml": "change_building_location",
   "uid": "d4db4971-f5ba-11e3-a3ac-0800200c9a66",
-  "version_id": "74b18b7a-0476-45da-8e8a-0304e83c0208",
+  "version_id": "12981f37-4e76-4993-a9cd-bfc97156c294",
   "modeler_description": "Change the building location",
   "description": "Change the building location",
   "tags": [

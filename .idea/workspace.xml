@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03cbe948-c2ff-4d04-8ae9-a7bfa82a2e51" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/measure.xml" afterPath="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/measure.xml" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\measure.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\measure.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\resources\SchoolGeometryOnly.osm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\resources\SchoolGeometryOnly\project.log" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\resources\SchoolGeometryOnly\project.osp" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\resources\SchoolGeometryOnly\run.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\resources\os_lib_geometry.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\resources\os_lib_helper_methods.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\tests\import_geometry_from_osm_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\tests\test.osm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_geometry_from_osm\tests\test_input.osm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_materia_from_bcl\measure.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_materia_from_bcl\measure.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\dgoldwas\Documents\GitHub\OpenStudio-programmatic-modeling\measures\import_materia_from_bcl\tests\import_materia_from_bcl_test.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/add_component_to_model/tests/add_component_to_model_test.rb" afterPath="$PROJECT_DIR$/measures/add_component_to_model/tests/add_component_to_model_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/faraday.log" afterPath="$PROJECT_DIR$/faraday.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/BarAspectRatioStudy/measure.json" afterPath="$PROJECT_DIR$/measures/BarAspectRatioStudy/measure.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/ChangeBuildingLocation/measure.json" afterPath="$PROJECT_DIR$/measures/ChangeBuildingLocation/measure.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/measure.json" afterPath="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/measure.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/add_component_to_model/measure.rb" afterPath="$PROJECT_DIR$/measures/add_component_to_model/measure.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/add_component_to_model/measure.xml" afterPath="$PROJECT_DIR$/measures/add_component_to_model/measure.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/run.rake" afterPath="$PROJECT_DIR$/lib/tasks/run.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/add_component_to_model/tests/test.osm" afterPath="$PROJECT_DIR$/measures/add_component_to_model/tests/test.osm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/measures/add_component_to_model/tests/test_input.osm" afterPath="$PROJECT_DIR$/measures/add_component_to_model/tests/test_input.osm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpenStudio-programmatic-modeling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,7 +40,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OpenStudio-programmatic-modeling@RunSingleTest.coverage" NAME="RunSingleTest Coverage Results" MODIFIED="1425664286062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="OpenStudio-programmatic-modeling" />
+    <SUITE FILE_PATH="coverage/OpenStudio-programmatic-modeling@RunSingleTest.coverage" NAME="RunSingleTest Coverage Results" MODIFIED="1425680728162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="OpenStudio-programmatic-modeling" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,21 +54,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="measure.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/measures/add_component_to_model/measure.rb">
+      <file leaf-file-name="run.rake" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6893543" vertical-offset="948" max-vertical-offset="1717">
-              <caret line="78" column="66" selection-start-line="78" selection-start-column="66" selection-end-line="78" selection-end-column="66" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
+              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+              <folding>
+                <element signature="e#72#1569#0" expanded="false" />
+                <element signature="e#6774#7749#0" expanded="false" />
+                <element signature="e#8222#8921#0" expanded="false" />
+                <element signature="e#8966#9109#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_component_to_model_test.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/measures/add_component_to_model/tests/add_component_to_model_test.rb">
+      <file leaf-file-name="workflow_option_c.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects/workflow_option_c.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1003">
-              <caret line="53" column="46" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4263323" vertical-offset="1394" max-vertical-offset="2669">
+              <caret line="98" column="120" selection-start-line="98" selection-start-column="120" selection-end-line="98" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -66,14 +95,20 @@
         <option value="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/measure.rb" />
         <option value="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/measure.xml" />
         <option value="$PROJECT_DIR$/measures/XcelEDATariffSelectionandModelSetup/tests/XcelEDATariffSelectionandModelSetup_Test.rb" />
-        <option value="$PROJECT_DIR$/projects/workflow_option_a.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/run.rake" />
         <option value="$PROJECT_DIR$/measures/import_geometry_from_osm/resources/os_lib_helper_methods.rb" />
         <option value="$PROJECT_DIR$/measures/import_geometry_from_osm/tests/import_geometry_from_osm_test.rb" />
         <option value="$PROJECT_DIR$/measures/import_geometry_from_osm/resources/os_lib_geometry.rb" />
         <option value="$PROJECT_DIR$/measures/import_geometry_from_osm/measure.rb" />
+        <option value="$PROJECT_DIR$/projects/workflow_option_a.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/run.rake" />
+        <option value="$PROJECT_DIR$/measures/AddSys3Pszac/measure.json" />
+        <option value="$PROJECT_DIR$/measures/AddSys3Pszac/tests/AddSys1PTACResidential_Test.rb" />
+        <option value="$PROJECT_DIR$/measures/AddSys3Pszac/measure.rb" />
+        <option value="$PROJECT_DIR$/measures/replace_exterior_window_constructions_with_component/tests/add_component_to_model_test.rb" />
+        <option value="$PROJECT_DIR$/measures/replace_exterior_window_constructions_with_component/measure.rb" />
         <option value="$PROJECT_DIR$/measures/add_component_to_model/tests/add_component_to_model_test.rb" />
         <option value="$PROJECT_DIR$/measures/add_component_to_model/measure.rb" />
+        <option value="$PROJECT_DIR$/projects/workflow_option_c.rb" />
       </list>
     </option>
   </component>
@@ -154,60 +189,6 @@
               <option name="myItemId" value="measures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="measures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="import_geometry_from_osm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="measures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="import_geometry_from_osm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="measures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="add_component_to_model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -226,14 +207,6 @@
               <option name="myItemId" value="measures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="add_component_to_model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -245,43 +218,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="measures" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="add_component_to_model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis_local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenStudio-programmatic-modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
+              <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,8 +369,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.7288503" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26198083" sideWeight="0.7147505" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35032538" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23908414" sideWeight="0.7147505" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27982646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -483,10 +424,9 @@
           <caret line="214" column="19" selection-start-line="214" selection-start-column="19" selection-end-line="214" selection-end-column="19" />
           <folding>
             <element signature="e#72#1569#0" expanded="false" />
-            <element signature="e#1770#6575#0" expanded="false" />
-            <element signature="e#6680#7655#0" expanded="false" />
-            <element signature="e#8128#8827#0" expanded="false" />
-            <element signature="e#8872#9015#0" expanded="false" />
+            <element signature="e#6774#7749#0" expanded="false" />
+            <element signature="e#8222#8921#0" expanded="false" />
+            <element signature="e#8966#9109#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -503,17 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="3825">
           <caret line="33" column="210" selection-start-line="33" selection-start-column="210" selection-end-line="33" selection-end-column="210" />
-          <folding>
-            <element signature="e#215#600#0" expanded="false" />
-            <element signature="e#602#1001#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/workflow_option_b.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3655">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="e#215#600#0" expanded="false" />
             <element signature="e#602#1001#0" expanded="false" />
@@ -561,28 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/workflow_option_a.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="3757">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09626274" vertical-offset="0" max-vertical-offset="883">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-          <folding>
-            <element signature="e#72#1569#0" expanded="false" />
-            <element signature="e#1770#6575#0" expanded="false" />
-            <element signature="e#6680#7655#0" expanded="false" />
-            <element signature="e#8128#8827#0" expanded="false" />
-            <element signature="e#8872#9015#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18973215" vertical-offset="0" max-vertical-offset="896">
@@ -607,50 +514,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measures/import_geometry_from_osm/resources/os_lib_helper_methods.rb">
+    <entry file="file://$PROJECT_DIR$/projects/workflow_option_b.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4847" max-vertical-offset="6086">
-          <caret line="299" column="25" selection-start-line="299" selection-start-column="25" selection-end-line="299" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3655">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#215#600#0" expanded="false" />
+            <element signature="e#602#1001#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/workflow_option_a.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measures/import_geometry_from_osm/resources/os_lib_geometry.rb">
+    <entry file="file://$PROJECT_DIR$/measures/AddSys3Pszac/measure.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48214287" vertical-offset="7037" max-vertical-offset="7820">
-          <caret line="426" column="20" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measures/import_geometry_from_osm/measure.rb">
+    <entry file="file://$PROJECT_DIR$/measures/AddSys3Pszac/tests/AddSys1PTACResidential_Test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="671" max-vertical-offset="1479">
-          <caret line="75" column="8" selection-start-line="26" selection-start-column="0" selection-end-line="75" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measures/import_geometry_from_osm/tests/import_geometry_from_osm_test.rb">
+    <entry file="file://$PROJECT_DIR$/measures/AddSys3Pszac/measure.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7631579" vertical-offset="357" max-vertical-offset="1003">
-          <caret line="50" column="10" selection-start-line="16" selection-start-column="0" selection-end-line="50" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.01954023" vertical-offset="0" max-vertical-offset="870">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/measures/AddSys3Pszac/measure.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.9598215" vertical-offset="0" max-vertical-offset="2873">
+          <caret line="156" column="60" selection-start-line="156" selection-start-column="15" selection-end-line="156" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/run.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding>
+            <element signature="e#72#1569#0" expanded="false" />
+            <element signature="e#6774#7749#0" expanded="false" />
+            <element signature="e#8222#8921#0" expanded="false" />
+            <element signature="e#8966#9109#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/measures/add_component_to_model/tests/add_component_to_model_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1003">
-          <caret line="53" column="46" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="1003">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/measures/add_component_to_model/measure.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6893543" vertical-offset="948" max-vertical-offset="1717">
-          <caret line="78" column="66" selection-start-line="78" selection-start-column="66" selection-end-line="78" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.72156197" vertical-offset="136" max-vertical-offset="2584">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/measures/add_component_to_model/measure.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20659722" vertical-offset="0" max-vertical-offset="629">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/workflow_option_c.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4263323" vertical-offset="1394" max-vertical-offset="2669">
+          <caret line="98" column="120" selection-start-line="98" selection-start-column="120" selection-end-line="98" selection-end-column="120" />
           <folding />
         </state>
       </provider>

@@ -35,7 +35,7 @@ class AddComponentToModelTest < MiniTest::Unit::TestCase
 
     # set argument values to good values
     construction = arguments[0].clone
-    assert(construction.setValue("Interior Wall"))
+    assert(construction.setValue("Interior Window"))
     argument_map["construction"] = construction
 
     # run the measure

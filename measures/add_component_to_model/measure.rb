@@ -25,10 +25,12 @@ class AddComponentToModel < OpenStudio::Ruleset::ModelUserScript
 
     #make an argument for the electric tariff
     choices = OpenStudio::StringVector.new
+    choices << "Interior Window"
     choices << "Interior Wall"
+    choices << "Interior Partition"
     construction = OpenStudio::Ruleset::OSArgument::makeChoiceArgument('construction', choices, true)
     construction.setDisplayName("Choose Construction Component to Import.")
-    construction.setDefaultValue("Interior Wall")
+    construction.setDefaultValue("Interior Window")
     args << construction
 
     return args
@@ -76,9 +78,51 @@ class AddComponentToModel < OpenStudio::Ruleset::ModelUserScript
           runner.registerError("translateSurfaceConstruction: Failed to insert construction component '#{construction_file}' into model")
           return false
         else
-          componentData.get.primaryComponentObject.to_Construction.get
+          new_construction = componentData.get.primaryComponentObject.to_Construction.get
         end
       end
+    end
+
+    #notes:
+    # the code below only changes constructions assigned via a construction set vs. hard assigned.
+    # it clones the construction set leaving the original un-touched. This could be cleaned up a lot by just editing in place.
+    # the current compoennt put in has no materials so simulation would fail
+
+    #loop through construction sets used in the model
+    default_construction_sets = model.getDefaultConstructionSets
+    default_construction_sets.each do |default_construction_set|
+      if default_construction_set.directUseCount > 0
+        default_sub_surface_const_set = default_construction_set.defaultExteriorSubSurfaceConstructions
+        if not default_sub_surface_const_set.empty?
+          starting_construction = default_sub_surface_const_set.get.fixedWindowConstruction
+
+          #creating new default construction set
+          new_default_construction_set = default_construction_set.clone(model)
+          new_default_construction_set = new_default_construction_set.to_DefaultConstructionSet.get
+
+          #create new sub_surface set
+          new_default_sub_surface_const_set = default_sub_surface_const_set.get.clone(model)
+          new_default_sub_surface_const_set = new_default_sub_surface_const_set.to_DefaultSubSurfaceConstructions.get
+
+          new_default_sub_surface_const_set.setFixedWindowConstruction(new_construction)
+          new_default_sub_surface_const_set.setOperableWindowConstruction(new_construction)
+
+          #link new subset to new set
+          new_default_construction_set.setDefaultExteriorSubSurfaceConstructions(new_default_sub_surface_const_set)
+
+          #swap all uses of the old construction set for the new
+          construction_set_sources = default_construction_set.sources
+          construction_set_sources.each do |construction_set_source|
+            building_source = construction_set_source.to_Building
+            if not building_source.empty?
+              building_source = building_source.get
+              building_source.setDefaultConstructionSet(new_default_construction_set)
+              next
+            end
+
+          end #end of construction_set_sources.each do
+        end #end of if not default_sub_surface_const_set.empty?
+      end #end of if default_construction_set.directUseCount > 0
     end
 
     # report final condition of model

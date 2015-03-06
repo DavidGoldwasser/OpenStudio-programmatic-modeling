@@ -85,7 +85,7 @@ def create_model(value_set,seed_model,save_string)
     model = model.get
     puts "Opening #{seed_model}"
   else
-    puts "Couldn't open seed model, creating a new empty model"
+    puts "Couldn't open #{seed_model}, creating a new empty model"
     model = OpenStudio::Model::Model.new
   end
 
@@ -94,6 +94,8 @@ def create_model(value_set,seed_model,save_string)
 
     # load the measure
     require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
+
+    # todo - see if I can directly get the class name. Can use resource.json if I have to
 
     # infer class from name
     name_without_prefix = m[:name].split("|")

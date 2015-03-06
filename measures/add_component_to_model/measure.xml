@@ -2,7 +2,7 @@
   <schema_version>3.0</schema_version>
   <name>add_component_to_model</name>
   <uid>9d066804-85a4-436e-addd-3e7e27ccfa16</uid>
-  <version_id>e89bee57-4a46-45da-b91c-69ed8ebae4c9</version_id>
+  <version_id>9ae5c842-5a93-42ae-bbbc-58c8a6440d77</version_id>
   <xml_checksum>D8922A73</xml_checksum>
   <class_name>AddComponentToModel</class_name>
   <display_name>AddComponentToModel</display_name>
@@ -10,12 +10,26 @@
   <modeler_description>Once I figure out what kind of component I'll rename and update the description, will probably </modeler_description>
   <arguments>
     <argument>
-      <name>space_name</name>
-      <display_name>New space name</display_name>
-      <description>This name will be used as the name of the new space.</description>
-      <type>String</type>
+      <name>construction</name>
+      <display_name>Choose Construction Component to Import.</display_name>
+      <type>Choice</type>
       <required>true</required>
       <model_dependent>false</model_dependent>
+      <default_value>Interior Window</default_value>
+      <choices>
+        <choice>
+          <value>Interior Window</value>
+          <display_name>Interior Window</display_name>
+        </choice>
+        <choice>
+          <value>Interior Wall</value>
+          <display_name>Interior Wall</display_name>
+        </choice>
+        <choice>
+          <value>Interior Partition</value>
+          <display_name>Interior Partition</display_name>
+        </choice>
+      </choices>
     </argument>
   </arguments>
   <provenances/>
@@ -46,23 +60,6 @@
   </attributes>
   <files>
     <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>1.6.3</identifier>
-        <min_compatible>1.6.3</min_compatible>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>D03A857E</checksum>
-    </file>
-    <file>
-      <filename>add_component_to_model_test.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>test</usage_type>
-      <checksum>A2C0A742</checksum>
-    </file>
-    <file>
       <filename>Interior Partition.osc</filename>
       <filetype>osc</filetype>
       <usage_type>resource</usage_type>
@@ -79,6 +76,35 @@
       <filetype>osc</filetype>
       <usage_type>resource</usage_type>
       <checksum>59E3B337</checksum>
+    </file>
+    <file>
+      <filename>add_component_to_model_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>5CC4C5E1</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.6.3</identifier>
+        <min_compatible>1.6.3</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>0F1DF150</checksum>
+    </file>
+    <file>
+      <filename>test_input.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>94521552</checksum>
+    </file>
+    <file>
+      <filename>test.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53EDFC6E</checksum>
     </file>
   </files>
 </measure>
