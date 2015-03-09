@@ -15541,23 +15541,6 @@ OS:Material,
   0.7,                                    !- Solar Absorptance
   0.3;                                    !- Visible Absorptance
 
-OS:SubSurface,
-  {f5c2baae-0596-41cb-938e-a971d3287e2b}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_5,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 8.0571, 8,                        !- X,Y,Z Vertex 1 {m}
-  3.61, 9.2763, 8,                        !- X,Y,Z Vertex 2 {m}
-  2.39, 9.2763, 8,                        !- X,Y,Z Vertex 3 {m}
-  2.39, 8.0571, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {2ef2e405-cca1-482d-9062-6b5b135ca93a}, !- Handle
   Skylight cons 456,                      !- Name
@@ -15598,23 +15581,6 @@ OS:WindowMaterial:Gas,
   Air,                                    !- Gas Type
   0.0127;                                 !- Thickness {m}
 
-OS:SubSurface,
-  {1631866c-c98f-47f8-8b8d-f06f8213e77e}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_2,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 2.2793, 8,                        !- X,Y,Z Vertex 1 {m}
-  9.61, 3.4985, 8,                        !- X,Y,Z Vertex 2 {m}
-  8.39, 3.4985, 8,                        !- X,Y,Z Vertex 3 {m}
-  8.39, 2.2793, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {de85d602-12d7-4164-9108-2b16ee6255e6}, !- Handle
   Skylight cons 457,                      !- Name
@@ -15629,23 +15595,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {fb94eef0-dc33-4224-9816-99194fb11c5b}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_34,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 48.5015, 8,                       !- X,Y,Z Vertex 1 {m}
-  9.61, 49.7207, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.39, 49.7207, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.39, 48.5015, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {e51ba84e-5332-440f-ba68-297637a78ea6}, !- Handle
@@ -15662,23 +15611,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {d6fd03d0-6cb2-41b2-a282-63c2005b4293}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_32,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 42.7237, 8,                      !- X,Y,Z Vertex 1 {m}
-  21.61, 43.9429, 8,                      !- X,Y,Z Vertex 2 {m}
-  20.39, 43.9429, 8,                      !- X,Y,Z Vertex 3 {m}
-  20.39, 42.7237, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {93f925f9-d1c1-4206-9886-89910dc81766}, !- Handle
   Skylight cons 459,                      !- Name
@@ -15693,23 +15625,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {e3ed007d-781e-49aa-86bb-5e4449a4b952}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_6,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 8.0571, 8,                        !- X,Y,Z Vertex 1 {m}
-  9.61, 9.2763, 8,                        !- X,Y,Z Vertex 2 {m}
-  8.39, 9.2763, 8,                        !- X,Y,Z Vertex 3 {m}
-  8.39, 8.0571, 8;                        !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {dd1099cd-e417-44ca-b6d3-491a990200a5}, !- Handle
@@ -15726,23 +15641,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {e82044ee-e49c-4377-8e04-6fbed7f065b0}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_36,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 48.5015, 8,                      !- X,Y,Z Vertex 1 {m}
-  21.61, 49.7207, 8,                      !- X,Y,Z Vertex 2 {m}
-  20.39, 49.7207, 8,                      !- X,Y,Z Vertex 3 {m}
-  20.39, 48.5015, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {da77f417-1b08-4830-adc2-77bcf79b2caf}, !- Handle
   Skylight cons 461,                      !- Name
@@ -15757,23 +15655,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {cbbec25f-c305-43fb-b074-b46cd5773904}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_8,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 8.0571, 8,                       !- X,Y,Z Vertex 1 {m}
-  21.61, 9.2763, 8,                       !- X,Y,Z Vertex 2 {m}
-  20.39, 9.2763, 8,                       !- X,Y,Z Vertex 3 {m}
-  20.39, 8.0571, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {c95ba025-ed12-44c7-b354-c0f0f3dcb7f4}, !- Handle
@@ -15790,23 +15671,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {b69c6184-578f-4263-b82f-0431345e4de1}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_9,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 13.8348, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.61, 15.054, 8,                        !- X,Y,Z Vertex 2 {m}
-  2.39, 15.054, 8,                        !- X,Y,Z Vertex 3 {m}
-  2.39, 13.8348, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {7ee9426a-50c2-4dc6-bed3-0b9213afc7fe}, !- Handle
   Skylight cons 463,                      !- Name
@@ -15821,23 +15685,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {d9806133-0b68-46cc-8adf-7042f4a65244}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_35,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 48.5015, 8,                      !- X,Y,Z Vertex 1 {m}
-  15.61, 49.7207, 8,                      !- X,Y,Z Vertex 2 {m}
-  14.39, 49.7207, 8,                      !- X,Y,Z Vertex 3 {m}
-  14.39, 48.5015, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {cff1dbb7-f69d-418a-8a0f-d0c3c4a641ee}, !- Handle
@@ -15854,23 +15701,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {3ea36db3-7562-4c08-a6f2-b39957e15268}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_7,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 8.0571, 8,                       !- X,Y,Z Vertex 1 {m}
-  15.61, 9.2763, 8,                       !- X,Y,Z Vertex 2 {m}
-  14.39, 9.2763, 8,                       !- X,Y,Z Vertex 3 {m}
-  14.39, 8.0571, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {6fec2c4b-706f-47f6-b3c9-5ed3813efecb}, !- Handle
   Skylight cons 465,                      !- Name
@@ -15885,23 +15715,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {b50c7e2f-0fd6-4c01-8aaa-74385b923082}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_14,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 19.6126, 8,                       !- X,Y,Z Vertex 1 {m}
-  9.61, 20.8318, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.39, 20.8318, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.39, 19.6126, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {2b4f09dd-1a11-40e4-906a-efccdcc22ce0}, !- Handle
@@ -15918,23 +15731,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {716cf178-438e-4b8d-9561-bd66ca6c7318}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_17,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 25.3904, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.61, 26.6096, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.39, 26.6096, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.39, 25.3904, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {c6533727-542c-4a57-931e-6f8bf8a43a74}, !- Handle
   Skylight cons 467,                      !- Name
@@ -15949,23 +15745,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {3e5729e3-881c-4b0b-8c31-82cffd0df2f5}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_33,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 48.5015, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.61, 49.7207, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.39, 49.7207, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.39, 48.5015, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {e2b33949-bc65-46a9-918d-4a1e07933d2f}, !- Handle
@@ -15982,23 +15761,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {7d548dd0-8733-48ce-9af2-6b3a19558c4a}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_20,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 25.3904, 8,                      !- X,Y,Z Vertex 1 {m}
-  21.61, 26.6096, 8,                      !- X,Y,Z Vertex 2 {m}
-  20.39, 26.6096, 8,                      !- X,Y,Z Vertex 3 {m}
-  20.39, 25.3904, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {1ec287bd-328c-421f-b817-7b93d7fb8130}, !- Handle
   Skylight cons 469,                      !- Name
@@ -16013,23 +15775,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {56438bfb-e0b0-4451-a3e4-e01361f80a19}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_31,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 42.7237, 8,                      !- X,Y,Z Vertex 1 {m}
-  15.61, 43.9429, 8,                      !- X,Y,Z Vertex 2 {m}
-  14.39, 43.9429, 8,                      !- X,Y,Z Vertex 3 {m}
-  14.39, 42.7237, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {45c06fc3-9bbe-475e-a917-2b7e90a5a893}, !- Handle
@@ -16046,23 +15791,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {760bccd6-aa75-4083-8b36-8543195d51f3}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_1,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 2.2793, 8,                        !- X,Y,Z Vertex 1 {m}
-  3.61, 3.4985, 8,                        !- X,Y,Z Vertex 2 {m}
-  2.39, 3.4985, 8,                        !- X,Y,Z Vertex 3 {m}
-  2.39, 2.2793, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {1d27270e-2483-49f8-a83c-0a679a52b31a}, !- Handle
   Skylight cons 471,                      !- Name
@@ -16077,23 +15805,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {e0e2b94c-49a8-4306-8130-4d79f74eb294}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_12,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 13.8348, 8,                      !- X,Y,Z Vertex 1 {m}
-  21.61, 15.054, 8,                       !- X,Y,Z Vertex 2 {m}
-  20.39, 15.054, 8,                       !- X,Y,Z Vertex 3 {m}
-  20.39, 13.8348, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {373f981d-5d55-458f-87e3-a47bdc49b75f}, !- Handle
@@ -16110,23 +15821,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {c2504552-99de-40da-a83a-4b72416b1487}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_11,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 13.8348, 8,                      !- X,Y,Z Vertex 1 {m}
-  15.61, 15.054, 8,                       !- X,Y,Z Vertex 2 {m}
-  14.39, 15.054, 8,                       !- X,Y,Z Vertex 3 {m}
-  14.39, 13.8348, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {4b37f2a9-cf70-42fa-b24c-c8d51fdf6458}, !- Handle
   Skylight cons 473,                      !- Name
@@ -16141,23 +15835,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {7f11968e-054d-4c15-a0b5-4d9c205c7d5e}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_3,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 2.2793, 8,                       !- X,Y,Z Vertex 1 {m}
-  15.61, 3.4985, 8,                       !- X,Y,Z Vertex 2 {m}
-  14.39, 3.4985, 8,                       !- X,Y,Z Vertex 3 {m}
-  14.39, 2.2793, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {334e57b4-1001-4cf9-a63d-1a548909b101}, !- Handle
@@ -16174,23 +15851,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {8af8b1e2-4fe4-41b0-ad30-3ea8dbf08938}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_13,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 19.6126, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.61, 20.8318, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.39, 20.8318, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.39, 19.6126, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {869f1c20-0d29-4722-a98c-62672ab56563}, !- Handle
   Skylight cons 475,                      !- Name
@@ -16205,23 +15865,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {b8dc64b5-858d-4b64-a5e2-393c7290a0d5}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_24,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 31.1682, 8,                      !- X,Y,Z Vertex 1 {m}
-  21.61, 32.3874, 8,                      !- X,Y,Z Vertex 2 {m}
-  20.39, 32.3874, 8,                      !- X,Y,Z Vertex 3 {m}
-  20.39, 31.1682, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {67d746c1-fde8-4fbd-a821-df4920665d34}, !- Handle
@@ -16238,23 +15881,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {4d174c09-36b3-41b0-8501-48c87fa0cdd1}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_25,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 36.946, 8,                        !- X,Y,Z Vertex 1 {m}
-  3.61, 38.1652, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.39, 38.1652, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.39, 36.946, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {29301986-b89a-46dc-87cf-f3e7dcc3c27e}, !- Handle
   Skylight cons 477,                      !- Name
@@ -16269,23 +15895,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {d744e20c-f899-45bf-86c5-ad104c217010}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_22,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 31.1682, 8,                       !- X,Y,Z Vertex 1 {m}
-  9.61, 32.3874, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.39, 32.3874, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.39, 31.1682, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {91fecd65-269f-4817-9db7-1b5c6b663232}, !- Handle
@@ -16302,23 +15911,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {7c9b8efc-6eeb-42d9-88e9-504dbd7d0f07}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_4,          !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 2.2793, 8,                       !- X,Y,Z Vertex 1 {m}
-  21.61, 3.4985, 8,                       !- X,Y,Z Vertex 2 {m}
-  20.39, 3.4985, 8,                       !- X,Y,Z Vertex 3 {m}
-  20.39, 2.2793, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {b0f3bd59-bab6-4faf-98da-07f3ba26745b}, !- Handle
   Skylight cons 479,                      !- Name
@@ -16333,23 +15925,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {fb37ff81-aede-4169-b4f1-95d46fb83feb}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_19,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 25.3904, 8,                      !- X,Y,Z Vertex 1 {m}
-  15.61, 26.6096, 8,                      !- X,Y,Z Vertex 2 {m}
-  14.39, 26.6096, 8,                      !- X,Y,Z Vertex 3 {m}
-  14.39, 25.3904, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {d85a7f12-bb83-403d-8c16-6564e5424c81}, !- Handle
@@ -16366,23 +15941,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {1c5859be-b779-48be-b8c7-bf04ba92a72e}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_26,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 36.946, 8,                        !- X,Y,Z Vertex 1 {m}
-  9.61, 38.1652, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.39, 38.1652, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.39, 36.946, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {46940759-c236-4a1f-b8ed-4bf1fcb56693}, !- Handle
   Skylight cons 481,                      !- Name
@@ -16397,23 +15955,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {d9fd2c5d-0a76-47cc-b21a-0c0816d26862}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_29,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 42.7237, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.61, 43.9429, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.39, 43.9429, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.39, 42.7237, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {4b7367e6-108b-4980-bc1f-2e156c13e834}, !- Handle
@@ -16430,23 +15971,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {ad3d54dc-161b-4746-9fd1-ad9a88e18811}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_27,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 36.946, 8,                       !- X,Y,Z Vertex 1 {m}
-  15.61, 38.1652, 8,                      !- X,Y,Z Vertex 2 {m}
-  14.39, 38.1652, 8,                      !- X,Y,Z Vertex 3 {m}
-  14.39, 36.946, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {c3283a3e-1035-44d4-8a6a-90a5e0600fe4}, !- Handle
   Skylight cons 483,                      !- Name
@@ -16461,23 +15985,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {cd4d3115-9182-4795-8fff-d73101776edd}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_21,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.61, 31.1682, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.61, 32.3874, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.39, 32.3874, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.39, 31.1682, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {4f402f64-f985-4cf6-83cb-09924dcdbcee}, !- Handle
@@ -16494,23 +16001,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {dad6d023-8dcd-42c6-bf73-b903d9d8f3df}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_30,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 42.7237, 8,                       !- X,Y,Z Vertex 1 {m}
-  9.61, 43.9429, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.39, 43.9429, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.39, 42.7237, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {68924437-0cd2-415e-adcb-bf1cb0a4d1c4}, !- Handle
   Skylight cons 485,                      !- Name
@@ -16525,23 +16015,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {6c192e52-7100-4e30-94e8-4d2fde1c3f64}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_23,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 31.1682, 8,                      !- X,Y,Z Vertex 1 {m}
-  15.61, 32.3874, 8,                      !- X,Y,Z Vertex 2 {m}
-  14.39, 32.3874, 8,                      !- X,Y,Z Vertex 3 {m}
-  14.39, 31.1682, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {dca6712d-a81e-4182-bbea-cc55d578951a}, !- Handle
@@ -16558,23 +16031,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {bfbf4954-99e4-441e-89b3-358a3c98af29}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_18,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 25.3904, 8,                       !- X,Y,Z Vertex 1 {m}
-  9.61, 26.6096, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.39, 26.6096, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.39, 25.3904, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {8a8edc2c-eca6-460f-b6c1-a1fcb6c1384b}, !- Handle
   Skylight cons 487,                      !- Name
@@ -16589,23 +16045,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {fdbb909a-86cb-4810-840b-ba372d77f527}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_28,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 36.946, 8,                       !- X,Y,Z Vertex 1 {m}
-  21.61, 38.1652, 8,                      !- X,Y,Z Vertex 2 {m}
-  20.39, 38.1652, 8,                      !- X,Y,Z Vertex 3 {m}
-  20.39, 36.946, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {453ba5d7-c497-4f4c-9f9a-9a3b78a5685c}, !- Handle
@@ -16622,23 +16061,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {56dc029d-9be7-4be7-b4e5-c6c71c0ed271}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_16,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  21.61, 19.6126, 8,                      !- X,Y,Z Vertex 1 {m}
-  21.61, 20.8318, 8,                      !- X,Y,Z Vertex 2 {m}
-  20.39, 20.8318, 8,                      !- X,Y,Z Vertex 3 {m}
-  20.39, 19.6126, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {04a8b734-3b4c-4dca-a000-72de88e0c35b}, !- Handle
   Skylight cons 489,                      !- Name
@@ -16654,23 +16076,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {fc28770e-c2c5-4b08-bda1-90cc92f7792a}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_15,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  15.61, 19.6126, 8,                      !- X,Y,Z Vertex 1 {m}
-  15.61, 20.8318, 8,                      !- X,Y,Z Vertex 2 {m}
-  14.39, 20.8318, 8,                      !- X,Y,Z Vertex 3 {m}
-  14.39, 19.6126, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {1a0da0a0-225e-4225-b46e-ed053b33f670}, !- Handle
   Skylight cons 490,                      !- Name
@@ -16685,23 +16090,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {5e7266d7-b036-43e5-97b7-abf9f228da2b}, !- Handle
-  Aux_Gym_ZN_1_FLR_2_skylight_10,         !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {83d2969e-ca8b-47e1-8f00-88d8ec13fcc5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  9.61, 13.8348, 8,                       !- X,Y,Z Vertex 1 {m}
-  9.61, 15.054, 8,                        !- X,Y,Z Vertex 2 {m}
-  8.39, 15.054, 8,                        !- X,Y,Z Vertex 3 {m}
-  8.39, 13.8348, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {646780f2-5888-485c-b9d9-4cea87cbd52d}, !- Handle
@@ -18022,23 +17410,6 @@ OS:Material,
   0.7,                                    !- Solar Absorptance
   0.3;                                    !- Visible Absorptance
 
-OS:SubSurface,
-  {854ed180-6bbb-433a-9e97-be130648ce13}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_39,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 36.946, 8,                      !- X,Y,Z Vertex 1 {m}
-  16.443, 38.1652, 8,                     !- X,Y,Z Vertex 2 {m}
-  15.224, 38.1652, 8,                     !- X,Y,Z Vertex 3 {m}
-  15.224, 36.946, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {c6bcb4b5-28bf-4af3-8a65-7cd75c229923}, !- Handle
   Skylight cons 492,                      !- Name
@@ -18053,23 +17424,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {75099cb7-5a65-4ddd-99f9-775b91eac5af}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_9,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 8.0571, 8,                      !- X,Y,Z Vertex 1 {m}
-  16.443, 9.2763, 8,                      !- X,Y,Z Vertex 2 {m}
-  15.224, 9.2763, 8,                      !- X,Y,Z Vertex 3 {m}
-  15.224, 8.0571, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {0d9489c6-089c-4405-be2e-bc6edd35f05f}, !- Handle
@@ -18086,23 +17440,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {d775d935-7132-44b7-858d-3329c0954943}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_15,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 13.8348, 8,                     !- X,Y,Z Vertex 1 {m}
-  16.443, 15.054, 8,                      !- X,Y,Z Vertex 2 {m}
-  15.224, 15.054, 8,                      !- X,Y,Z Vertex 3 {m}
-  15.224, 13.8348, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {4e58ad45-0f13-4775-9338-b7bf5d82352b}, !- Handle
   Skylight cons 494,                      !- Name
@@ -18117,23 +17454,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {5b71085d-616f-4bb5-a320-ae3682af1bbf}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_17,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 13.8348, 8,                      !- X,Y,Z Vertex 1 {m}
-  29.11, 15.054, 8,                       !- X,Y,Z Vertex 2 {m}
-  27.89, 15.054, 8,                       !- X,Y,Z Vertex 3 {m}
-  27.89, 13.8348, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {dfd7c90c-5225-4db6-b030-94c4ed9e7c0c}, !- Handle
@@ -18150,23 +17470,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {32ea8a9c-08f1-4b3f-bcce-a4c6b06a6a74}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_2,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 2.2793, 8,                       !- X,Y,Z Vertex 1 {m}
-  10.11, 3.4985, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.89, 3.4985, 8,                        !- X,Y,Z Vertex 3 {m}
-  8.89, 2.2793, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {af851696-6258-4a3b-b19a-4fcc5b506903}, !- Handle
   Skylight cons 496,                      !- Name
@@ -18181,23 +17484,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {8c9ce3c3-b928-4d98-af4e-0e857a8336f1}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_18,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 13.8348, 8,                     !- X,Y,Z Vertex 1 {m}
-  35.443, 15.054, 8,                      !- X,Y,Z Vertex 2 {m}
-  34.224, 15.054, 8,                      !- X,Y,Z Vertex 3 {m}
-  34.224, 13.8348, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {c6b4b7f4-fc99-490b-b7ac-9665290cf6ca}, !- Handle
@@ -18214,23 +17500,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {61251e48-99fe-48fd-b423-7464d2c2770e}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_6,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 2.2793, 8,                      !- X,Y,Z Vertex 1 {m}
-  35.443, 3.4985, 8,                      !- X,Y,Z Vertex 2 {m}
-  34.224, 3.4985, 8,                      !- X,Y,Z Vertex 3 {m}
-  34.224, 2.2793, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {8601af52-4229-4e7d-bb7f-d180ebe6e9d7}, !- Handle
   Skylight cons 498,                      !- Name
@@ -18245,23 +17514,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {123a6699-859f-4a9d-bea0-37e1826767e0}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_21,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 19.6126, 8,                     !- X,Y,Z Vertex 1 {m}
-  16.443, 20.8318, 8,                     !- X,Y,Z Vertex 2 {m}
-  15.224, 20.8318, 8,                     !- X,Y,Z Vertex 3 {m}
-  15.224, 19.6126, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {2d272d99-201a-4446-a5e4-c625f467f5db}, !- Handle
@@ -18278,23 +17530,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {b2573771-1ecd-49e1-9fde-903fd759a61a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_16,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 13.8348, 8,                     !- X,Y,Z Vertex 1 {m}
-  22.776, 15.054, 8,                      !- X,Y,Z Vertex 2 {m}
-  21.557, 15.054, 8,                      !- X,Y,Z Vertex 3 {m}
-  21.557, 13.8348, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {5798d583-40ec-4308-9acb-2b6d582599aa}, !- Handle
   Skylight cons 500,                      !- Name
@@ -18309,23 +17544,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {1b81e0c5-42ff-4494-81ff-0668bf252151}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_36,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 31.1682, 8,                     !- X,Y,Z Vertex 1 {m}
-  35.443, 32.3874, 8,                     !- X,Y,Z Vertex 2 {m}
-  34.224, 32.3874, 8,                     !- X,Y,Z Vertex 3 {m}
-  34.224, 31.1682, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {b2f34bec-84e8-4b2c-82d3-279d6f294bda}, !- Handle
@@ -18342,23 +17560,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {e53b340a-2ec4-4b48-8388-6204a2b7ad08}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_42,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 36.946, 8,                      !- X,Y,Z Vertex 1 {m}
-  35.443, 38.1652, 8,                     !- X,Y,Z Vertex 2 {m}
-  34.224, 38.1652, 8,                     !- X,Y,Z Vertex 3 {m}
-  34.224, 36.946, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {a2a08379-68c9-4e66-9f48-5ad4809a9041}, !- Handle
   Skylight cons 502,                      !- Name
@@ -18373,23 +17574,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {aaf2a1e8-f05c-497a-be04-fd83dc93c3b4}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_37,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 36.946, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.776, 38.1652, 8,                      !- X,Y,Z Vertex 2 {m}
-  2.557, 38.1652, 8,                      !- X,Y,Z Vertex 3 {m}
-  2.557, 36.946, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {d43121f6-4d8a-4d67-a9c2-140161bb01a8}, !- Handle
@@ -18406,23 +17590,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {aee67238-a83b-4e44-a088-75489de1d25e}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_19,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 19.6126, 8,                      !- X,Y,Z Vertex 1 {m}
-  3.776, 20.8318, 8,                      !- X,Y,Z Vertex 2 {m}
-  2.557, 20.8318, 8,                      !- X,Y,Z Vertex 3 {m}
-  2.557, 19.6126, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {0f3ecfc5-fa16-4239-b057-053433f52e57}, !- Handle
   Skylight cons 504,                      !- Name
@@ -18437,23 +17604,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {8fad056b-299e-40c4-8a3c-2d77fd85f98b}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_13,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 13.8348, 8,                      !- X,Y,Z Vertex 1 {m}
-  3.776, 15.054, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.557, 15.054, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.557, 13.8348, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {49764c6e-d316-40ff-983d-43c0d3daefc3}, !- Handle
@@ -18470,23 +17620,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {a2c09a4d-ccf4-4cb3-9416-fb1856e6b96a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_28,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 25.3904, 8,                     !- X,Y,Z Vertex 1 {m}
-  22.776, 26.6096, 8,                     !- X,Y,Z Vertex 2 {m}
-  21.557, 26.6096, 8,                     !- X,Y,Z Vertex 3 {m}
-  21.557, 25.3904, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {1fc15a93-062f-4d77-9927-ebfccd2033df}, !- Handle
   Skylight cons 506,                      !- Name
@@ -18501,23 +17634,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {a3bb8cb4-98d8-4a9f-9e08-86775cc9ecbf}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_31,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 31.1682, 8,                      !- X,Y,Z Vertex 1 {m}
-  3.776, 32.3874, 8,                      !- X,Y,Z Vertex 2 {m}
-  2.557, 32.3874, 8,                      !- X,Y,Z Vertex 3 {m}
-  2.557, 31.1682, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {bc569e33-40b8-4c41-9100-e41810a4a192}, !- Handle
@@ -18534,23 +17650,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {ea68b41d-f3be-4724-84aa-133a474063ae}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_4,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 2.2793, 8,                      !- X,Y,Z Vertex 1 {m}
-  22.776, 3.4985, 8,                      !- X,Y,Z Vertex 2 {m}
-  21.557, 3.4985, 8,                      !- X,Y,Z Vertex 3 {m}
-  21.557, 2.2793, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {b4fc3299-4a2f-41a7-8048-7cc13d85d2cd}, !- Handle
   Skylight cons 508,                      !- Name
@@ -18565,23 +17664,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {7f82127e-ef5f-4aae-8881-8665cd093213}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_47,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 42.7237, 8,                      !- X,Y,Z Vertex 1 {m}
-  29.11, 43.9429, 8,                      !- X,Y,Z Vertex 2 {m}
-  27.89, 43.9429, 8,                      !- X,Y,Z Vertex 3 {m}
-  27.89, 42.7237, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {083bcd32-b0f0-4bbf-807e-01155253d526}, !- Handle
@@ -18598,23 +17680,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {da75a636-81f6-4993-b247-a04ab180bcad}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_23,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 19.6126, 8,                      !- X,Y,Z Vertex 1 {m}
-  29.11, 20.8318, 8,                      !- X,Y,Z Vertex 2 {m}
-  27.89, 20.8318, 8,                      !- X,Y,Z Vertex 3 {m}
-  27.89, 19.6126, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {60e718a9-11a0-4df2-9323-8b1d511f37f8}, !- Handle
   Skylight cons 510,                      !- Name
@@ -18629,23 +17694,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {cc1e44b3-9542-4683-b44f-b1f0a0f9b3c5}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_51,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 48.5015, 8,                     !- X,Y,Z Vertex 1 {m}
-  16.443, 49.7207, 8,                     !- X,Y,Z Vertex 2 {m}
-  15.224, 49.7207, 8,                     !- X,Y,Z Vertex 3 {m}
-  15.224, 48.5015, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {e5392eff-6bd8-43b0-a198-c1c73ba8e28c}, !- Handle
@@ -18662,23 +17710,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {9f0f63c8-6937-4249-8352-dc81e03757a9}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_54,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 48.5015, 8,                     !- X,Y,Z Vertex 1 {m}
-  35.443, 49.7207, 8,                     !- X,Y,Z Vertex 2 {m}
-  34.224, 49.7207, 8,                     !- X,Y,Z Vertex 3 {m}
-  34.224, 48.5015, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {882dca2b-b1e7-44fe-a748-5a516ac76a40}, !- Handle
   Skylight cons 512,                      !- Name
@@ -18693,23 +17724,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {d29abfda-c906-471d-9c71-467e4c45099a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_7,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 8.0571, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.776, 9.2763, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.557, 9.2763, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.557, 8.0571, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {63247334-72f1-4871-b940-0428fabb839a}, !- Handle
@@ -18726,23 +17740,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {1fc68e8a-f17d-49dc-b74d-9cda888c0982}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_30,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 25.3904, 8,                     !- X,Y,Z Vertex 1 {m}
-  35.443, 26.6096, 8,                     !- X,Y,Z Vertex 2 {m}
-  34.224, 26.6096, 8,                     !- X,Y,Z Vertex 3 {m}
-  34.224, 25.3904, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {379e27c4-04d8-488e-a545-7725dad31b6d}, !- Handle
   Skylight cons 514,                      !- Name
@@ -18757,23 +17754,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {34f7d6a5-c0c4-4cdd-980b-6b490dd1bfa6}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_49,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 48.5015, 8,                      !- X,Y,Z Vertex 1 {m}
-  3.776, 49.7207, 8,                      !- X,Y,Z Vertex 2 {m}
-  2.557, 49.7207, 8,                      !- X,Y,Z Vertex 3 {m}
-  2.557, 48.5015, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {77846c25-9c1d-48b1-be21-4c9bd6967240}, !- Handle
@@ -18790,23 +17770,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {51eecc61-2866-46f0-8549-a528305ea22a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_32,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 31.1682, 8,                      !- X,Y,Z Vertex 1 {m}
-  10.11, 32.3874, 8,                      !- X,Y,Z Vertex 2 {m}
-  8.89, 32.3874, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.89, 31.1682, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {851b7e23-ca08-432a-b28c-790839c599bb}, !- Handle
   Skylight cons 516,                      !- Name
@@ -18821,23 +17784,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {ce2b5a48-28ca-4015-89a5-30187ab6651a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_20,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 19.6126, 8,                      !- X,Y,Z Vertex 1 {m}
-  10.11, 20.8318, 8,                      !- X,Y,Z Vertex 2 {m}
-  8.89, 20.8318, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.89, 19.6126, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {eb4d3b2d-8d34-4e02-8829-7928e59197eb}, !- Handle
@@ -18854,23 +17800,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {621d287f-dc22-48b3-9fe4-341fffd3009a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_29,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 25.3904, 8,                      !- X,Y,Z Vertex 1 {m}
-  29.11, 26.6096, 8,                      !- X,Y,Z Vertex 2 {m}
-  27.89, 26.6096, 8,                      !- X,Y,Z Vertex 3 {m}
-  27.89, 25.3904, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {b4cb01df-7394-4672-b5b3-ad971cfe7bf7}, !- Handle
   Skylight cons 518,                      !- Name
@@ -18885,23 +17814,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {2587731e-9942-461a-87cb-3642f7eafdf3}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_46,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 42.7237, 8,                     !- X,Y,Z Vertex 1 {m}
-  22.776, 43.9429, 8,                     !- X,Y,Z Vertex 2 {m}
-  21.557, 43.9429, 8,                     !- X,Y,Z Vertex 3 {m}
-  21.557, 42.7237, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {7e2526f9-25c2-4489-b9f7-72d7de8db9d5}, !- Handle
@@ -18918,23 +17830,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {73893117-3d54-4b8e-9801-dac8babd60ef}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_25,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 25.3904, 8,                      !- X,Y,Z Vertex 1 {m}
-  3.776, 26.6096, 8,                      !- X,Y,Z Vertex 2 {m}
-  2.557, 26.6096, 8,                      !- X,Y,Z Vertex 3 {m}
-  2.557, 25.3904, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {0bdf3230-c1a2-448c-8f0a-81c7b7336b6e}, !- Handle
   Skylight cons 520,                      !- Name
@@ -18949,23 +17844,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {8cbc5df2-3eac-47fe-a667-d047e6dd77da}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_26,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 25.3904, 8,                      !- X,Y,Z Vertex 1 {m}
-  10.11, 26.6096, 8,                      !- X,Y,Z Vertex 2 {m}
-  8.89, 26.6096, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.89, 25.3904, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {98e0dd20-3efd-4d8b-82e2-bc2ea7c391e2}, !- Handle
@@ -18982,23 +17860,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {f45455c6-3e62-492a-9def-f2fe555614d3}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_38,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 36.946, 8,                       !- X,Y,Z Vertex 1 {m}
-  10.11, 38.1652, 8,                      !- X,Y,Z Vertex 2 {m}
-  8.89, 38.1652, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.89, 36.946, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {d81924e8-4a9c-496e-8951-c5bb10c1af0f}, !- Handle
   Skylight cons 522,                      !- Name
@@ -19013,23 +17874,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {b0eed464-9f2b-480f-a75f-ff3214ae9d97}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_22,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 19.6126, 8,                     !- X,Y,Z Vertex 1 {m}
-  22.776, 20.8318, 8,                     !- X,Y,Z Vertex 2 {m}
-  21.557, 20.8318, 8,                     !- X,Y,Z Vertex 3 {m}
-  21.557, 19.6126, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {a3672908-6795-4a64-98ac-98effe58077d}, !- Handle
@@ -19046,23 +17890,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {51b275c0-af20-4f27-87ee-28f06b1e8699}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_27,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 25.3904, 8,                     !- X,Y,Z Vertex 1 {m}
-  16.443, 26.6096, 8,                     !- X,Y,Z Vertex 2 {m}
-  15.224, 26.6096, 8,                     !- X,Y,Z Vertex 3 {m}
-  15.224, 25.3904, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {6c8371aa-f0ca-498d-a7b4-e6e49e791876}, !- Handle
   Skylight cons 524,                      !- Name
@@ -19077,23 +17904,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {2f85634a-8776-4c7f-adde-b4b72033029a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_44,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 42.7237, 8,                      !- X,Y,Z Vertex 1 {m}
-  10.11, 43.9429, 8,                      !- X,Y,Z Vertex 2 {m}
-  8.89, 43.9429, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.89, 42.7237, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {c5d03391-4d31-4c7b-9290-98cfad0aa863}, !- Handle
@@ -19110,23 +17920,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {58629264-6111-49a6-a06a-29d86de8b07e}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_53,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 48.5015, 8,                      !- X,Y,Z Vertex 1 {m}
-  29.11, 49.7207, 8,                      !- X,Y,Z Vertex 2 {m}
-  27.89, 49.7207, 8,                      !- X,Y,Z Vertex 3 {m}
-  27.89, 48.5015, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {4314b14e-229e-4d28-ad94-fb9316737f55}, !- Handle
   Skylight cons 526,                      !- Name
@@ -19141,23 +17934,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {5f72b959-20ec-4e5d-a166-f1e0056e6345}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_40,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 36.946, 8,                      !- X,Y,Z Vertex 1 {m}
-  22.776, 38.1652, 8,                     !- X,Y,Z Vertex 2 {m}
-  21.557, 38.1652, 8,                     !- X,Y,Z Vertex 3 {m}
-  21.557, 36.946, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {365f4ac8-ad11-44ca-9e76-e5347ce7ecc4}, !- Handle
@@ -19174,23 +17950,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {1e2702e9-06a7-4010-b57d-6e366a449e7a}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_35,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 31.1682, 8,                      !- X,Y,Z Vertex 1 {m}
-  29.11, 32.3874, 8,                      !- X,Y,Z Vertex 2 {m}
-  27.89, 32.3874, 8,                      !- X,Y,Z Vertex 3 {m}
-  27.89, 31.1682, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {caee4698-3e11-41bc-9b1a-866beacafdff}, !- Handle
   Skylight cons 528,                      !- Name
@@ -19205,23 +17964,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {ed08fa95-5fd1-4bce-a94c-a8c4ebcc67bf}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_50,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 48.5015, 8,                      !- X,Y,Z Vertex 1 {m}
-  10.11, 49.7207, 8,                      !- X,Y,Z Vertex 2 {m}
-  8.89, 49.7207, 8,                       !- X,Y,Z Vertex 3 {m}
-  8.89, 48.5015, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {ab939e64-8bde-49b9-9acd-74edb96dcdee}, !- Handle
@@ -19238,23 +17980,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {846cec0a-f905-4cdb-aaeb-76412257a38f}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_41,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 36.946, 8,                       !- X,Y,Z Vertex 1 {m}
-  29.11, 38.1652, 8,                      !- X,Y,Z Vertex 2 {m}
-  27.89, 38.1652, 8,                      !- X,Y,Z Vertex 3 {m}
-  27.89, 36.946, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {1d28549e-5e76-4ea1-8256-ccc3da15a2a8}, !- Handle
   Skylight cons 530,                      !- Name
@@ -19269,23 +17994,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {b419f763-e1a3-41ad-a109-46dcd8d8d1f9}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_48,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 42.7237, 8,                     !- X,Y,Z Vertex 1 {m}
-  35.443, 43.9429, 8,                     !- X,Y,Z Vertex 2 {m}
-  34.224, 43.9429, 8,                     !- X,Y,Z Vertex 3 {m}
-  34.224, 42.7237, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {5ffd3b48-c57a-4ca9-a600-777f10d25e73}, !- Handle
@@ -19302,23 +18010,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {e4efa90d-fb49-4968-8111-6b1ada7d7e7e}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_12,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 8.0571, 8,                      !- X,Y,Z Vertex 1 {m}
-  35.443, 9.2763, 8,                      !- X,Y,Z Vertex 2 {m}
-  34.224, 9.2763, 8,                      !- X,Y,Z Vertex 3 {m}
-  34.224, 8.0571, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {8c04c952-8454-44d9-8774-56f6daaaae7b}, !- Handle
   Skylight cons 532,                      !- Name
@@ -19333,23 +18024,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {44c5e4b6-33a0-42fd-a832-75e67b883877}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_14,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 13.8348, 8,                      !- X,Y,Z Vertex 1 {m}
-  10.11, 15.054, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.89, 15.054, 8,                        !- X,Y,Z Vertex 3 {m}
-  8.89, 13.8348, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {c9288f8d-535f-4713-87a0-e691d4686888}, !- Handle
@@ -19366,23 +18040,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {888cc82f-488a-4260-8b00-445f4ef98108}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_24,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  35.443, 19.6126, 8,                     !- X,Y,Z Vertex 1 {m}
-  35.443, 20.8318, 8,                     !- X,Y,Z Vertex 2 {m}
-  34.224, 20.8318, 8,                     !- X,Y,Z Vertex 3 {m}
-  34.224, 19.6126, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {a787b058-1d69-42b6-971f-6e41fa3daee2}, !- Handle
   Skylight cons 534,                      !- Name
@@ -19397,23 +18054,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {83558a9a-b5b8-4714-8f63-6f1bf302c780}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_45,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 42.7237, 8,                     !- X,Y,Z Vertex 1 {m}
-  16.443, 43.9429, 8,                     !- X,Y,Z Vertex 2 {m}
-  15.224, 43.9429, 8,                     !- X,Y,Z Vertex 3 {m}
-  15.224, 42.7237, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {15dcad21-5085-4bab-9938-8dc7a727a020}, !- Handle
@@ -19430,23 +18070,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {e7eb1ffb-fb88-4127-8804-fe9fbd8dd23b}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_34,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 31.1682, 8,                     !- X,Y,Z Vertex 1 {m}
-  22.776, 32.3874, 8,                     !- X,Y,Z Vertex 2 {m}
-  21.557, 32.3874, 8,                     !- X,Y,Z Vertex 3 {m}
-  21.557, 31.1682, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {4992d432-1bf5-40c1-88f9-5669c9348703}, !- Handle
   Skylight cons 536,                      !- Name
@@ -19461,23 +18084,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {513e07d1-a3e7-4a92-8f24-5900fd43e3d1}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_11,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 8.0571, 8,                       !- X,Y,Z Vertex 1 {m}
-  29.11, 9.2763, 8,                       !- X,Y,Z Vertex 2 {m}
-  27.89, 9.2763, 8,                       !- X,Y,Z Vertex 3 {m}
-  27.89, 8.0571, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {e192aa20-595f-4cdb-b675-40016e4741d7}, !- Handle
@@ -19494,23 +18100,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {64b287f5-eddb-4504-83da-4d1578c1c684}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_3,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 2.2793, 8,                      !- X,Y,Z Vertex 1 {m}
-  16.443, 3.4985, 8,                      !- X,Y,Z Vertex 2 {m}
-  15.224, 3.4985, 8,                      !- X,Y,Z Vertex 3 {m}
-  15.224, 2.2793, 8;                      !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {354f1af2-15aa-45db-93e9-7d82e7feb5cb}, !- Handle
   Skylight cons 538,                      !- Name
@@ -19525,23 +18114,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {7a69cfb6-e25f-43a2-a5d9-88465c440ba3}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_10,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 8.0571, 8,                      !- X,Y,Z Vertex 1 {m}
-  22.776, 9.2763, 8,                      !- X,Y,Z Vertex 2 {m}
-  21.557, 9.2763, 8,                      !- X,Y,Z Vertex 3 {m}
-  21.557, 8.0571, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {39fe70dd-d2cc-465b-8acb-8b33f30583ce}, !- Handle
@@ -19558,23 +18130,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {06038046-e569-4f2c-a57a-124a0e028432}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_8,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  10.11, 8.0571, 8,                       !- X,Y,Z Vertex 1 {m}
-  10.11, 9.2763, 8,                       !- X,Y,Z Vertex 2 {m}
-  8.89, 9.2763, 8,                        !- X,Y,Z Vertex 3 {m}
-  8.89, 8.0571, 8;                        !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {119a4f7f-af7a-452b-82f1-1500726272dd}, !- Handle
   Skylight cons 540,                      !- Name
@@ -19589,23 +18144,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {9526f99c-662e-4b8c-87ff-bfda3d627b8e}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_43,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 42.7237, 8,                      !- X,Y,Z Vertex 1 {m}
-  3.776, 43.9429, 8,                      !- X,Y,Z Vertex 2 {m}
-  2.557, 43.9429, 8,                      !- X,Y,Z Vertex 3 {m}
-  2.557, 42.7237, 8;                      !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {7542e291-d6e9-4f66-ad63-fa37ca40b43e}, !- Handle
@@ -19622,23 +18160,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {39aa7aa1-3451-4c57-a285-ad25f4e4c851}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_33,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  16.443, 31.1682, 8,                     !- X,Y,Z Vertex 1 {m}
-  16.443, 32.3874, 8,                     !- X,Y,Z Vertex 2 {m}
-  15.224, 32.3874, 8,                     !- X,Y,Z Vertex 3 {m}
-  15.224, 31.1682, 8;                     !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {6bf69121-113f-49be-9ac6-c70523b56021}, !- Handle
   Skylight cons 542,                      !- Name
@@ -19653,23 +18174,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {d2b65561-8741-44cc-9b58-5da35d31c672}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_1,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  3.776, 2.2793, 8,                       !- X,Y,Z Vertex 1 {m}
-  3.776, 3.4985, 8,                       !- X,Y,Z Vertex 2 {m}
-  2.557, 3.4985, 8,                       !- X,Y,Z Vertex 3 {m}
-  2.557, 2.2793, 8;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {532c1ce6-930f-42cb-b29c-054bb04f0f41}, !- Handle
@@ -19686,23 +18190,6 @@ OS:Rendering:Color,
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
 
-OS:SubSurface,
-  {6708baf3-5338-40b7-b58f-b003baf2edad}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_5,              !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  29.11, 2.2793, 8,                       !- X,Y,Z Vertex 1 {m}
-  29.11, 3.4985, 8,                       !- X,Y,Z Vertex 2 {m}
-  27.89, 3.4985, 8,                       !- X,Y,Z Vertex 3 {m}
-  27.89, 2.2793, 8;                       !- X,Y,Z Vertex 4 {m}
-
 OS:Construction,
   {b8d4da79-b1ab-4da7-98ac-b22869d627a5}, !- Handle
   Skylight cons 544,                      !- Name
@@ -19717,23 +18204,6 @@ OS:Rendering:Color,
   65,                                     !- Rendering Red Value
   105,                                    !- Rendering Green Value
   225;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {fd3975cf-02b1-45d4-85d4-07abf34cf396}, !- Handle
-  Gym_ZN_1_FLR_2_skylight_52,             !- Name
-  Skylight,                               !- Sub Surface Type
-  ,                                       !- Construction Name
-  {4b0554d6-47cf-4cca-baee-0fb358754655}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  1,                                      !- Multiplier
-  ,                                       !- Number of Vertices
-  22.776, 48.5015, 8,                     !- X,Y,Z Vertex 1 {m}
-  22.776, 49.7207, 8,                     !- X,Y,Z Vertex 2 {m}
-  21.557, 49.7207, 8,                     !- X,Y,Z Vertex 3 {m}
-  21.557, 48.5015, 8;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Construction,
   {8b5e894f-734a-4dec-9961-d0b8280f1b53}, !- Handle
