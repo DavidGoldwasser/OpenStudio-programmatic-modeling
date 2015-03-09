@@ -13,12 +13,12 @@
 
 
 #start the measure
-class XcelEdaTariffSelectionandModelSetup < OpenStudio::Ruleset::WorkspaceUserScript
+class XcelEDATariffSelectionandModelSetup < OpenStudio::Ruleset::WorkspaceUserScript
   
   #define the name that a user will see, this method may be deprecated as
   #the display name in PAT comes from the name field in measure.xml
   def name
-    return "XcelEdaTariffSelectionandModelSetup"
+    return "XcelEDATariffSelectionandModelSetup"
   end
   
   #define the arguments that the user will input
@@ -369,7 +369,7 @@ class XcelEdaTariffSelectionandModelSetup < OpenStudio::Ruleset::WorkspaceUserSc
 end #end the measure
 
 #this allows the measure to be use by the application
-XcelEdaTariffSelectionandModelSetup.new.registerWithApplication
+XcelEDATariffSelectionandModelSetup.new.registerWithApplication
 
 
 

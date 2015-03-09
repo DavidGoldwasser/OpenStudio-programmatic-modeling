@@ -5,7 +5,7 @@ require "#{File.dirname(__FILE__)}/../measure.rb"
 
 require 'minitest/autorun'
 
-class XcelEdaTariffSelectionandModelSetup_Test < MiniTest::Test
+class XcelEDATariffSelectionandModelSetup_Test < MiniTest::Test
   
   # def setup
   # end
@@ -13,10 +13,10 @@ class XcelEdaTariffSelectionandModelSetup_Test < MiniTest::Test
   # def teardown
   # end
   
-  def test_XcelEdaTariffSelectionandModelSetup_NumInputs
+  def test_XcelEDATariffSelectionandModelSetup_NumInputs
      
     # create an instance of the measure
-    measure = XcelEdaTariffSelectionandModelSetup.new
+    measure = XcelEDATariffSelectionandModelSetup.new
     
     # create an instance of a runner
     runner = OpenStudio::Ruleset::OSRunner.new
@@ -37,10 +37,10 @@ class XcelEdaTariffSelectionandModelSetup_Test < MiniTest::Test
     assert((arguments[1].hasDefaultValue))
   end
 
-  def test_XcelEdaTariffSelectionandModelSetup_empty_model
+  def test_XcelEDATariffSelectionandModelSetup_empty_model
 
     # create an instance of the measure
-    measure = XcelEdaTariffSelectionandModelSetup.new
+    measure = XcelEDATariffSelectionandModelSetup.new
 
     # create an instance of a runner
     runner = OpenStudio::Ruleset::OSRunner.new
@@ -72,10 +72,10 @@ class XcelEdaTariffSelectionandModelSetup_Test < MiniTest::Test
 
   end
 
-  def test_XcelEdaTariffSelectionandModelSetup_good_model
+  def test_XcelEDATariffSelectionandModelSetup_good_model
 
     # create an instance of the measure
-    measure = XcelEdaTariffSelectionandModelSetup.new
+    measure = XcelEDATariffSelectionandModelSetup.new
 
     # create an instance of a runner
     runner = OpenStudio::Ruleset::OSRunner.new

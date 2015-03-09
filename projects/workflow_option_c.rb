@@ -36,9 +36,9 @@ def populate_value_sets()
   # jobs to run
   value_sets = []
   value_sets << {:building_type => "Office", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "LargeHotel", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "Warehouse", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
+  #value_sets << {:building_type => "LargeHotel", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
+  #value_sets << {:building_type => "Warehouse", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
+  #value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
 
   return value_sets
 end
@@ -91,7 +91,7 @@ def populate_workflow(value_set,seed_model)
   measures << {
       :name => 'add_sys3_pszac',
       :desc => 'Add Sys3 Pszac',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AddSys3Pszac')}",
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AddSys3PSZAC')}",
       :arguments => arguments,
       :variables => variables
   }
@@ -131,7 +131,7 @@ def populate_workflow(value_set,seed_model)
   measures << {
       :name => 'xcel_eda_tariff_selectionand_model_setup',
       :desc => 'Xcel EDA Tariff Selectionand Model Setup',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEdaTariffSelectionandModelSetup')}",
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEDATariffSelectionandModelSetup')}",
       :arguments => arguments,
       :variables => variables
   }

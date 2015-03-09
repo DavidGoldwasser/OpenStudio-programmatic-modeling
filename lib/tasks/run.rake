@@ -89,17 +89,19 @@ def create_model(value_set,seed_model,save_string)
     model = OpenStudio::Model::Model.new
   end
 
+  model_measures = []
+
   # add model measures to analysis
   measures.each do |m|
 
     # load the measure
     require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
 
-    # todo - see if I can directly get the class name. Can use resource.json if I have to
-
-    # infer class from name
-    name_without_prefix = m[:name].split("|")
-    measure_class = "#{name_without_prefix.last}".split('_').collect(&:capitalize).join
+    # get the measure class name from the JSON file
+    path_to_measure_json =  (Dir.pwd + "/" + m[:path] + "/measure.json")
+    temp = File.read(path_to_measure_json)
+    measure_json = JSON.parse(temp)
+    measure_class = measure_json["classname"]
 
     # create an instance of the measure
     measure = eval(measure_class).new
@@ -108,6 +110,8 @@ def create_model(value_set,seed_model,save_string)
     if not measure.is_a?(OpenStudio::Ruleset::ModelUserScript)
       puts "Skipping #{measure.name}. It isn't a model measure."
       next
+    else
+      model_measures << m
     end
 
     # get arguments
@@ -154,15 +158,24 @@ def create_model(value_set,seed_model,save_string)
   ft = OpenStudio::EnergyPlus::ForwardTranslator.new
   workspace = ft.translateModel(model)
 
+  energy_plus_measures = []
+
   # add energy plus measures to analysis
   measures.each do |m|
+
+    # stop here if measure already identified as model measure
+    if model_measures.include? m
+      next
+    end
 
     # load the measure
     require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
 
-    # infer class from name
-    name_without_prefix = m[:name].split("|")
-    measure_class = "#{name_without_prefix.last}".split('_').collect(&:capitalize).join
+    # get the measure class name from the JSON file
+    path_to_measure_json =  (Dir.pwd + "/" + m[:path] + "/measure.json")
+    temp = File.read(path_to_measure_json)
+    measure_json = JSON.parse(temp)
+    measure_class = measure_json["classname"]
 
     # create an instance of the measure
     measure = eval(measure_class).new
@@ -171,6 +184,8 @@ def create_model(value_set,seed_model,save_string)
     if not measure.is_a?(OpenStudio::Ruleset::WorkspaceUserScript)
       puts "Skipping #{measure.name}. It isn't an EnergyPlus measure."
       next
+    else
+      energy_plus_measures << m
     end
 
     # get arguments
@@ -211,9 +226,9 @@ def create_model(value_set,seed_model,save_string)
   puts "Saving #{output_file_path}"
   workspace.save(output_file_path,true)
 
-  # todo - look at ChangeBuildingLocation, it things it is in files, not weather? Can I save the folder like app does
+  # todo - look at ChangeBuildingLocation, it thinks epw it is in files, not weather? Can I save the folder like app does
 
-  # todo - add support for E+ and reporting measures (will require E+ run)
+  # todo - reporting measures (will require E+ run)
 
 end
 
