@@ -195,10 +195,11 @@ def populate_workflow(value_set,seed_model)
   measures << {
       :name => 'xcel_eda_tariff_selectionand_model_setup',
       :desc => 'Xcel EDA Tariff Selectionand Model Setup',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEdaTariffSelectionandModelSetup')}",
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEDATariffSelectionandModelSetup')}",
       :arguments => arguments,
       :variables => variables
   }
+
 
   # start of reporting measures
 
