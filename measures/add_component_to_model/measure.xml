@@ -2,7 +2,7 @@
   <schema_version>3.0</schema_version>
   <name>add_component_to_model</name>
   <uid>9d066804-85a4-436e-addd-3e7e27ccfa16</uid>
-  <version_id>9ae5c842-5a93-42ae-bbbc-58c8a6440d77</version_id>
+  <version_id>f45995e5-c442-4bda-ac80-492d989f5884</version_id>
   <xml_checksum>D8922A73</xml_checksum>
   <class_name>AddComponentToModel</class_name>
   <display_name>AddComponentToModel</display_name>
@@ -104,7 +104,7 @@
       <filename>test.osm</filename>
       <filetype>osm</filetype>
       <usage_type>test</usage_type>
-      <checksum>53EDFC6E</checksum>
+      <checksum>0F95BE24</checksum>
     </file>
   </files>
 </measure>

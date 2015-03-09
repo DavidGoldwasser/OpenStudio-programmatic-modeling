@@ -31117,3 +31117,119 @@ OS:ElectricEquipment:Definition,
   0.5,                                    !- Fraction Radiant
   0;                                      !- Fraction Lost
 
+OS:ClimateZones,
+  {82a5ac22-6a14-4b84-b8f6-173f246f798a}, !- Handle
+  ,                                       !- Active Institution
+  ,                                       !- Active Year
+  ASHRAE,                                 !- Climate Zone Institution Name 1
+  ANSI/ASHRAE Standard 169,               !- Climate Zone Document Name 1
+  2006,                                   !- Climate Zone Document Year 1
+  ,                                       !- Climate Zone Value 1
+  CEC,                                    !- Climate Zone Institution Name 2
+  California Climate Zone Descriptions,   !- Climate Zone Document Name 2
+  1995,                                   !- Climate Zone Document Year 2
+  ;                                       !- Climate Zone Value 2
+
+OS:LifeCycleCost:Parameters,
+  {408d11e4-6d6d-40ea-9f42-5738bb654ddb}, !- Handle
+  FEMP,                                   !- Analysis Type
+  ,                                       !- Discounting Convention
+  ,                                       !- Inflation Approach
+  ,                                       !- Real Discount Rate
+  ,                                       !- Nominal Discount Rate
+  ,                                       !- Inflation
+  ,                                       !- Base Date Month
+  ,                                       !- Base Date Year
+  ,                                       !- Service Date Month
+  ,                                       !- Service Date Year
+  ,                                       !- Length of Study Period in Years
+  ,                                       !- Tax Rate
+  ,                                       !- Depreciation Method
+  Yes;                                    !- Use NIST Fuel Escalation Rates
+
+OS:YearDescription,
+  {92a9ba61-f06b-4279-a612-ac351a1730a2}; !- Handle
+
+OS:RadianceParameters,
+  {22c62f62-39ad-487c-bd37-ffe08553c4d0}, !- Handle
+  1,                                      !- Accumulated Rays per Record
+  0,                                      !- Direct Threshold
+  1,                                      !- Direct Certainty
+  1,                                      !- Direct Jitter
+  1,                                      !- Direct Pretest
+  6,                                      !- Ambient Bounces VMX
+  2,                                      !- Ambient Bounces DMX
+  4050,                                   !- Ambient Divisions VMX
+  512,                                    !- Ambient Divisions DMX
+  256,                                    !- Ambient Supersamples
+  0.001,                                  !- Limit Weight VMX
+  0.001,                                  !- Limit Weight DMX
+  500,                                    !- Klems Sampling Density
+  146;                                    !- Sky Discretization Resolution
+
+OS:SimulationControl,
+  {b1ff6fcb-b609-407d-b5fe-03c3e916f416}; !- Handle
+
+OS:Sizing:Parameters,
+  {4f35a5d7-30e0-43d4-874f-f393aad3687b}, !- Handle
+  1.25,                                   !- Heating Sizing Factor
+  1.15;                                   !- Cooling Sizing Factor
+
+OS:ProgramControl,
+  {195aa67e-5c7d-4c41-bd5b-b2e577448be0}; !- Handle
+
+OS:Timestep,
+  {e876413b-ae72-43d6-9fe7-c11f7453f33e}, !- Handle
+  6;                                      !- Number of Timesteps per Hour
+
+OS:OutputControl:ReportingTolerances,
+  {64c4166d-5a3c-4e8c-afe1-9f99b2885303}; !- Handle
+
+OS:ConvergenceLimits,
+  {e055a970-490e-48d1-9aad-4675f156e446}; !- Handle
+
+OS:ShadowCalculation,
+  {68b40975-e810-45d0-bc8b-90eb653bf619}, !- Handle
+  7,                                      !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+OS:SurfaceConvectionAlgorithm:Inside,
+  {5a628b94-7063-4f2e-9238-eb11c47d4e8b}, !- Handle
+  TARP;                                   !- Algorithm
+
+OS:SurfaceConvectionAlgorithm:Outside,
+  {dd550347-0319-4c67-ae41-e6b0ccc6c475}, !- Handle
+  DOE-2;                                  !- Algorithm
+
+OS:HeatBalanceAlgorithm,
+  {513ca285-7555-407d-aae5-f43995277db3}, !- Handle
+  ConductionTransferFunction,             !- Algorithm
+  200;                                    !- Surface Temperature Upper Limit {F}
+
+OS:ZoneAirHeatBalanceAlgorithm,
+  {4f9fed01-93d5-4289-9b25-f5e6c49fe08b}, !- Handle
+  AnalyticalSolution;                     !- Algorithm
+
+OS:ZoneAirContaminantBalance,
+  {5f7bc728-0aec-44c2-adcb-3f5e2e19ad92}; !- Handle
+
+OS:ZoneCapacitanceMultiplier:ResearchSpecial,
+  {6ea7e556-6ed6-4ef3-8358-0a9ba044b70e}, !- Handle
+  ,                                       !- Temperature Capacity Multiplier
+  ,                                       !- Humidity Capacity Multiplier
+  ;                                       !- Carbon Dioxide Capacity Multiplier
+
+OS:RunPeriod,
+  {447a4bee-43c0-4021-8428-bfe5972c798b}, !- Handle
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  12,                                     !- End Month
+  31,                                     !- End Day of Month
+  ,                                       !- Use Weather File Holidays and Special Days
+  ,                                       !- Use Weather File Daylight Saving Period
+  ,                                       !- Apply Weekend Holiday Rule
+  ,                                       !- Use Weather File Rain Indicators
+  ,                                       !- Use Weather File Snow Indicators
+  ;                                       !- Number of Times Runperiod to be Repeated
+

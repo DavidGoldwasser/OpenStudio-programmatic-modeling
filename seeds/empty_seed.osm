@@ -49,3 +49,86 @@ OS:Building,
 OS:Facility,
   {57faeb43-443e-4961-8221-fe11336fdc41}; !- Handle
 
+OS:RadianceParameters,
+  {2adc2ec0-3b43-4af6-865f-34f6f251112e}, !- Handle
+  1,                                      !- Accumulated Rays per Record
+  0,                                      !- Direct Threshold
+  1,                                      !- Direct Certainty
+  1,                                      !- Direct Jitter
+  1,                                      !- Direct Pretest
+  6,                                      !- Ambient Bounces VMX
+  2,                                      !- Ambient Bounces DMX
+  4050,                                   !- Ambient Divisions VMX
+  512,                                    !- Ambient Divisions DMX
+  256,                                    !- Ambient Supersamples
+  0.001,                                  !- Limit Weight VMX
+  0.001,                                  !- Limit Weight DMX
+  500,                                    !- Klems Sampling Density
+  146;                                    !- Sky Discretization Resolution
+
+OS:SimulationControl,
+  {f3a396be-ded9-47bd-8c93-9e2bac2884ff}; !- Handle
+
+OS:Sizing:Parameters,
+  {a1bb613f-8c24-4a5d-b4cd-198e7ed57581}, !- Handle
+  1.25,                                   !- Heating Sizing Factor
+  1.15;                                   !- Cooling Sizing Factor
+
+OS:ProgramControl,
+  {912b7772-6daf-4d62-bd18-fa6f7b50aff2}; !- Handle
+
+OS:Timestep,
+  {966a617f-7377-48c1-836d-e58f87e3c8d9}, !- Handle
+  4;                                      !- Number of Timesteps per Hour
+
+OS:OutputControl:ReportingTolerances,
+  {e4209ccc-2834-4b4c-af7b-a14d3cb76ee4}; !- Handle
+
+OS:ConvergenceLimits,
+  {c6756c9a-8bf1-4e09-bd9e-0c454ef9922d}; !- Handle
+
+OS:ShadowCalculation,
+  {e01d6e3a-4c00-4c18-83eb-19434622a851}, !- Handle
+  7,                                      !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+OS:SurfaceConvectionAlgorithm:Inside,
+  {9d265dc1-d476-4e26-abdf-69d8f4a2019d}, !- Handle
+  TARP;                                   !- Algorithm
+
+OS:SurfaceConvectionAlgorithm:Outside,
+  {7626ef08-3f39-4810-ae05-595bbb761586}, !- Handle
+  DOE-2;                                  !- Algorithm
+
+OS:HeatBalanceAlgorithm,
+  {9ac9db1f-072a-48bd-806d-5878d13ad82f}, !- Handle
+  ConductionTransferFunction,             !- Algorithm
+  200;                                    !- Surface Temperature Upper Limit {F}
+
+OS:ZoneAirHeatBalanceAlgorithm,
+  {e723800d-e828-4a77-a546-8f7d260381d5}, !- Handle
+  AnalyticalSolution;                     !- Algorithm
+
+OS:ZoneAirContaminantBalance,
+  {cde72b6d-c3a0-4871-9915-5c26221036e8}; !- Handle
+
+OS:ZoneCapacitanceMultiplier:ResearchSpecial,
+  {479f0bcc-fba5-44ac-aba3-ad99a39e2804}, !- Handle
+  ,                                       !- Temperature Capacity Multiplier
+  ,                                       !- Humidity Capacity Multiplier
+  ;                                       !- Carbon Dioxide Capacity Multiplier
+
+OS:RunPeriod,
+  {40d9dbad-2b7f-4d4f-9ee2-1cad1c721ce4}, !- Handle
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  12,                                     !- End Month
+  31,                                     !- End Day of Month
+  ,                                       !- Use Weather File Holidays and Special Days
+  ,                                       !- Use Weather File Daylight Saving Period
+  ,                                       !- Apply Weekend Holiday Rule
+  ,                                       !- Use Weather File Rain Indicators
+  ,                                       !- Use Weather File Snow Indicators
+  ;                                       !- Number of Times Runperiod to be Repeated
+

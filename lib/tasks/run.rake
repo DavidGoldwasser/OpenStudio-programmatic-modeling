@@ -215,7 +215,7 @@ def create_model(value_set,seed_model,save_string)
     #puts "Measure is running from #{Dir.pwd}"
 
     # run the measure
-    measure.run(model, runner, argument_map)
+    measure.run(workspace, runner, argument_map)
     result = runner.result
     show_output(result)
 
