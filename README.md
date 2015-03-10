@@ -47,9 +47,40 @@ bundle install
 rake -T
 ```
 
-```ruby
+```
 rake workflow:make_models
 ```
 
+
 ![Configure](docs/img/rake_t.png)
 
+## Summary of Relevant Rake Methods
+
+### rake update_measure_jsons
+* These are needed by make_json and make_models.
+* Run this if you add or remove arguments to your measure.
+
+### rake workflow:make_jsons
+* User prompt to select .rb file to run.
+* This populates the analysis directory with files need to run an analysis on the server.
+* The zip file contains the seed model, weather file, measures and other resources that will be pushed to the server later.
+
+### rake_workflow:make_models
+* User prompt to select .rb file to run.
+* This Populates the analysis_local directory with OSM and IDF files.
+* In the current state this requires OpenStudio. In the future this will use the openstudio-analysis gem instead.
+
+### rake workflow:queue
+* This will push all the files in the analysis directory up to a server in the location configured in the run.rake file
+
+### rake workflow:start
+* This will start all of the jobs that hare already been put in the queue on the server.
+
+## Configuring the run.rake file
+Currently the "lib/tasks/run.rake" file is used to determine the type of analysis. This will probably be moved to a better location for user editing, or maybe will be in each .rb file in the project directory. These are the only constants in the file that should be edited as needed.
+
+```ruby
+# set constants
+ANALYSIS_TYPE = 'single_run'
+HOSTNAME = 'http://localhost:8080'
+```
