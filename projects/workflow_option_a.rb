@@ -57,7 +57,7 @@ def populate_workflow(value_set,seed_model)
 
   # start of OpenStudio measures
 
-  # adding space_type_and_construction_set_wizard
+  # adding SpaceTypeAndConstructionSetWizard
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'buildingType', :desc => 'Building Type', :value => building_type}
@@ -66,14 +66,12 @@ def populate_workflow(value_set,seed_model)
   arguments << {:name => 'createConstructionSet', :desc => 'Create Construction Set?', :value => true}
   arguments << {:name => 'setBuildingDefaults', :desc => 'Set Building Defaults Using New Objects?', :value => true}
   measures << {
-      :name => 'space_type_and_construction_set_wizard',
-      :desc => 'Space Type And Construction Set Wizard',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'SpaceTypeAndConstructionSetWizard')}",
       :arguments => arguments,
       :variables => variables
   }
 
-  # adding bar_aspect_ratio_study
+  # adding BarAspectRatioStudy
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'total_bldg_area_ip', :desc => 'Total Building Floor Area (ft^2).', :value => total_bldg_area_ip}
@@ -83,8 +81,6 @@ def populate_workflow(value_set,seed_model)
   variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
   variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10}}
   measures << {
-      :name => 'bar_aspect_ratio_study',
-      :desc => 'Bar Aspect Ratio Study',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioStudy')}",
       :arguments => arguments,
       :variables => variables
@@ -116,28 +112,20 @@ def populate_workflow(value_set,seed_model)
   end
 
   # adding assign_thermostats_basedon_standards_building_typeand_standards_space_type
-  measures << {
-      :name => 'assign_thermostats_basedon_standards_building_typeand_standards_space_type',
-      :desc => 'Assign Thermostats Basedon Standards Building Typeand Standards Space Type',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}",
-      :variables => [],
-      :arguments => []
-  }
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}"}
 
   # use case statement to choose HVAC based on building type
   case building_type
 
     when "Office"
 
-      # adding aedg_office_hvac_ashp_doas
+      # adding AedgOfficeHvacAshpDoas
       arguments = [] # :value is just a value
       variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
       arguments << {:name => 'ceilingReturnPlenumSpaceType', :desc => 'This space type should be part of a ceiling return air plenum.', :value => nil} # this is an optional argument
       arguments << {:name => 'costTotalHVACSystem', :desc => 'Total Cost for HVAC System ($).', :value => 0.0}
       arguments << {:name => 'remake_schedules', :desc => 'Apply recommended availability and ventilation schedules for air handlers?"', :value => true}
       measures << {
-          :name => 'aedg_office_hvac_ashp_doas',
-          :desc => 'AEDG Office Hvac Ashp Doas',
           :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgOfficeHvacAshpDoas')}",
           :arguments => arguments,
           :variables => variables
@@ -145,15 +133,13 @@ def populate_workflow(value_set,seed_model)
 
     when "PrimarySchool" , "SecondarySchool"
 
-      # adding aedg_k12_hvac_dual_duct_doas
+      # adding AedgK12HvacDualDuctDoas
       arguments = [] # :value is just a value
       variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
       arguments << {:name => 'ceilingReturnPlenumSpaceType', :desc => 'This space type should be part of a ceiling return air plenum.', :value => nil} # this is an optional argument
       arguments << {:name => 'costTotalHVACSystem', :desc => 'Total Cost for HVAC System ($).', :value => 0.0}
       arguments << {:name => 'remake_schedules', :desc => 'Apply recommended availability and ventilation schedules for air handlers?"', :value => true}
       measures << {
-          :name => 'aedg_k12_hvac_dual_duct_doas',
-          :desc => 'AEDG K12 Hvac Dual Duct Doas',
           :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12HvacDualDuctDoas')}",
           :arguments => arguments,
           :variables => variables
@@ -161,20 +147,18 @@ def populate_workflow(value_set,seed_model)
 
     else
 
-      # adding enable_ideal_air_loads_for_all_zones
+      # adding EnableIdealAirLoadsForAllZones
       # this shows streamlined workflow item when no custom description and no arguments or variables
       measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'EnableIdealAirLoadsForAllZones')}"}
 
   end
 
-  # adding set_building_location
+  # adding ChangeBuildingLocation
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../weather"}
   arguments << {:name => 'weather_file_name', :desc => 'Weather File Name', :value => WEATHER_FILE_NAME}
   measures << {
-      :name => 'change_building_location',
-      :desc => 'Change Building Location And Design Days',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'ChangeBuildingLocation')}",
       :arguments => arguments,
       :variables => variables
@@ -182,30 +166,21 @@ def populate_workflow(value_set,seed_model)
 
   # start of energy plus measures
 
-  # adding xcel_eda_tariff_selectionand_model_setup
+  # adding XcelEDATariffSelectionandModelSetup
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'elec_tar', :desc => 'Select an Electricity Tariff.', :value => "Secondary General"}
   arguments << {:name => 'gas_tar', :desc => 'Select a Gas Tariff.', :value => "Large CG"}
   measures << {
-      :name => 'xcel_eda_tariff_selectionand_model_setup',
-      :desc => 'Xcel EDA Tariff Selectionand Model Setup',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEDATariffSelectionandModelSetup')}",
       :arguments => arguments,
       :variables => variables
   }
 
-
   # start of reporting measures
 
   # adding annual_end_use_breakdown
-  measures << {
-      :name => 'annual_end_use_breakdown',
-      :desc => 'Annual End Use Breakdown',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}",
-      :variables => [],
-      :arguments => []
-  }
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
 
   return measures
 
