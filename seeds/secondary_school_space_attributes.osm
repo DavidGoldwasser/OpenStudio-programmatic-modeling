@@ -996,8 +996,8 @@ OS:Building,
   ,                                       !- Building Sector Type
   ,                                       !- North Axis {deg}
   ,                                       !- Nominal Floor to Floor Height {m}
-  {7714418c-d95c-4b36-8866-9ff44953ab7a}, !- Space Type Name
-  ,                                       !- Default Construction Set Name
+  {ac851e13-d2ab-404c-a5a0-0af2a90815fa}, !- Space Type Name
+  {33188a09-8fb9-4529-8bca-1e70f8542a08}, !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   ,                                       !- Standards Number of Stories
   ,                                       !- Standards Number of Above Ground Stories
@@ -3301,14 +3301,14 @@ OS:Rendering:Color,
 OS:Space,
   {0de30b0c-c5ff-402b-949e-26861353d09b}, !- Handle
   Corridor_Pod_1_ZN_1_FLR_2,              !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   9,                                      !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {5a03da98-5c36-469b-b395-eeb9ca0d2a40}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -3577,7 +3577,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   40,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {22d70e12-bbc7-4edc-959c-608d92739df7}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -3769,14 +3769,14 @@ OS:Rendering:Color,
 OS:Space,
   {0d2e431d-02c9-4eb0-a735-9beed8bd84b8}, !- Handle
   Corridor_Pod_1_ZN_1_FLR_1,              !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   9,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {cedd57a2-7563-445b-9d08-c5d660d12657}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -4023,7 +4023,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   81,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {ca4f85cc-32f1-438b-94a5-b94ed6367584}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -4222,7 +4222,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   14,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {149cb4ab-709d-49ef-a862-683adb7b86d4}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -4445,7 +4445,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   40,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {4f8b3c3f-2f87-4371-8910-bd6ce904c6c1}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -4653,7 +4653,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   95,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {2602c315-fd39-4cb9-93f2-b39a50edffa0}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -4885,7 +4885,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   54,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {69a5f26e-eb74-477a-8f4d-b96e9b773782}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -5117,7 +5117,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   81,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {bb159a18-5916-4456-b8e0-d8d73a9b8d20}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -5318,14 +5318,14 @@ OS:Rendering:Color,
 OS:Space,
   {66753730-d286-46e4-8bce-b8b3ef56b5fa}, !- Handle
   Lobby_ZN_1_FLR_1,                       !- Name
-  ,                                       !- Space Type Name
+  {e9ee9478-a5fe-4742-a20b-a495a8ad49f9}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   64,                                     !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {49ca1120-dae2-4966-bd91-0741bf7bbe0b}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -5557,7 +5557,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   0,                                      !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {b4ae1cc4-44df-4f09-8d8b-a173f078d0f5}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -5756,7 +5756,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   54,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {a9fed558-6e68-46d4-b193-693112e15a01}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -5979,7 +5979,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   54,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {fd6127bb-f9af-4966-9497-5ea52f587473}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -6187,7 +6187,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   14,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {6b0b08c0-28ca-4b57-8189-22b66a19c73d}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -6412,14 +6412,14 @@ OS:Rendering:Color,
 OS:Space,
   {72aad2b9-e8ff-41d5-9c0d-d03eae944425}, !- Handle
   Mech_ZN_1_FLR_1,                        !- Name
-  ,                                       !- Space Type Name
+  {96135814-35c2-4c64-a971-b441edd2eedc}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   79,                                     !- X Origin {m}
   66,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {2a3a5932-db74-480f-b58d-6a71a1428da3}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -6603,7 +6603,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   95,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {87ac6655-53ea-45b3-ad38-6c668f700381}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -6802,7 +6802,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   54,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {b4b5a43c-2577-435f-8bc1-88141fa09344}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -7001,7 +7001,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   40,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {836020ab-7df6-4e65-8c39-75da506521d7}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -7226,14 +7226,14 @@ OS:Rendering:Color,
 OS:Space,
   {33ac578a-a97a-42cf-84f0-0ac4f4c1366b}, !- Handle
   Bathrooms_ZN_1_FLR_1,                   !- Name
-  ,                                       !- Space Type Name
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   64,                                     !- X Origin {m}
   90,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {b6d4404b-40ec-4803-ae48-00824d6e95a4}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -7506,14 +7506,14 @@ OS:Rendering:Color,
 OS:Space,
   {1138de20-19ec-49d0-b70e-45a4f8009f3a}, !- Handle
   Aux_Gym_ZN_1_FLR_1,                     !- Name
-  ,                                       !- Space Type Name
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   117,                                    !- X Origin {m}
   14,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {faff2a8d-325a-41b2-bd86-e8c263904545}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -8150,14 +8150,14 @@ OS:Rendering:Color,
 OS:Space,
   {98fb73c5-8b57-4261-8c80-c54a3ae974b9}, !- Handle
   Lobby_ZN_1_FLR_2,                       !- Name
-  ,                                       !- Space Type Name
+  {e9ee9478-a5fe-4742-a20b-a495a8ad49f9}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   64,                                     !- X Origin {m}
   0,                                      !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {7a7844d9-323c-4ad7-b2ed-c22263c74e39}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -8373,14 +8373,14 @@ OS:Rendering:Color,
 OS:Space,
   {12a56121-214f-438c-affc-9e930c39e172}, !- Handle
   Gym_ZN_1_FLR_1,                         !- Name
-  ,                                       !- Space Type Name
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   79,                                     !- X Origin {m}
   14,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {744951e2-cf14-4a8d-9f61-0ec0c15bf0e4}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -9022,14 +9022,14 @@ OS:Rendering:Color,
 OS:Space,
   {2be0d82e-6002-4509-888e-bea10a6eeed6}, !- Handle
   Offices_ZN_1_FLR_1,                     !- Name
-  ,                                       !- Space Type Name
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   79,                                     !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {9a25539b-d216-483b-bd02-c6f6f74e3091}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -9261,7 +9261,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   95,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {c9fc0fb8-b9c5-44d3-87b7-cacab3a7b8bd}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -9462,14 +9462,14 @@ OS:Rendering:Color,
 OS:Space,
   {ab3dc111-087b-4f92-acb4-307bf210c4b5}, !- Handle
   Corridor_Pod_3_ZN_1_FLR_1,              !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   90,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {f88aca12-dfe1-4373-84dd-6734698e35f6}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -9718,14 +9718,14 @@ OS:Rendering:Color,
 OS:Space,
   {775dea24-4ab5-44db-9575-caa257345c1d}, !- Handle
   Main_Corridor_ZN_1_FLR_1,               !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   64,                                     !- X Origin {m}
   14,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {d83885f6-a134-4f5a-96fb-4fe01198dfd7}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -10142,14 +10142,14 @@ OS:Rendering:Color,
 OS:Space,
   {5fb0ad34-e6c9-459b-96fd-c3fd6a9c487e}, !- Handle
   Auditorium_ZN_1_FLR_1,                  !- Name
-  ,                                       !- Space Type Name
+  {8a6611d5-d96d-4fce-8609-9b6c13306492}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   79,                                     !- X Origin {m}
   75,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {6bc979f4-4316-4ee8-b06e-510561af7a54}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -10468,7 +10468,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {9a090ecc-6c20-4fc7-8f80-ccb8cae24723}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -10693,14 +10693,14 @@ OS:Rendering:Color,
 OS:Space,
   {eee2f2e9-b281-4191-8b05-f578bf92b5d6}, !- Handle
   Corridor_Pod_2_ZN_1_FLR_2,              !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   49,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {0526ab67-2140-444b-b86d-d3ed1bcddcf0}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -10940,14 +10940,14 @@ OS:Rendering:Color,
 OS:Space,
   {2f7aa58f-dc53-4652-a880-828cedb01e40}, !- Handle
   Mech_ZN_1_FLR_2,                        !- Name
-  ,                                       !- Space Type Name
+  {96135814-35c2-4c64-a971-b441edd2eedc}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   79,                                     !- X Origin {m}
   66,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {b19bff0b-a118-4516-88ae-15b92c713a93}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -11122,7 +11122,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   14,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {84611b15-ea5c-4311-985f-454afd7eb999}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -11314,14 +11314,14 @@ OS:Rendering:Color,
 OS:Space,
   {688141a7-bbfb-4161-93ab-c8ee9a992eec}, !- Handle
   Bathrooms_ZN_1_FLR_2,                   !- Name
-  ,                                       !- Space Type Name
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   64,                                     !- X Origin {m}
   90,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {0fc49ce3-cf2e-4ea7-b4fe-c630c5e2c401}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -11592,7 +11592,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   40,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {f1f5700c-2d04-498d-b42f-733092733156}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -11808,14 +11808,14 @@ OS:Rendering:Color,
 OS:Space,
   {e43bee4a-5121-40ae-8f0a-cbb0242dc82a}, !- Handle
   Corridor_Pod_3_ZN_1_FLR_2,              !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   90,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {d5eb1d61-cb63-47c6-9138-a32300a74c40}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -12055,14 +12055,14 @@ OS:Rendering:Color,
 OS:Space,
   {74134460-afb9-4251-9fb8-7501b8700171}, !- Handle
   Corridor_Pod_2_ZN_1_FLR_1,              !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   49,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {7d6f404e-2227-43a8-bc4d-1e3ab99156f6}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -12311,14 +12311,14 @@ OS:Rendering:Color,
 OS:Space,
   {d609396f-0fed-46fb-99c6-92872b9067e5}, !- Handle
   Kitchen_ZN_1_FLR_1,                     !- Name
-  ,                                       !- Space Type Name
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   117,                                    !- X Origin {m}
   66,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {d5e41ff1-a016-42dd-9181-7572573f9a02}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -12526,7 +12526,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   81,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {6f20109f-4ea6-48af-aa69-9b02640ea89c}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -12758,7 +12758,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {ad96f755-e52b-46f7-b567-64584b2c1cb8}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -12981,7 +12981,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   95,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {d6c6f4da-05ae-4131-acdf-9773a2cc36d8}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -13204,7 +13204,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {2368119e-3d17-475c-a320-acb1bcd93b33}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -13405,14 +13405,14 @@ OS:Rendering:Color,
 OS:Space,
   {94ca01b7-e0ce-4c23-9ef1-5ebd5ea8bfb8}, !- Handle
   Cafeteria_ZN_1_FLR_1,                   !- Name
-  ,                                       !- Space Type Name
+  {f320d287-244a-445c-84ad-c87aaa458d3e}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   117,                                    !- X Origin {m}
   75,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {da71e91a-a2f2-4457-94e5-377560f63efb}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -13644,7 +13644,7 @@ OS:Space,
   0,                                      !- X Origin {m}
   81,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {80a4a104-dfd0-4d8a-9db8-3e2556b6dd10}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -13860,14 +13860,14 @@ OS:Rendering:Color,
 OS:Space,
   {ab438a21-47ca-477a-a801-6b335eb9a6e8}, !- Handle
   Offices_ZN_1_FLR_2,                     !- Name
-  ,                                       !- Space Type Name
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   79,                                     !- X Origin {m}
   0,                                      !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {5f389185-e45f-4632-95ee-2a51cd13652b}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -14083,14 +14083,14 @@ OS:Rendering:Color,
 OS:Space,
   {642285e4-0d10-4c2a-a07a-46efa5c811e1}, !- Handle
   LIBRARY_MEDIA_CENTER_ZN_1_FLR_2,        !- Name
-  ,                                       !- Space Type Name
+  {08458baa-26d5-4480-9aa6-18176db829b9}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   117,                                    !- X Origin {m}
   66,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {f9573f2c-e2c2-4581-ad1c-a60b7bc06940}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -14370,7 +14370,7 @@ OS:Space,
   11,                                     !- X Origin {m}
   14,                                     !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Building Story Name
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Building Story Name
   {934d6dd5-5757-4534-ac42-2223335cd1ff}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -14571,14 +14571,14 @@ OS:Rendering:Color,
 OS:Space,
   {90e74488-9e27-42c9-886d-03a9d211dbe3}, !- Handle
   Main_Corridor_ZN_1_FLR_2,               !- Name
-  ,                                       !- Space Type Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   0,                                      !- Direction of Relative North {deg}
   64,                                     !- X Origin {m}
   14,                                     !- Y Origin {m}
   4,                                      !- Z Origin {m}
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Building Story Name
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Building Story Name
   {10d279be-575d-436d-9766-c8009efa765b}, !- Thermal Zone Name
   Yes,                                    !- Part of Total Floor Area
   ;                                       !- Design Specification Outdoor Air Object Name
@@ -16526,7 +16526,8 @@ OS:ThermalZone,
   ,                                       !- Illuminance Map Name
   {1ded5732-c342-4767-8dd2-7017cbf118fe}, !- Group Rendering Name
   ,                                       !- Thermostat Name
-  No;                                     !- Use Ideal Air Loads
+  No,                                     !- Use Ideal Air Loads
+  ;                                       !- Humidistat Name
 
 OS:Node,
   {37e891b0-8023-421f-a3ee-c382f5c547cf}, !- Handle
@@ -18376,7 +18377,8 @@ OS:ThermalZone,
   ,                                       !- Illuminance Map Name
   {45caf4a7-2902-4eb5-8d34-191416f42b85}, !- Group Rendering Name
   ,                                       !- Thermostat Name
-  No;                                     !- Use Ideal Air Loads
+  No,                                     !- Use Ideal Air Loads
+  ;                                       !- Humidistat Name
 
 OS:Node,
   {46ac3599-76a4-4227-8dca-cb3ea981c988}, !- Handle
@@ -20031,16 +20033,6 @@ OS:ThermostatSetpoint:DualSetpoint,
   {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
   {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
 
-OS:SpaceType,
-  {7714418c-d95c-4b36-8866-9ff44953ab7a}, !- Handle
-  DOE Ref 2004 - SecSchl - Classroom,     !- Name
-  ,                                       !- Default Construction Set Name
-  {7db955ca-8110-469e-9325-269ecf4e371f}, !- Default Schedule Set Name
-  {7578c6d6-e81f-4de9-8b4a-21e9a02b8dca}, !- Group Rendering Name
-  {3786234d-1a1c-47ad-9226-da93513676ec}, !- Design Specification Outdoor Air Object Name
-  SecondarySchool,                        !- Standards Building Type
-  Classroom;                              !- Standards Space Type
-
 OS:Rendering:Color,
   {7578c6d6-e81f-4de9-8b4a-21e9a02b8dca}, !- Handle
   Rendering Color 634,                    !- Name
@@ -20070,12 +20062,6 @@ OS:Lights:Definition,
   15.0694745833936,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
 
-OS:Lights,
-  {e2472f76-50e5-498b-9f53-6850bc28950d}, !- Handle
-  DOE Ref 2004 - SecSchl - Classroom Lights, !- Name
-  {5fb71f22-ab48-4bf7-9ded-9286baae47bb}, !- Lights Definition Name
-  {7714418c-d95c-4b36-8866-9ff44953ab7a}; !- Space or SpaceType Name
-
 OS:DesignSpecification:OutdoorAir,
   {3786234d-1a1c-47ad-9226-da93513676ec}, !- Handle
   DOE Ref 2004 - SecSchl - Classroom Ventilation, !- Name
@@ -20095,27 +20081,6 @@ OS:People:Definition,
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
 
-OS:People,
-  {9bca8c57-07b6-4af3-ad51-777e908c494e}, !- Handle
-  DOE Ref 2004 - SecSchl - Classroom People, !- Name
-  {8b606369-9b4c-44ae-900d-49419fcdf1be}, !- People Definition Name
-  {7714418c-d95c-4b36-8866-9ff44953ab7a}; !- Space or SpaceType Name
-
-OS:SpaceInfiltration:DesignFlowRate,
-  {a2f0f4c3-195b-4a0c-82bf-8db3f96eda05}, !- Handle
-  DOE Ref 2004 - SecSchl - Classroom Infiltration, !- Name
-  {7714418c-d95c-4b36-8866-9ff44953ab7a}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
-  ,                                       !- Design Flow Rate {m3/s}
-  ,                                       !- Flow per Space Floor Area {m3/s-m2}
-  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
-  ,                                       !- Air Changes per Hour {1/hr}
-  ,                                       !- Constant Term Coefficient
-  ,                                       !- Temperature Term Coefficient
-  ,                                       !- Velocity Term Coefficient
-  ;                                       !- Velocity Squared Term Coefficient
-
 OS:ElectricEquipment:Definition,
   {dfeb8238-2d87-445f-a2e8-0220d40fea2e}, !- Handle
   DOE Ref 2004 - SecSchl - Classroom Electric Equipment Definition, !- Name
@@ -20123,12 +20088,6 @@ OS:ElectricEquipment:Definition,
   ,                                       !- Design Level {W}
   10.01043668754,                         !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:ElectricEquipment,
-  {e1806db6-188d-4414-8c7d-0172a9c06c68}, !- Handle
-  DOE Ref 2004 - SecSchl - Classroom Electric Equipment, !- Name
-  {dfeb8238-2d87-445f-a2e8-0220d40fea2e}, !- Electric Equipment Definition Name
-  {7714418c-d95c-4b36-8866-9ff44953ab7a}; !- Space or SpaceType Name
 
 OS:ThermostatSetpoint:DualSetpoint,
   {a7bbab87-2cf2-450f-af2e-899e3d02a6ac}, !- Handle
@@ -21397,35 +21356,1634 @@ OS:StandardsInformation:Material,
   {73e8bc15-b8e9-4cf9-b906-1c77d4317b42}, !- Handle
   {778222fb-2d70-4bd3-87aa-e0e7025f46d9}; !- Material Name
 
+OS:SpaceType,
+  {8a6611d5-d96d-4fce-8609-9b6c13306492}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium,    !- Name
+  ,                                       !- Default Construction Set Name
+  {193725bf-7ef8-4946-bc3a-b1c878f05bea}, !- Default Schedule Set Name
+  {32f1b40a-b554-499c-a549-bfe896215a34}, !- Group Rendering Name
+  {570f525f-3875-4bc6-8700-0c5679c8752f}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Auditorium;                             !- Standards Space Type
+
+OS:Rendering:Color,
+  {32f1b40a-b554-499c-a549-bfe896215a34}, !- Handle
+  Rendering Color 654,                    !- Name
+  230,                                    !- Rendering Red Value
+  196,                                    !- Rendering Green Value
+  120;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {193725bf-7ef8-4946-bc3a-b1c878f05bea}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {9fb32b94-e72f-435b-b1f4-ace30d1d3c54}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {a635aba8-46b1-4e3e-a28d-d34983b1d2c1}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  9.68751937503875,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {369f7097-1dfd-42cc-83de-3acc578ea743}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Lights, !- Name
+  {a635aba8-46b1-4e3e-a28d-d34983b1d2c1}, !- Lights Definition Name
+  {8a6611d5-d96d-4fce-8609-9b6c13306492}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {570f525f-3875-4bc6-8700-0c5679c8752f}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.007079211648,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {655b8e4b-e1b8-4717-936a-bf28cada7bd3}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  1.000397834129,                         !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {1cb2c842-52c7-4a3d-b1ef-2639a8fcb424}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium People, !- Name
+  {655b8e4b-e1b8-4717-936a-bf28cada7bd3}, !- People Definition Name
+  {8a6611d5-d96d-4fce-8609-9b6c13306492}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {9ff6f865-9819-465c-a571-838ba25031ee}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Infiltration, !- Name
+  {8a6611d5-d96d-4fce-8609-9b6c13306492}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {ca6b0c93-16ae-482c-87f7-502feb92264e}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  4.95139879168647,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {96eb3e41-27b4-4883-a4dd-0f2009788ea7}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Electric Equipment, !- Name
+  {ca6b0c93-16ae-482c-87f7-502feb92264e}, !- Electric Equipment Definition Name
+  {8a6611d5-d96d-4fce-8609-9b6c13306492}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {6115f710-4ae1-4678-8680-03f8079cfdb6}, !- Handle
+  DOE Ref 2004 - SecSchl - Auditorium Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {f320d287-244a-445c-84ad-c87aaa458d3e}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria,     !- Name
+  ,                                       !- Default Construction Set Name
+  {cb490d9b-acda-41b9-aee8-c8335c383511}, !- Default Schedule Set Name
+  {8df8b5bf-54fc-431e-be18-18efb7019c66}, !- Group Rendering Name
+  {1f897384-8ddb-4051-ae3d-8a4fe1128347}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Cafeteria;                              !- Standards Space Type
+
+OS:Rendering:Color,
+  {8df8b5bf-54fc-431e-be18-18efb7019c66}, !- Handle
+  Rendering Color 655,                    !- Name
+  31,                                     !- Rendering Red Value
+  169,                                    !- Rendering Green Value
+  34;                                     !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {cb490d9b-acda-41b9-aee8-c8335c383511}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {9fea0f12-6b38-4810-bf52-573d2ab1bccd}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  9.68751937503875,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {1e415746-3a72-462e-9fc7-2c06d0c55774}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Lights, !- Name
+  {9fea0f12-6b38-4810-bf52-573d2ab1bccd}, !- Lights Definition Name
+  {f320d287-244a-445c-84ad-c87aaa458d3e}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {1f897384-8ddb-4051-ae3d-8a4fe1128347}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.009438948864,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {1f2d7ace-899b-495d-af47-f7736dddbed3}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.719459772252878,                      !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {ad859e80-0d10-4356-83e6-c2b9b3cb3ee2}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria People, !- Name
+  {1f2d7ace-899b-495d-af47-f7736dddbed3}, !- People Definition Name
+  {f320d287-244a-445c-84ad-c87aaa458d3e}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {10690eb7-7406-47ed-a9d4-91a6c67d780b}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Infiltration, !- Name
+  {f320d287-244a-445c-84ad-c87aaa458d3e}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {1181a996-f3f6-4c87-8a9f-95ddc048821a}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  19.2673996459104,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {c78f4626-fa40-456f-aa1a-921319238d27}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Electric Equipment, !- Name
+  {1181a996-f3f6-4c87-8a9f-95ddc048821a}, !- Electric Equipment Definition Name
+  {f320d287-244a-445c-84ad-c87aaa458d3e}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {45dabc1f-fb2e-439d-8a2b-f2d9641ec02e}, !- Handle
+  DOE Ref 2004 - SecSchl - Cafeteria Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {ac851e13-d2ab-404c-a5a0-0af2a90815fa}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom,     !- Name
+  ,                                       !- Default Construction Set Name
+  {fb8a5395-9bf4-4bfa-86cf-b2beea81e485}, !- Default Schedule Set Name
+  {318fa828-c5c3-40b4-8d1a-5bff392acc6d}, !- Group Rendering Name
+  {2752485b-eaae-4f8b-80bd-18fb9d544ad3}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Classroom;                              !- Standards Space Type
+
+OS:Rendering:Color,
+  {318fa828-c5c3-40b4-8d1a-5bff392acc6d}, !- Handle
+  Rendering Color 656,                    !- Name
+  120,                                    !- Rendering Red Value
+  230,                                    !- Rendering Green Value
+  199;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {fb8a5395-9bf4-4bfa-86cf-b2beea81e485}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Schedule Set 1, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {6fac1099-2462-4b1b-ac00-6edea78ac559}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Lights Definition 1, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  15.0694745833936,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {af00b3c0-a75d-4c88-9ac7-d61f6f071810}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Lights, !- Name
+  {6fac1099-2462-4b1b-ac00-6edea78ac559}, !- Lights Definition Name
+  {ac851e13-d2ab-404c-a5a0-0af2a90815fa}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {2752485b-eaae-4f8b-80bd-18fb9d544ad3}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Ventilation 1, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.007079211648,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {e4700c35-d95e-4fb9-8763-3f7c1da1e5df}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom People Definition 1, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.249937999876,                         !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {67bceb35-f03b-466c-8dc4-32c7e498a18e}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom People, !- Name
+  {e4700c35-d95e-4fb9-8763-3f7c1da1e5df}, !- People Definition Name
+  {ac851e13-d2ab-404c-a5a0-0af2a90815fa}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {e5bdbb4d-1b0a-4fdb-9387-abb769976719}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Infiltration, !- Name
+  {ac851e13-d2ab-404c-a5a0-0af2a90815fa}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {f485f716-06b1-4ba7-956c-e8e5f1b37589}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Electric Equipment Definition 1, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  10.01043668754,                         !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {8f377fd9-f641-4b8f-ac5a-3062c4eef6d8}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Electric Equipment, !- Name
+  {f485f716-06b1-4ba7-956c-e8e5f1b37589}, !- Electric Equipment Definition Name
+  {ac851e13-d2ab-404c-a5a0-0af2a90815fa}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {e93a4634-21d4-4b12-a861-845619fc0dc0}, !- Handle
+  DOE Ref 2004 - SecSchl - Classroom Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor,      !- Name
+  ,                                       !- Default Construction Set Name
+  {bff7ef5c-1494-440c-8856-82d1b23995f5}, !- Default Schedule Set Name
+  {b667fa3d-59ec-42e3-96be-c9802e0a0dd8}, !- Group Rendering Name
+  {f39b6453-fe6e-474a-9e3b-d354950e9f08}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Corridor;                               !- Standards Space Type
+
+OS:Rendering:Color,
+  {b667fa3d-59ec-42e3-96be-c9802e0a0dd8}, !- Handle
+  Rendering Color 657,                    !- Name
+  169,                                    !- Rendering Red Value
+  31,                                     !- Rendering Green Value
+  31;                                     !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {bff7ef5c-1494-440c-8856-82d1b23995f5}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {c79b0ba9-f372-4a34-a848-d7b57e9b5151}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  5.38195520835486,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {02acdb5c-8f8d-4738-b7c5-2d915ef77926}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Lights, !- Name
+  {c79b0ba9-f372-4a34-a848-d7b57e9b5151}, !- Lights Definition Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {f39b6453-fe6e-474a-9e3b-d354950e9f08}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  ,                                       !- Outdoor Air Flow per Person {m3/s-person}
+  0.000508,                               !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {b7437aa1-2b29-4c0c-a83f-5df923dd695a}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.100212005979568,                      !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {bb80a089-ef17-4a98-ab2c-d0e40c8dffa8}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor People, !- Name
+  {b7437aa1-2b29-4c0c-a83f-5df923dd695a}, !- People Definition Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {94011987-2766-46da-be9b-881dc24b66ea}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Infiltration, !- Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {a2e8b4a7-fe6a-47ed-be8c-dbebfc87d525}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  3.9826468541826,                        !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {3dd0e7b5-b78b-4443-a334-e8c85c58acd3}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Electric Equipment, !- Name
+  {a2e8b4a7-fe6a-47ed-be8c-dbebfc87d525}, !- Electric Equipment Definition Name
+  {7081bf8e-19fb-4b67-9fd6-72290ceb8a7a}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {2c05b8b2-09f8-4a1e-80bb-79a0782aa2c8}, !- Handle
+  DOE Ref 2004 - SecSchl - Corridor Thermostat 2, !- Name
+  {cdb7d971-ac17-457d-b913-d3548635f5e3}, !- Heating Setpoint Temperature Schedule Name
+  {eec55855-b3f3-469f-88bd-531cdcf84062}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym,           !- Name
+  ,                                       !- Default Construction Set Name
+  {eedae7ce-26ab-491c-8c6d-7cba7a9e6b38}, !- Default Schedule Set Name
+  {fe1b547e-eabf-4a43-a5cb-cd67aee582b2}, !- Group Rendering Name
+  {0c35f0f1-4a8b-442c-9090-abd338fc8407}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Gym;                                    !- Standards Space Type
+
+OS:Rendering:Color,
+  {fe1b547e-eabf-4a43-a5cb-cd67aee582b2}, !- Handle
+  Rendering Color 658,                    !- Name
+  154,                                    !- Rendering Red Value
+  230,                                    !- Rendering Green Value
+  120;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {eedae7ce-26ab-491c-8c6d-7cba7a9e6b38}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {81571508-8bf1-4419-a567-a813841e9072}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {91ac38ef-8ce1-4c3a-8061-45ad27cd5265}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  15.0694745833936,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {b18c6f58-4c01-4a73-8fa3-7030f4270f41}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Lights,    !- Name
+  {91ac38ef-8ce1-4c3a-8061-45ad27cd5265}, !- Lights Definition Name
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {0c35f0f1-4a8b-442c-9090-abd338fc8407}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.009438948864,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {dd8b4e62-2175-4c37-bf0c-8fbf41aae46f}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  1.000397834129,                         !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {a3481b39-ae45-4916-8282-7488070c9f8c}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym People,    !- Name
+  {dd8b4e62-2175-4c37-bf0c-8fbf41aae46f}, !- People Definition Name
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {cf2c6a38-8e59-40f5-b928-54eea3c64f54}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Infiltration, !- Name
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {c832cfe3-b9ad-44b5-8911-e873c60de502}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  4.95139879168647,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {9a57a113-2c1a-4c81-9958-baadda261d8d}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Electric Equipment, !- Name
+  {c832cfe3-b9ad-44b5-8911-e873c60de502}, !- Electric Equipment Definition Name
+  {8e01ea93-b657-41dd-b4f9-255c76c5dda7}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {5c6d23fe-160a-4ac6-9e95-42ac1a54d549}, !- Handle
+  DOE Ref 2004 - SecSchl - Gym Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen,       !- Name
+  ,                                       !- Default Construction Set Name
+  {319d8767-30e3-4ee6-b847-4030000975e3}, !- Default Schedule Set Name
+  {d50e3aec-8576-4865-97c9-f4faadeed80c}, !- Group Rendering Name
+  {91f44f17-a87e-41d7-9a67-b68c01abaeff}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Kitchen;                                !- Standards Space Type
+
+OS:Rendering:Color,
+  {d50e3aec-8576-4865-97c9-f4faadeed80c}, !- Handle
+  Rendering Color 659,                    !- Name
+  78,                                     !- Rendering Red Value
+  222,                                    !- Rendering Green Value
+  133;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {319d8767-30e3-4ee6-b847-4030000975e3}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {62b871be-d0b6-49b4-a67a-222e18ba5227}, !- Electric Equipment Schedule Name
+  {6f5548f7-31da-425f-8ae8-2bb287c32d06}, !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {775b495f-6a40-4f0d-9eaa-c862ec4358a1}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  12.9166925000517,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {01380b03-877c-4a64-8b93-f570a88911e7}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Lights, !- Name
+  {775b495f-6a40-4f0d-9eaa-c862ec4358a1}, !- Lights Definition Name
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {91f44f17-a87e-41d7-9a67-b68c01abaeff}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.007079211648,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {7e3a3399-8f09-401c-8150-aff14f390d38}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.166625333250667,                      !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {eb31d26e-0c5e-42e4-a24d-fc9acfd3e4fd}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen People, !- Name
+  {7e3a3399-8f09-401c-8150-aff14f390d38}, !- People Definition Name
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {ff0e07f6-621b-41a0-b6e8-080dbdf1c547}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Infiltration, !- Name
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {97368187-ee37-4eea-9be5-8451f447401b}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  222.274750105056,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {ce62e455-1478-4096-8e13-27686e52517f}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Electric Equipment, !- Name
+  {97368187-ee37-4eea-9be5-8451f447401b}, !- Electric Equipment Definition Name
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}; !- Space or SpaceType Name
+
+OS:GasEquipment:Definition,
+  {795c1406-84f8-44ef-ab63-940c9054f361}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Gas Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  1119.56425542288,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/Person}
+
+OS:GasEquipment,
+  {42ce0496-524e-4882-9c84-fb8c4fdaa6b8}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Gas Equipment, !- Name
+  {795c1406-84f8-44ef-ab63-940c9054f361}, !- Gas Equipment Definition Name
+  {5bf51008-3c68-4e71-920c-4fc5e2f38283}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {f524041d-df16-40ce-8a24-ed123a097c7c}, !- Handle
+  DOE Ref 2004 - SecSchl - Kitchen Thermostat 2, !- Name
+  {cdb7d971-ac17-457d-b913-d3548635f5e3}, !- Heating Setpoint Temperature Schedule Name
+  {eec55855-b3f3-469f-88bd-531cdcf84062}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {08458baa-26d5-4480-9aa6-18176db829b9}, !- Handle
+  DOE Ref 2004 - SecSchl - Library,       !- Name
+  ,                                       !- Default Construction Set Name
+  {fbb556c8-ed9e-44cf-b35b-cfb9194cef3a}, !- Default Schedule Set Name
+  {77cd500d-f348-46bd-b039-654358701cf0}, !- Group Rendering Name
+  {9dcdd232-1bd9-4820-a960-9ae60d309677}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Library;                                !- Standards Space Type
+
+OS:Rendering:Color,
+  {77cd500d-f348-46bd-b039-654358701cf0}, !- Handle
+  Rendering Color 660,                    !- Name
+  230,                                    !- Rendering Red Value
+  196,                                    !- Rendering Green Value
+  120;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {fbb556c8-ed9e-44cf-b35b-cfb9194cef3a}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {dbc41a0a-b3d4-477c-9402-33a229eca328}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  12.9166925000517,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {eee06f8b-b1ac-4d6c-a0a2-17410cd462b9}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Lights, !- Name
+  {dbc41a0a-b3d4-477c-9402-33a229eca328}, !- Lights Definition Name
+  {08458baa-26d5-4480-9aa6-18176db829b9}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {9dcdd232-1bd9-4820-a960-9ae60d309677}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.007079211648,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {484170c6-2a50-4b24-adad-076bae549e91}, !- Handle
+  DOE Ref 2004 - SecSchl - Library People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.229701848292585,                      !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {032e84ec-6b00-4e4e-9ab4-06a507278c95}, !- Handle
+  DOE Ref 2004 - SecSchl - Library People, !- Name
+  {484170c6-2a50-4b24-adad-076bae549e91}, !- People Definition Name
+  {08458baa-26d5-4480-9aa6-18176db829b9}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {2c0612ff-72c5-4c59-82ff-c15727b19e39}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Infiltration, !- Name
+  {08458baa-26d5-4480-9aa6-18176db829b9}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {be80f81d-7fd2-40cf-8a68-2e0a576dbfcd}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  10.01043668754,                         !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {4e94d0d8-b837-458b-9fe4-8e549e3a4ec7}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Electric Equipment, !- Name
+  {be80f81d-7fd2-40cf-8a68-2e0a576dbfcd}, !- Electric Equipment Definition Name
+  {08458baa-26d5-4480-9aa6-18176db829b9}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {6a3f28f7-4312-4762-9961-11c4ea5bee57}, !- Handle
+  DOE Ref 2004 - SecSchl - Library Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {e9ee9478-a5fe-4742-a20b-a495a8ad49f9}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby,         !- Name
+  ,                                       !- Default Construction Set Name
+  {e6dc01a6-7611-42d6-9027-ba2b533accc8}, !- Default Schedule Set Name
+  {4f72ce04-8635-4be2-8eca-261fe154410f}, !- Group Rendering Name
+  {5c32e444-cf39-48f1-9cc0-d25a2ff92f8f}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Lobby;                                  !- Standards Space Type
+
+OS:Rendering:Color,
+  {4f72ce04-8635-4be2-8eca-261fe154410f}, !- Handle
+  Rendering Color 661,                    !- Name
+  230,                                    !- Rendering Red Value
+  157,                                    !- Rendering Green Value
+  120;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {e6dc01a6-7611-42d6-9027-ba2b533accc8}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {1af6446b-6edd-4d51-bd88-1f00eb734da1}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  13.9930835417226,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {44d6cf12-5659-4272-b6a3-9bc9abed1712}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Lights,  !- Name
+  {1af6446b-6edd-4d51-bd88-1f00eb734da1}, !- Lights Definition Name
+  {e9ee9478-a5fe-4742-a20b-a495a8ad49f9}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {5c32e444-cf39-48f1-9cc0-d25a2ff92f8f}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  ,                                       !- Outdoor Air Flow per Person {m3/s-person}
+  0.000508,                               !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {df463a81-859e-4af8-bc0c-d8288cfa3a33}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Infiltration, !- Name
+  {e9ee9478-a5fe-4742-a20b-a495a8ad49f9}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {d7d5180f-cfcf-487d-a443-ae7606118330}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  3.9826468541826,                        !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {8530cb7a-76df-44c2-9cad-01743a184cda}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Electric Equipment, !- Name
+  {d7d5180f-cfcf-487d-a443-ae7606118330}, !- Electric Equipment Definition Name
+  {e9ee9478-a5fe-4742-a20b-a495a8ad49f9}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {31f61295-6bf3-46d2-aa4d-6f67bdd03141}, !- Handle
+  DOE Ref 2004 - SecSchl - Lobby Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {96135814-35c2-4c64-a971-b441edd2eedc}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical,    !- Name
+  ,                                       !- Default Construction Set Name
+  {3003a502-a91e-4476-9672-78054ea017f2}, !- Default Schedule Set Name
+  {578383b3-67b6-442b-91ca-c868a5b753bc}, !- Group Rendering Name
+  {cac827c9-841e-4fa3-a450-ba1298eb8663}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Mechanical;                             !- Standards Space Type
+
+OS:Rendering:Color,
+  {578383b3-67b6-442b-91ca-c868a5b753bc}, !- Handle
+  Rendering Color 662,                    !- Name
+  41,                                     !- Rendering Red Value
+  31,                                     !- Rendering Green Value
+  169;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {3003a502-a91e-4476-9672-78054ea017f2}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {d761ddb2-4eef-42a6-90b0-6b826187a231}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  16.1458656250646,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {c5aa19e9-2ea9-47ab-b18d-728a09bafe63}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Lights, !- Name
+  {d761ddb2-4eef-42a6-90b0-6b826187a231}, !- Lights Definition Name
+  {96135814-35c2-4c64-a971-b441edd2eedc}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {cac827c9-841e-4fa3-a450-ba1298eb8663}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  ,                                       !- Outdoor Air Flow per Person {m3/s-person}
+  0.000254,                               !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {d778ccd8-8b53-410d-94fc-461f0f94a61b}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.01001043668754,                       !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {ac53be2a-5666-4b7e-ae07-2d1948d066ef}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical People, !- Name
+  {d778ccd8-8b53-410d-94fc-461f0f94a61b}, !- People Definition Name
+  {96135814-35c2-4c64-a971-b441edd2eedc}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {46777495-dbfd-4f2c-bfa7-c437181bfe21}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Infiltration, !- Name
+  {96135814-35c2-4c64-a971-b441edd2eedc}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {3a4e920a-023f-4074-8159-253dc5366172}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  3.9826468541826,                        !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {9fe9dbbd-c3d9-4e68-889d-245ccbb9f220}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Electric Equipment, !- Name
+  {3a4e920a-023f-4074-8159-253dc5366172}, !- Electric Equipment Definition Name
+  {96135814-35c2-4c64-a971-b441edd2eedc}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {8016024a-8e21-4147-a3bf-07cd72a5a60f}, !- Handle
+  DOE Ref 2004 - SecSchl - Mechanical Thermostat 2, !- Name
+  {cdb7d971-ac17-457d-b913-d3548635f5e3}, !- Heating Setpoint Temperature Schedule Name
+  {eec55855-b3f3-469f-88bd-531cdcf84062}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}, !- Handle
+  DOE Ref 2004 - SecSchl - Office,        !- Name
+  ,                                       !- Default Construction Set Name
+  {04dfd0e2-4f19-4995-b5f5-3f119719e686}, !- Default Schedule Set Name
+  {9cbf5f24-8a27-419f-b14c-b0467fd02086}, !- Group Rendering Name
+  {b36b0d9b-4fd7-4622-a1c6-77b52eb4eaf0}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Office;                                 !- Standards Space Type
+
+OS:Rendering:Color,
+  {9cbf5f24-8a27-419f-b14c-b0467fd02086}, !- Handle
+  Rendering Color 663,                    !- Name
+  120,                                    !- Rendering Red Value
+  230,                                    !- Rendering Green Value
+  199;                                    !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {04dfd0e2-4f19-4995-b5f5-3f119719e686}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {c5557fa3-3003-4409-8277-b98283a69fde}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {bc3fb9b4-3a07-4734-be4d-1eecd0e15a82}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  11.8403014583807,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {8475d071-7f49-4e00-ab72-5a62602c2c1a}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Lights, !- Name
+  {bc3fb9b4-3a07-4734-be4d-1eecd0e15a82}, !- Lights Definition Name
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {b36b0d9b-4fd7-4622-a1c6-77b52eb4eaf0}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  0.009438948864,                         !- Outdoor Air Flow per Person {m3/s-person}
+  ,                                       !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {5ee99877-d37f-4d0b-bb9c-1f106ee25c6c}, !- Handle
+  DOE Ref 2004 - SecSchl - Office People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.0500521834377002,                     !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {ab209820-7a9e-4c68-9b34-cbc2c12e7c58}, !- Handle
+  DOE Ref 2004 - SecSchl - Office People, !- Name
+  {5ee99877-d37f-4d0b-bb9c-1f106ee25c6c}, !- People Definition Name
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {1f5ba5d3-5d7f-4a0b-aa96-44227c3872f2}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Infiltration, !- Name
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {c063e96f-61d0-4077-b797-442abc75fa08}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  10.7639104167097,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {80539a6a-f5d8-4052-833b-38e0c5bff60a}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Electric Equipment, !- Name
+  {c063e96f-61d0-4077-b797-442abc75fa08}, !- Electric Equipment Definition Name
+  {a9c0a8dc-f0ac-41cd-a067-f9f5c1058cc4}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {f3afbf2b-d506-4087-a88e-7077516302c6}, !- Handle
+  DOE Ref 2004 - SecSchl - Office Thermostat 2, !- Name
+  {00a09d7f-b016-4949-81e7-c65f2b7ade65}, !- Heating Setpoint Temperature Schedule Name
+  {9d9fd717-5f34-4db5-a2eb-42b7c406ebf0}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:SpaceType,
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom,      !- Name
+  ,                                       !- Default Construction Set Name
+  {54e477e5-b37a-491a-8d34-8487cccb9e73}, !- Default Schedule Set Name
+  {088dd973-aac1-49b9-a62e-68e9e0d142c0}, !- Group Rendering Name
+  {dbe73365-af78-438c-8c5b-62f6e329958f}, !- Design Specification Outdoor Air Object Name
+  SecondarySchool,                        !- Standards Building Type
+  Restroom;                               !- Standards Space Type
+
+OS:Rendering:Color,
+  {088dd973-aac1-49b9-a62e-68e9e0d142c0}, !- Handle
+  Rendering Color 664,                    !- Name
+  169,                                    !- Rendering Red Value
+  169,                                    !- Rendering Green Value
+  31;                                     !- Rendering Blue Value
+
+OS:DefaultScheduleSet,
+  {54e477e5-b37a-491a-8d34-8487cccb9e73}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Schedule Set, !- Name
+  ,                                       !- Hours of Operation Schedule Name
+  {7e19ebfc-2a4e-4a1a-af38-31e50a4b4818}, !- Number of People Schedule Name
+  {f6c7c72f-9706-402b-aff6-4d7aac7d9e83}, !- People Activity Level Schedule Name
+  {cdd68d39-da6e-40c3-9f0e-4729713817cf}, !- Lighting Schedule Name
+  {ad81b6bf-2cb3-4697-8861-54f65fe4a8d7}, !- Electric Equipment Schedule Name
+  ,                                       !- Gas Equipment Schedule Name
+  ,                                       !- Hot Water Equipment Schedule Name
+  {0d1e2963-b540-47d5-94fd-ad20c4e19951}, !- Infiltration Schedule Name
+  ,                                       !- Steam Equipment Schedule Name
+  ;                                       !- Other Equipment Schedule Name
+
+OS:Lights:Definition,
+  {aeceeb01-f5c7-4fb5-a12f-354a0bf3e547}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Lights Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Lighting Level {W}
+  9.68751937503875,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:Lights,
+  {bd727535-8dc7-4a77-8bc0-4786100e4010}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Lights, !- Name
+  {aeceeb01-f5c7-4fb5-a12f-354a0bf3e547}, !- Lights Definition Name
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}; !- Space or SpaceType Name
+
+OS:DesignSpecification:OutdoorAir,
+  {dbe73365-af78-438c-8c5b-62f6e329958f}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Ventilation, !- Name
+  Sum,                                    !- Outdoor Air Method
+  ,                                       !- Outdoor Air Flow per Person {m3/s-person}
+  0.0048768,                              !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate {m3/s}
+  ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
+
+OS:People:Definition,
+  {0deb69f6-524f-42e0-b063-d072d9976776}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom People Definition, !- Name
+  People/Area,                            !- Number of People Calculation Method
+  ,                                       !- Number of People {people}
+  0.0999967277712333,                     !- People per Space Floor Area {person/m2}
+  ,                                       !- Space Floor Area per Person {m2/person}
+  0.3;                                    !- Fraction Radiant
+
+OS:People,
+  {7c67ea91-4b67-49e0-b572-0cb3aea7d04b}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom People, !- Name
+  {0deb69f6-524f-42e0-b063-d072d9976776}, !- People Definition Name
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}; !- Space or SpaceType Name
+
+OS:SpaceInfiltration:DesignFlowRate,
+  {1ac8bcf2-1de2-4699-b87e-2601ac7cb226}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Infiltration, !- Name
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Space Floor Area {m3/s-m2}
+  0.00030226,                             !- Flow per Exterior Surface Area {m3/s-m2}
+  ,                                       !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+OS:ElectricEquipment:Definition,
+  {fe1035c1-8f8d-49ff-b4d2-8f375415a86c}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  3.9826468541826,                        !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {0a78a66e-5c6e-4371-9e84-39daa7ccc668}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Electric Equipment, !- Name
+  {fe1035c1-8f8d-49ff-b4d2-8f375415a86c}, !- Electric Equipment Definition Name
+  {40d2bc88-6661-452a-ad0f-ab4d768c0470}; !- Space or SpaceType Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {99f74059-d6e1-4b2f-984d-7528d7f0ebe0}, !- Handle
+  DOE Ref 2004 - SecSchl - Restroom Thermostat 2, !- Name
+  {cdb7d971-ac17-457d-b913-d3548635f5e3}, !- Heating Setpoint Temperature Schedule Name
+  {eec55855-b3f3-469f-88bd-531cdcf84062}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:DefaultConstructionSet,
+  {33188a09-8fb9-4529-8bca-1e70f8542a08}, !- Handle
+  DOE Ref 2004 - CZ5-6 - SecSchl,         !- Name
+  {d7039015-1384-47c0-a9f3-c9255a2966ee}, !- Default Exterior Surface Constructions Name
+  {d21e6be6-20cc-4a47-ab36-d4190e4ea20b}, !- Default Interior Surface Constructions Name
+  {3812b8d8-7642-4129-8194-6893f3b6596d}, !- Default Ground Contact Surface Constructions Name
+  {a6e9ad81-2908-42bb-bd13-f1b257e4f7fe}, !- Default Exterior SubSurface Constructions Name
+  {db81d7ef-2b01-4b25-8344-427fed3703c3}, !- Default Interior SubSurface Constructions Name
+  {5c548f0a-92ab-45c3-828f-f20f8798ca20}, !- Interior Partition Construction Name
+  ,                                       !- Space Shading Construction Name
+  ,                                       !- Building Shading Construction Name
+  ;                                       !- Site Shading Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {d7039015-1384-47c0-a9f3-c9255a2966ee}, !- Handle
+  Default Surface Constructions 1,        !- Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Floor Construction Name
+  {aac0f838-8f2c-40e0-9fc8-2c3e47a23ac8}, !- Wall Construction Name
+  {bfa7bc0a-8eb7-4bd6-9d17-26fc4ba07f1e}; !- Roof Ceiling Construction Name
+
+OS:Construction,
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Handle
+  ExtSlabCarpet 4in ClimateZone 1-8,      !- Name
+  {1e86abdc-3f00-4278-8ada-9123d250ff7c}, !- Surface Rendering Name
+  {eec45aba-6477-49bc-96e0-1d78d2d7aad2}, !- Layer 1
+  {778222fb-2d70-4bd3-87aa-e0e7025f46d9}; !- Layer 2
+
+OS:StandardsInformation:Construction,
+  {17545afe-f51a-45af-b005-24859d3b91eb}, !- Handle
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Construction Name
+  ExteriorFloor,                          !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Material,
+  {eec45aba-6477-49bc-96e0-1d78d2d7aad2}, !- Handle
+  MAT-CC05 4 HW CONCRETE,                 !- Name
+  Rough,                                  !- Roughness
+  0.1016,                                 !- Thickness {m}
+  1.311,                                  !- Conductivity {W/m-K}
+  2240,                                   !- Density {kg/m3}
+  836.800000000001,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.85,                                   !- Solar Absorptance
+  0.85;                                   !- Visible Absorptance
+
+OS:Construction,
+  {aac0f838-8f2c-40e0-9fc8-2c3e47a23ac8}, !- Handle
+  ASHRAE 90.1-2004 ExtWall SteelFrame ClimateZone 5-6, !- Name
+  {0d7859e4-27d5-485c-badb-9f533438d637}, !- Surface Rendering Name
+  {1647822e-0d93-4f3b-983f-aafb7ff5cfed}, !- Layer 1
+  {581767f5-d1d5-409d-9969-b5acc1a047b9}, !- Layer 2
+  {b040665a-d37e-4993-9808-1bc757286cf9}; !- Layer 3
+
+OS:StandardsInformation:Construction,
+  {e337e472-f137-43f0-8c70-95cd85d27ad8}, !- Handle
+  {aac0f838-8f2c-40e0-9fc8-2c3e47a23ac8}, !- Construction Name
+  ExteriorWall,                           !- Intended Surface Type
+  SteelFramed;                            !- Standards Construction Type
+
+OS:Material,
+  {1647822e-0d93-4f3b-983f-aafb7ff5cfed}, !- Handle
+  Wood Siding,                            !- Name
+  MediumSmooth,                           !- Roughness
+  0.01,                                   !- Thickness {m}
+  0.11,                                   !- Conductivity {W/m-K}
+  544.62,                                 !- Density {kg/m3}
+  1210,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.78,                                   !- Solar Absorptance
+  0.78;                                   !- Visible Absorptance
+
+OS:Material,
+  {581767f5-d1d5-409d-9969-b5acc1a047b9}, !- Handle
+  Steel Frame NonRes Wall Insulation-2.10, !- Name
+  MediumRough,                            !- Roughness
+  0.0870564552646046,                     !- Thickness {m}
+  0.049,                                  !- Conductivity {W/m-K}
+  265,                                    !- Density {kg/m3}
+  836.800000000001,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.7,                                    !- Solar Absorptance
+  0.7;                                    !- Visible Absorptance
+
+OS:Material,
+  {b040665a-d37e-4993-9808-1bc757286cf9}, !- Handle
+  1/2IN Gypsum,                           !- Name
+  Smooth,                                 !- Roughness
+  0.0127,                                 !- Thickness {m}
+  0.16,                                   !- Conductivity {W/m-K}
+  784.9,                                  !- Density {kg/m3}
+  830.000000000001,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.4,                                    !- Solar Absorptance
+  0.4;                                    !- Visible Absorptance
+
+OS:Construction,
+  {bfa7bc0a-8eb7-4bd6-9d17-26fc4ba07f1e}, !- Handle
+  ASHRAE 90.1-2004 ExtRoof IEAD ClimateZone 5-6, !- Name
+  {ad560c60-580b-4435-a8c3-eb42259c7b40}, !- Surface Rendering Name
+  {f8188248-fedd-4125-977e-547d8dd6b5c1}, !- Layer 1
+  {6f251c3e-894a-472e-ae67-73671deac9f1}, !- Layer 2
+  {cafdae79-0888-48e9-adb2-167e3376b35b}; !- Layer 3
+
+OS:StandardsInformation:Construction,
+  {f62cb934-3843-42f1-ab9e-cc2c0376dc80}, !- Handle
+  {bfa7bc0a-8eb7-4bd6-9d17-26fc4ba07f1e}, !- Construction Name
+  ExteriorRoof,                           !- Intended Surface Type
+  IEAD;                                   !- Standards Construction Type
+
+OS:Material,
+  {f8188248-fedd-4125-977e-547d8dd6b5c1}, !- Handle
+  Roof Membrane,                          !- Name
+  VeryRough,                              !- Roughness
+  0.0095,                                 !- Thickness {m}
+  0.16,                                   !- Conductivity {W/m-K}
+  1121.29,                                !- Density {kg/m3}
+  1460,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.7,                                    !- Solar Absorptance
+  0.7;                                    !- Visible Absorptance
+
+OS:Material,
+  {6f251c3e-894a-472e-ae67-73671deac9f1}, !- Handle
+  IEAD NonRes Roof Insulation-2.85,       !- Name
+  MediumRough,                            !- Roughness
+  0.127338688569477,                      !- Thickness {m}
+  0.049,                                  !- Conductivity {W/m-K}
+  265,                                    !- Density {kg/m3}
+  836.800000000001,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.7,                                    !- Solar Absorptance
+  0.7;                                    !- Visible Absorptance
+
+OS:Material,
+  {cafdae79-0888-48e9-adb2-167e3376b35b}, !- Handle
+  Metal Decking,                          !- Name
+  MediumSmooth,                           !- Roughness
+  0.0015,                                 !- Thickness {m}
+  45.006,                                 !- Conductivity {W/m-K}
+  7680,                                   !- Density {kg/m3}
+  418.4,                                  !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+OS:DefaultSurfaceConstructions,
+  {d21e6be6-20cc-4a47-ab36-d4190e4ea20b}, !- Handle
+  Default Surface Constructions 2,        !- Name
+  {7a9fb545-9100-4dec-a667-de4f0e4c7d03}, !- Floor Construction Name
+  {02752cdd-cf09-4970-9dd0-6950494883c7}, !- Wall Construction Name
+  {24f7753e-d747-406b-b867-62235a51db0b}; !- Roof Ceiling Construction Name
+
+OS:Construction,
+  {7a9fb545-9100-4dec-a667-de4f0e4c7d03}, !- Handle
+  Interior Floor,                         !- Name
+  {b83371c3-657c-49ec-ba54-8c9421c27809}, !- Surface Rendering Name
+  {528df285-b758-4ff5-a376-88fe04c5c192}, !- Layer 1
+  {25c2915d-cf3f-4f68-8c90-eccbd9baeaae}, !- Layer 2
+  {299a1cfb-327a-4427-83cc-862fee148597}; !- Layer 3
+
+OS:StandardsInformation:Construction,
+  {aa88bcd4-9ad0-4d61-9f32-43fa4b0f6ade}, !- Handle
+  {7a9fb545-9100-4dec-a667-de4f0e4c7d03}, !- Construction Name
+  InteriorFloor,                          !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Material,
+  {528df285-b758-4ff5-a376-88fe04c5c192}, !- Handle
+  F16 Acoustic tile,                      !- Name
+  MediumSmooth,                           !- Roughness
+  0.0191,                                 !- Thickness {m}
+  0.06,                                   !- Conductivity {W/m-K}
+  368,                                    !- Density {kg/m3}
+  590.000000000002,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.3,                                    !- Solar Absorptance
+  0.3;                                    !- Visible Absorptance
+
+OS:Material:AirGap,
+  {25c2915d-cf3f-4f68-8c90-eccbd9baeaae}, !- Handle
+  F05 Ceiling air space resistance,       !- Name
+  0.18;                                   !- Thermal Resistance {m2-K/W}
+
+OS:Material,
+  {299a1cfb-327a-4427-83cc-862fee148597}, !- Handle
+  M11 100mm lightweight concrete,         !- Name
+  MediumRough,                            !- Roughness
+  0.1016,                                 !- Thickness {m}
+  0.53,                                   !- Conductivity {W/m-K}
+  1280,                                   !- Density {kg/m3}
+  840.000000000002,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.5,                                    !- Solar Absorptance
+  0.5;                                    !- Visible Absorptance
+
+OS:Construction,
+  {02752cdd-cf09-4970-9dd0-6950494883c7}, !- Handle
+  Interior Wall,                          !- Name
+  {23549c5c-49e8-4a68-8f52-b12259cb14b2}, !- Surface Rendering Name
+  {78cfac37-a50b-4dd1-b1e5-4e915dec2c37}, !- Layer 1
+  {205d1797-4786-41aa-bb49-c62de03322d9}, !- Layer 2
+  {78cfac37-a50b-4dd1-b1e5-4e915dec2c37}; !- Layer 3
+
+OS:StandardsInformation:Construction,
+  {266179f5-73a3-42cc-8b7b-2e005cffd3b9}, !- Handle
+  {02752cdd-cf09-4970-9dd0-6950494883c7}, !- Construction Name
+  InteriorWall,                           !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Material,
+  {78cfac37-a50b-4dd1-b1e5-4e915dec2c37}, !- Handle
+  G01a 19mm gypsum board,                 !- Name
+  MediumSmooth,                           !- Roughness
+  0.019,                                  !- Thickness {m}
+  0.16,                                   !- Conductivity {W/m-K}
+  800,                                    !- Density {kg/m3}
+  1090,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.4,                                    !- Solar Absorptance
+  0.4;                                    !- Visible Absorptance
+
+OS:Construction,
+  {24f7753e-d747-406b-b867-62235a51db0b}, !- Handle
+  Interior Ceiling,                       !- Name
+  {980a6a9b-9c8d-4d19-b318-f97c3c73eb9c}, !- Surface Rendering Name
+  {299a1cfb-327a-4427-83cc-862fee148597}, !- Layer 1
+  {25c2915d-cf3f-4f68-8c90-eccbd9baeaae}, !- Layer 2
+  {528df285-b758-4ff5-a376-88fe04c5c192}; !- Layer 3
+
+OS:StandardsInformation:Construction,
+  {f0bba4e0-9fa6-45e6-b410-87c68a6c3605}, !- Handle
+  {24f7753e-d747-406b-b867-62235a51db0b}, !- Construction Name
+  InteriorCeiling,                        !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:DefaultSurfaceConstructions,
+  {3812b8d8-7642-4129-8194-6893f3b6596d}, !- Handle
+  Default Surface Constructions 3,        !- Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Floor Construction Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Wall Construction Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}; !- Roof Ceiling Construction Name
+
+OS:DefaultSubSurfaceConstructions,
+  {a6e9ad81-2908-42bb-bd13-f1b257e4f7fe}, !- Handle
+  Default Sub Surface Constructions 1,    !- Name
+  {b2fe6b06-681f-4dd4-be7c-310777b2bb25}, !- Fixed Window Construction Name
+  {b2fe6b06-681f-4dd4-be7c-310777b2bb25}, !- Operable Window Construction Name
+  {2ca5928d-4f62-4a47-831c-10f9bad2cd0f}, !- Door Construction Name
+  ,                                       !- Glass Door Construction Name
+  ,                                       !- Overhead Door Construction Name
+  ,                                       !- Skylight Construction Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Tubular Daylight Dome Construction Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}; !- Tubular Daylight Diffuser Construction Name
+
+OS:Construction,
+  {b2fe6b06-681f-4dd4-be7c-310777b2bb25}, !- Handle
+  ASHRAE 90.1-2004 ExtWindow ClimateZone 4-6, !- Name
+  {58f3ab12-6703-454b-a44b-a70287841bb1}, !- Surface Rendering Name
+  {8c1f1a44-834f-41a0-a150-58257cea5238}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {6b74cb8e-8a8a-4873-abb8-6c85a6cec6b7}, !- Handle
+  {b2fe6b06-681f-4dd4-be7c-310777b2bb25}, !- Construction Name
+  ExteriorWindow,                         !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Construction,
+  {2ca5928d-4f62-4a47-831c-10f9bad2cd0f}, !- Handle
+  Exterior Door,                          !- Name
+  {3b9fce66-f133-4a56-92f3-29ee2b5cf3da}, !- Surface Rendering Name
+  {fdb45a61-8be3-49ba-bf92-1ff10cf31e4f}, !- Layer 1
+  {ca648314-2883-408a-ba21-16c4e6f043cc}; !- Layer 2
+
+OS:StandardsInformation:Construction,
+  {cf59565b-cfa5-4d50-93f1-091f8de5a45f}, !- Handle
+  {2ca5928d-4f62-4a47-831c-10f9bad2cd0f}, !- Construction Name
+  ExteriorDoor,                           !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Material,
+  {fdb45a61-8be3-49ba-bf92-1ff10cf31e4f}, !- Handle
+  F08 Metal surface,                      !- Name
+  Smooth,                                 !- Roughness
+  0.0008,                                 !- Thickness {m}
+  45.2800000000001,                       !- Conductivity {W/m-K}
+  7823.99999999999,                       !- Density {kg/m3}
+  500,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.7,                                    !- Solar Absorptance
+  0.7;                                    !- Visible Absorptance
+
+OS:Material,
+  {ca648314-2883-408a-ba21-16c4e6f043cc}, !- Handle
+  I01 25mm insulation board,              !- Name
+  MediumRough,                            !- Roughness
+  0.0254,                                 !- Thickness {m}
+  0.03,                                   !- Conductivity {W/m-K}
+  43,                                     !- Density {kg/m3}
+  1210,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+OS:Construction,
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Handle
+  Interior Window,                        !- Name
+  {588fb664-694d-4d86-aa4a-3d869ecf201b}, !- Surface Rendering Name
+  {572356bb-0c24-49d0-b480-38deaae93b50}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {28a700cb-6c64-4920-bd5f-c832115a04c5}, !- Handle
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Construction Name
+  InteriorWindow,                         !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:DefaultSubSurfaceConstructions,
+  {db81d7ef-2b01-4b25-8344-427fed3703c3}, !- Handle
+  Default Sub Surface Constructions 2,    !- Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Fixed Window Construction Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Operable Window Construction Name
+  {78d4033c-811c-422f-a1a7-63daf6c58618}, !- Door Construction Name
+  ,                                       !- Glass Door Construction Name
+  ,                                       !- Overhead Door Construction Name
+  ,                                       !- Skylight Construction Name
+  ,                                       !- Tubular Daylight Dome Construction Name
+  ;                                       !- Tubular Daylight Diffuser Construction Name
+
+OS:Construction,
+  {78d4033c-811c-422f-a1a7-63daf6c58618}, !- Handle
+  Interior Door,                          !- Name
+  {69e7cbc8-cf4a-45b7-a6d8-4dc58ccb432a}, !- Surface Rendering Name
+  {7686e88a-6687-4d94-a0e5-1210767501f7}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {f4dca69c-63f7-429c-8183-7d429a0f8205}, !- Handle
+  {78d4033c-811c-422f-a1a7-63daf6c58618}, !- Construction Name
+  InteriorDoor,                           !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Material,
+  {7686e88a-6687-4d94-a0e5-1210767501f7}, !- Handle
+  G05 25mm wood,                          !- Name
+  MediumSmooth,                           !- Roughness
+  0.0254,                                 !- Thickness {m}
+  0.15,                                   !- Conductivity {W/m-K}
+  608,                                    !- Density {kg/m3}
+  1630,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.5,                                    !- Solar Absorptance
+  0.5;                                    !- Visible Absorptance
+
+OS:Construction,
+  {5c548f0a-92ab-45c3-828f-f20f8798ca20}, !- Handle
+  Interior Partition,                     !- Name
+  {4d6f3d4c-016a-4a93-875a-f0e308230de7}, !- Surface Rendering Name
+  {7686e88a-6687-4d94-a0e5-1210767501f7}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {6c6a5a1e-d728-4dd5-8ae6-9d874f276d5c}, !- Handle
+  {5c548f0a-92ab-45c3-828f-f20f8798ca20}, !- Construction Name
+  InteriorPartition,                      !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Rendering:Color,
+  {4d6f3d4c-016a-4a93-875a-f0e308230de7}, !- Handle
+  Rendering Color 665,                    !- Name
+  250,                                    !- Rendering Red Value
+  128,                                    !- Rendering Green Value
+  114;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {69e7cbc8-cf4a-45b7-a6d8-4dc58ccb432a}, !- Handle
+  Rendering Color 666,                    !- Name
+  238,                                    !- Rendering Red Value
+  232,                                    !- Rendering Green Value
+  170;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {588fb664-694d-4d86-aa4a-3d869ecf201b}, !- Handle
+  Rendering Color 667,                    !- Name
+  30,                                     !- Rendering Red Value
+  144,                                    !- Rendering Green Value
+  255;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {3b9fce66-f133-4a56-92f3-29ee2b5cf3da}, !- Handle
+  Rendering Color 668,                    !- Name
+  255,                                    !- Rendering Red Value
+  255,                                    !- Rendering Green Value
+  224;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {58f3ab12-6703-454b-a44b-a70287841bb1}, !- Handle
+  Rendering Color 669,                    !- Name
+  72,                                     !- Rendering Red Value
+  61,                                     !- Rendering Green Value
+  139;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {980a6a9b-9c8d-4d19-b318-f97c3c73eb9c}, !- Handle
+  Rendering Color 670,                    !- Name
+  127,                                    !- Rendering Red Value
+  255,                                    !- Rendering Green Value
+  212;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {23549c5c-49e8-4a68-8f52-b12259cb14b2}, !- Handle
+  Rendering Color 671,                    !- Name
+  100,                                    !- Rendering Red Value
+  149,                                    !- Rendering Green Value
+  237;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {b83371c3-657c-49ec-ba54-8c9421c27809}, !- Handle
+  Rendering Color 672,                    !- Name
+  186,                                    !- Rendering Red Value
+  85,                                     !- Rendering Green Value
+  211;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {ad560c60-580b-4435-a8c3-eb42259c7b40}, !- Handle
+  Rendering Color 673,                    !- Name
+  112,                                    !- Rendering Red Value
+  128,                                    !- Rendering Green Value
+  144;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {0d7859e4-27d5-485c-badb-9f533438d637}, !- Handle
+  Rendering Color 674,                    !- Name
+  255,                                    !- Rendering Red Value
+  105,                                    !- Rendering Green Value
+  180;                                    !- Rendering Blue Value
+
+OS:Rendering:Color,
+  {1e86abdc-3f00-4278-8ada-9123d250ff7c}, !- Handle
+  Rendering Color 675,                    !- Name
+  255,                                    !- Rendering Red Value
+  250,                                    !- Rendering Green Value
+  205;                                    !- Rendering Blue Value
+
 OS:BuildingStory,
-  {d05bd989-c42e-4a82-bd68-acc6747eca4f}, !- Handle
+  {9e2f2f94-11fc-49b4-a067-544e858a2413}, !- Handle
   Building Story 1,                       !- Name
   0,                                      !- Nominal Z Coordinate {m}
   ,                                       !- Nominal Floor to Floor Height {m}
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  {44edb4f6-6cdd-4f6a-a5d3-ea93d406c2f2}; !- Group Rendering Name
+  {80e02af2-012c-4ce7-8e72-5f33417d15c9}; !- Group Rendering Name
 
 OS:BuildingStory,
-  {3b340a74-1a8d-4a7b-8b50-b70a2b01c977}, !- Handle
+  {c86f7c89-7c39-4fc1-9a9a-ce1cd09bc294}, !- Handle
   Building Story 2,                       !- Name
   4,                                      !- Nominal Z Coordinate {m}
   ,                                       !- Nominal Floor to Floor Height {m}
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  {593580c9-0d39-49af-816f-5be96df04058}; !- Group Rendering Name
+  {6c8ee8ce-9c9b-4553-b786-e807e59cd4e2}; !- Group Rendering Name
 
 OS:Rendering:Color,
-  {44edb4f6-6cdd-4f6a-a5d3-ea93d406c2f2}, !- Handle
-  Rendering Color 654,                    !- Name
-  188,                                    !- Rendering Red Value
-  143,                                    !- Rendering Green Value
-  143;                                    !- Rendering Blue Value
+  {80e02af2-012c-4ce7-8e72-5f33417d15c9}, !- Handle
+  Rendering Color 676,                    !- Name
+  255,                                    !- Rendering Red Value
+  237,                                    !- Rendering Green Value
+  78,                                     !- Rendering Blue Value
+  255;                                    !- Rendering Alpha Value
 
 OS:Rendering:Color,
-  {593580c9-0d39-49af-816f-5be96df04058}, !- Handle
-  Rendering Color 655,                    !- Name
-  175,                                    !- Rendering Red Value
-  238,                                    !- Rendering Green Value
-  238;                                    !- Rendering Blue Value
+  {6c8ee8ce-9c9b-4553-b786-e807e59cd4e2}, !- Handle
+  Rendering Color 677,                    !- Name
+  0,                                      !- Rendering Red Value
+  250,                                    !- Rendering Green Value
+  154;                                    !- Rendering Blue Value
+
+OS:StandardsInformation:Material,
+  {dbf99fc4-7478-435e-90d5-b3af49270c36}, !- Handle
+  {b040665a-d37e-4993-9808-1bc757286cf9}; !- Material Name
 
