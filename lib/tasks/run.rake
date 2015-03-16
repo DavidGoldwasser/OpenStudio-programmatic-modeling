@@ -81,6 +81,27 @@ def create_json(value_set,seed_model,save_string)
 
 end
 
+
+def create_model_workflow_gem(path)
+  # NICK: make a single model. Save the log messages.
+  # - Remove system call to zip
+  # - Add method to just create the open studio model
+  # - Put each zip/json file in its own directory (DG)
+  # - Allow for no data point file (set to default/static values)
+  # - Paths to energyplus and openstudio on windows
+
+  k = OpenStudio::Workflow.run_energyplus 'Local', path
+
+  options = {
+      problem_filename: 'analysis_1.json',
+      datapoint_filename: 'datapoint_1.json',
+      analysis_root_path: 'spec/files/example_models',
+      use_monthly_reports: true
+  }
+  k = OpenStudio::Workflow.load 'Local', path, options
+
+end
+
 # this will create model (eventually IDF and sim run) from script in projects directory
 # todo - this will eventually be replaced with method to make models from json files in the analysis directory
 def create_model(value_set,seed_model,save_string)
