@@ -15,7 +15,7 @@ def workflow_create_jsons()
 
   value_sets.each do |value_set|
     # create json files
-    create_json(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
+    create_json(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:climate_zone]}")
   end
 end
 
@@ -28,7 +28,7 @@ def workflow_create_models()
 
   value_sets.each do |value_set|
     # run measures and create model
-    create_model(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:template]}_#{value_set[:climate_zone]}")
+    create_model(value_set,seed_model,"#{value_set[:hvac_type]}_#{value_set[:climate_zone]}")
   end
 end
 
@@ -36,7 +36,7 @@ end
 def populate_value_sets()
   # jobs to run
   value_sets = []
-  value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
+  value_sets << {:hvac_type => "AedgK12HvacDualDuctDoas", :climate_zone => "ASHRAE 169-2006-3A"}
 
   return value_sets
 end
@@ -45,63 +45,39 @@ end
 def populate_workflow(value_set,seed_model)
 
   # break out value_set
-  building_type = value_set[:building_type]
-  template = value_set[:template]
+  hvac_type = value_set[:hvac_type]
   climate_zone = value_set[:climate_zone]
-  total_bldg_area_ip = value_set[:total_bldg_area_ip]
 
   # setup
   measures = []
 
   # start of OpenStudio measures
 
-  # adding aedg_k12_electric_equipment
-  measures << {
-      :name => 'aedg_k12_electric_equipment',
-      :desc => 'AEDG K12 Electric Equipment',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipment')}",
-      :variables => [],
-      :arguments => []
-  }
+  # adding AEDG K12 measures
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipment')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipmentControls')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12EnvelopeAndEntryInfiltration')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorDoorConstruction')}"} # todo had issues resolving matched surfaces
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorFloorConstruction')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorWallConstruction')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12RoofConstruction')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12FenestrationAndDaylightingControls')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorFinishes')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorLighting')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorLightingControls')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12Kitchen')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12Swh')}"}
 
-  # adding aedg_k12_electric_equipment_controls
-  measures << {
-      :name => 'aedg_k12_electric_equipment_controls',
-      :desc => 'AEDG K12 Electric Equipment Controls',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipmentControls')}",
-      :variables => [],
-      :arguments => []
-  }
+  # need to supply inputs
+  #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorLighting')}"}
 
-  # adding assign_thermostats_basedon_standards_building_typeand_standards_space_type
-  measures << {
-      :name => 'assign_thermostats_basedon_standards_building_typeand_standards_space_type',
-      :desc => 'Assign Thermostats Basedon Standards Building Typeand Standards Space Type',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}",
-      :variables => [],
-      :arguments => []
-  }
+  #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12SlabAndBasement')}"}
+
 
   # use case statement to choose HVAC based on building type
-  case building_type
+  case hvac_type
 
-    when "Office"
-
-      # adding aedg_office_hvac_ashp_doas
-      arguments = [] # :value is just a value
-      variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-      arguments << {:name => 'ceilingReturnPlenumSpaceType', :desc => 'This space type should be part of a ceiling return air plenum.', :value => nil} # this is an optional argument
-      arguments << {:name => 'costTotalHVACSystem', :desc => 'Total Cost for HVAC System ($).', :value => 0.0}
-      arguments << {:name => 'remake_schedules', :desc => 'Apply recommended availability and ventilation schedules for air handlers?"', :value => true}
-      measures << {
-          :name => 'aedg_office_hvac_ashp_doas',
-          :desc => 'AEDG Office Hvac Ashp Doas',
-          :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgOfficeHvacAshpDoas')}",
-          :arguments => arguments,
-          :variables => variables
-      }
-
-    when "PrimarySchool" , "SecondarySchool"
+    when "AedgK12HvacDualDuctDoas"
 
       # adding aedg_k12_hvac_dual_duct_doas
       arguments = [] # :value is just a value
