@@ -69,8 +69,8 @@ def create_json(value_set,seed_model,save_string)
   #a.libraries.add("#{MEASURES_ROOT_DIRECTORY}/lib", { library_name: 'lib'})
 
   # Save the analysis JSON
-  formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
-  zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
+  formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
+  zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
 
   # set the analysis type here as well.
   a.analysis_type = ANALYSIS_TYPE
@@ -344,7 +344,6 @@ namespace :workflow do
     # loop through jsons found in the directory
     analysis_jsons.each do |json|
       save_string = json.downcase.gsub('.json','') # remove the extension
-
       formulation_file = "#{save_string}.json"
       zip_file = "#{save_string}.zip"
       if File.exist?(formulation_file) && File.exist?(zip_file)
