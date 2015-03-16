@@ -1,7 +1,7 @@
 
 OS:Version,
-  {064d329e-630e-468e-ab49-5d927b0558f7}, !- Handle
-  1.2.0;                                  !- Version Identifier
+  {efffd38d-3b63-4999-b2ac-f6f4076746ce}, !- Handle
+  1.7.0;                                  !- Version Identifier
 
 OS:SimulationControl,
   {41f65c43-2dc9-4d82-a6e4-a562bae08803}, !- Handle
@@ -1572,7 +1572,7 @@ OS:StandardsInformation:Construction,
   {0fed2599-a9fb-49a7-9f6d-9314e62bc523}, !- Handle
   {caa58376-d24d-4bc4-8d0f-3a92bce53f09}, !- Construction Name
   ,                                       !- Intended Surface Type
-  ,                                       !- Construction Type
+  ,                                       !- Standards Construction Type
   2,                                      !- Perturbable Layer
   Insulation,                             !- Perturbable Layer Type
   ;                                       !- Other Perturbable Layer Type
@@ -1727,7 +1727,7 @@ OS:StandardsInformation:Construction,
   {ff76aeec-55d5-437c-8a1c-05739ffb4d98}, !- Handle
   {c6c2add5-aa1f-4e15-bd7a-0492aa07a418}, !- Construction Name
   ,                                       !- Intended Surface Type
-  ,                                       !- Construction Type
+  ,                                       !- Standards Construction Type
   1,                                      !- Perturbable Layer
   Insulation,                             !- Perturbable Layer Type
   ;                                       !- Other Perturbable Layer Type
@@ -1811,16 +1811,6 @@ OS:People,
 
 OS:Facility,
   {a6468ea3-4188-4667-86f7-1a35b777f6ce}; !- Handle
-
-OS:Building,
-  {e11b34af-2bb6-4f16-8082-cbd61ee7679e}, !- Handle
-  Building 1,                             !- Name
-  ,                                       !- Building Type
-  ,                                       !- North Axis {deg}
-  ,                                       !- Nominal Floor to Floor Height {m}
-  ,                                       !- Space Type Name
-  {c50911a9-e76e-4759-bb87-25716b1a78da}, !- Default Construction Set Name
-  {530f9623-af4a-491d-9109-39cfa4e2ff70}; !- Default Schedule Set Name
 
 OS:ThermalZone,
   {fc71e57a-151a-46b8-a678-25e6fe6f7b47}, !- Handle
@@ -3238,7 +3228,7 @@ OS:WeatherFile,
   -105.18,                                !- Longitude {deg}
   -7,                                     !- Time Zone {hr}
   1829,                                   !- Elevation {m}
-  file:files/USA_CO_Golden-NREL.724666_TMY3.epw, !- Url
+  file:///C:/Users/dgoldwas/Documents/GitHub/OpenStudio-measures/NREL working measures/AnnualEndUseBreakdown/tests/ExampleModel/files/USA_CO_Golden-NREL.724666_TMY3.epw, !- Url
   3CF64E88;                               !- Checksum
 
 OS:Rendering:Color,
@@ -4000,4 +3990,44 @@ OS:Rendering:Color,
   127,                                    !- Rendering Red Value
   255,                                    !- Rendering Green Value
   0;                                      !- Rendering Blue Value
+
+OS:Building,
+  {e11b34af-2bb6-4f16-8082-cbd61ee7679e}, !- Handle
+  Building 1,                             !- Name
+  ,                                       !- Building Sector Type
+  ,                                       !- North Axis {deg}
+  ,                                       !- Nominal Floor to Floor Height {m}
+  ,                                       !- Space Type Name
+  {c50911a9-e76e-4759-bb87-25716b1a78da}, !- Default Construction Set Name
+  {530f9623-af4a-491d-9109-39cfa4e2ff70}; !- Default Schedule Set Name
+
+OS:ClimateZones,
+  {a5ff52c9-3afa-4761-8e52-6da7a4886ff4}, !- Handle
+  ,                                       !- Active Institution
+  ,                                       !- Active Year
+  ASHRAE,                                 !- Climate Zone Institution Name 1
+  ANSI/ASHRAE Standard 169,               !- Climate Zone Document Name 1
+  2006,                                   !- Climate Zone Document Year 1
+  ,                                       !- Climate Zone Value 1
+  CEC,                                    !- Climate Zone Institution Name 2
+  California Climate Zone Descriptions,   !- Climate Zone Document Name 2
+  1995,                                   !- Climate Zone Document Year 2
+  ;                                       !- Climate Zone Value 2
+
+OS:LifeCycleCost:Parameters,
+  {1242216a-eb49-4a5a-b287-651aa1b055d1}, !- Handle
+  FEMP,                                   !- Analysis Type
+  ,                                       !- Discounting Convention
+  ,                                       !- Inflation Approach
+  ,                                       !- Real Discount Rate
+  ,                                       !- Nominal Discount Rate
+  ,                                       !- Inflation
+  ,                                       !- Base Date Month
+  ,                                       !- Base Date Year
+  ,                                       !- Service Date Month
+  ,                                       !- Service Date Year
+  ,                                       !- Length of Study Period in Years
+  ,                                       !- Tax Rate
+  ,                                       !- Depreciation Method
+  Yes;                                    !- Use NIST Fuel Escalation Rates
 

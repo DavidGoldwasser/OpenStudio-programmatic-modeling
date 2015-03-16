@@ -69,8 +69,8 @@ def create_json(value_set,seed_model,save_string)
   #a.libraries.add("#{MEASURES_ROOT_DIRECTORY}/lib", { library_name: 'lib'})
 
   # Save the analysis JSON
-  formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
-  zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
+  formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
+  zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
 
   # set the analysis type here as well.
   a.analysis_type = ANALYSIS_TYPE
@@ -78,6 +78,27 @@ def create_json(value_set,seed_model,save_string)
   # save files
   a.save formulation_file
   a.save_zip zip_file
+
+end
+
+
+def create_model_workflow_gem(path)
+  # NICK: make a single model. Save the log messages.
+  # - Remove system call to zip
+  # - Add method to just create the open studio model
+  # - Put each zip/json file in its own directory (DG)
+  # - Allow for no data point file (set to default/static values)
+  # - Paths to energyplus and openstudio on windows
+
+  k = OpenStudio::Workflow.run_energyplus 'Local', path
+
+  options = {
+      problem_filename: 'analysis_1.json',
+      datapoint_filename: 'datapoint_1.json',
+      analysis_root_path: 'spec/files/example_models',
+      use_monthly_reports: true
+  }
+  k = OpenStudio::Workflow.load 'Local', path, options
 
 end
 
@@ -262,10 +283,6 @@ def create_model(value_set,seed_model,save_string)
   puts "Saving #{output_file_path}"
   workspace.save(output_file_path,true)
 
-  # todo - look at ChangeBuildingLocation, it thinks epw it is in files, not weather? Can I save the folder like app does
-
-  # todo - reporting measures (will require E+ run)
-
 end
 
 # Command-line arguments in Rake: http://viget.com/extend/protip-passing-parameters-to-your-rake-tasks
@@ -327,7 +344,6 @@ namespace :workflow do
     # loop through jsons found in the directory
     analysis_jsons.each do |json|
       save_string = json.downcase.gsub('.json','') # remove the extension
-
       formulation_file = "#{save_string}.json"
       zip_file = "#{save_string}.zip"
       if File.exist?(formulation_file) && File.exist?(zip_file)

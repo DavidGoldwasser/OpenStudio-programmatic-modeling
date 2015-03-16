@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Annual Summary Report</title>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="file:///C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/resources/web_assets/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Testing Pie Chart</title>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.1.3"></script>
+
+    <style type="text/css">
+        .slice text {
+            font-size: 10pt;
+            font-family: Arial;
+        }
+    </style>
+    <style>
+        <!--
+        .tab { margin-left: 40px; }
+        -->
+    </style>
+
+</head>
+  <body>
+    <div class="container-fluid">
+      <a name= "top"></a>
+      <h2>Annual Summary Report</h2>
+      <br>
+      <h3>Table of Contents</h3>
+      
+          <a href="#General_Building_Information">General Building Information</a>
+          <br>
+      
+          <a href="#Space_Type_Breakdown">Space Type Breakdown</a>
+          <br>
+      
+          <a href="#LEED_Summary_-_EAp2-18._End_Use_Percentage">LEED Summary - EAp2-18. End Use Percentage</a>
+          <br>
+      
+          <a href="#LEED_Summary_-_EAp2-17a._Energy_Use_Intensity_-_Electricity">LEED Summary - EAp2-17a. Energy Use Intensity - Electricity</a>
+          <br>
+      
+          <a href="#LEED_Summary_-_EAp2-17b._Energy_Use_Intensity_-_Natural_Gas">LEED Summary - EAp2-17b. Energy Use Intensity - Natural Gas</a>
+          <br>
+      
+          <a href="#LEED_Summary_-_EAp2-6._Energy_Use_Summary">LEED Summary - EAp2-6. Energy Use Summary</a>
+          <br>
+      
+          <a href="#LEED_Summary_-_EAp2-2._Advisory_Messages">LEED Summary - EAp2-2. Advisory Messages</a>
+          <br>
+      
+          <a href="#Space_Type_Details">Space Type Details</a>
+          <br>
+      
+          <a href="#Air_Loop_Summary">Air Loop Summary</a>
+          <br>
+      
+          <a href="#Plant_Loop_Summary">Plant Loop Summary</a>
+          <br>
+      
+          <a href="#Zone_Equipment_Summary">Zone Equipment Summary</a>
+          <br>
+      
+          <a href="#Conditioned_Window-Wall_Ratio_and_Skylight-Roof_Ratio">Conditioned Window-Wall Ratio and Skylight-Roof Ratio</a>
+          <br>
+      
+          <a href="#Construction_Summary_for_Base_Surfaces">Construction Summary for Base Surfaces</a>
+          <br>
+      
+          <a href="#Construction_Summary_for_Fenestration">Construction Summary for Fenestration</a>
+          <br>
+      
+          <a href="#Water_Use_Equipment_Summary">Water Use Equipment Summary</a>
+          <br>
+      
+          <a href="#Exterior_Lighting_Summary">Exterior Lighting Summary</a>
+          <br>
+      
+
+        
+        
+          <a name= "General_Building_Information"></a>
+          <h3>General Building Information</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Information</th>
+                
+                    <th>Value</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Building Name
+                        </td>
+                    
+                        <td>
+                          Building 1
+                        </td>
+                    
+                        <td>
+                          building_name
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Net Site Energy
+                        </td>
+                    
+                        <td>
+                          160,323
+                        </td>
+                    
+                        <td>
+                          kBtu
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Total Building Area
+                        </td>
+                    
+                        <td>
+                          4,306
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          EUI
+                        </td>
+                    
+                        <td>
+                          37.24
+                        </td>
+                    
+                        <td>
+                          kBtu/ft^2
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart1")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Space_Type_Breakdown"></a>
+          <h3>Space Type Breakdown</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Space Type Name</th>
+                
+                    <th>Floor Area</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          ASHRAE 189.1-2009 ClimateZone 4-8 MediumOffice
+                        </td>
+                    
+                        <td>
+                          1,076
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Space Type 1
+                        </td>
+                    
+                        <td>
+                          2,153
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          No Space Type
+                        </td>
+                    
+                        <td>
+                          1,076
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+                  <div class="row">
+                      <div id= "pie_chart2" class="col-md-4"></div>
+                      <div class="col-md-4"></div>
+                  </div>
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [{"label":"ASHRAE 189.1-2009 ClimateZone 4-8 MediumOffice", "value":1076.3910416709723, "color":"rgb(120,236,201)"},{"label":"Space Type 1", "value":2152.7820833419446, "color":"rgb(255,0,0)"},{"label":"No SpaceType Assigned", "value":1076.39,"color":"rgb(20,20,20)"}];
+
+                    var vis = d3.select("#pie_chart2")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "LEED_Summary_-_EAp2-18._End_Use_Percentage"></a>
+          <h3>LEED Summary - EAp2-18. End Use Percentage</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>End Use</th>
+                
+                    <th>Percentage</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Interior Lighting
+                        </td>
+                    
+                        <td>
+                          20.38
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Space Heating
+                        </td>
+                    
+                        <td>
+                          45.85
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Space Cooling
+                        </td>
+                    
+                        <td>
+                          7.84
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Fans-Interior
+                        </td>
+                    
+                        <td>
+                          7.98
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Service Water Heating
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Receptacle Equipment
+                        </td>
+                    
+                        <td>
+                          17.96
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Miscellaneous
+                        </td>
+                    
+                        <td>
+                          -0.00
+                        </td>
+                    
+                        <td>
+                          %
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+                  <div class="row">
+                      <div id= "pie_chart3" class="col-md-4"></div>
+                      <div class="col-md-4"></div>
+                  </div>
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [{"label":"Interior Lighting", "value":20.38, "color":"#F7DF10"},{"label":"Space Heating", "value":45.85, "color":"#EF1C21"},{"label":"Space Cooling", "value":7.84, "color":"#0071BD"},{"label":"Fans-Interior", "value":7.98, "color":"#FF79AD"},{"label":"Receptacle Equipment", "value":17.96, "color":"#4A4D4A"}];
+
+                    var vis = d3.select("#pie_chart3")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "LEED_Summary_-_EAp2-17a._Energy_Use_Intensity_-_Electricity"></a>
+          <h3>LEED Summary - EAp2-17a. Energy Use Intensity - Electricity</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>End Use</th>
+                
+                    <th>Consumption</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Interior Lighting
+                        </td>
+                    
+                        <td>
+                          2.22
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Space Heating
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Space Cooling
+                        </td>
+                    
+                        <td>
+                          0.86
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Fans-Interior
+                        </td>
+                    
+                        <td>
+                          0.87
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Service Water Heating
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Receptacle Equipment
+                        </td>
+                    
+                        <td>
+                          1.96
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Miscellaneous
+                        </td>
+                    
+                        <td>
+                          -0.00
+                        </td>
+                    
+                        <td>
+                          kWh/ft^2
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+                  <div class="row">
+                      <div id= "pie_chart4" class="col-md-4"></div>
+                      <div class="col-md-4"></div>
+                  </div>
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [{"label":"Interior Lighting", "value":86.17, "color":"#F7DF10"},{"label":"Space Cooling", "value":33.15, "color":"#0071BD"},{"label":"Fans-Interior", "value":33.74, "color":"#FF79AD"},{"label":"Receptacle Equipment", "value":75.93, "color":"#4A4D4A"}];
+
+                    var vis = d3.select("#pie_chart4")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "LEED_Summary_-_EAp2-17b._Energy_Use_Intensity_-_Natural_Gas"></a>
+          <h3>LEED Summary - EAp2-17b. Energy Use Intensity - Natural Gas</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>End Use</th>
+                
+                    <th>Consumption</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Space Heating
+                        </td>
+                    
+                        <td>
+                          0.17
+                        </td>
+                    
+                        <td>
+                          therms/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Service Water Heating
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          therms/ft^2
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Miscellaneous
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          therms/ft^2
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+                  <div class="row">
+                      <div id= "pie_chart5" class="col-md-4"></div>
+                      <div class="col-md-4"></div>
+                  </div>
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [{"label":"Space Heating", "value":193.89, "color":"#EF1C21"}];
+
+                    var vis = d3.select("#pie_chart5")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "LEED_Summary_-_EAp2-6._Energy_Use_Summary"></a>
+          <h3>LEED Summary - EAp2-6. Energy Use Summary</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Fuel</th>
+                
+                    <th>Value</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Electricity
+                        </td>
+                    
+                        <td>
+                          25.45
+                        </td>
+                    
+                        <td>
+                          kWh
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Natural Gas
+                        </td>
+                    
+                        <td>
+                          735.11
+                        </td>
+                    
+                        <td>
+                          therms
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Additional
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          kBtu
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+                  <div class="row">
+                      <div id= "pie_chart6" class="col-md-4"></div>
+                      <div class="col-md-4"></div>
+                  </div>
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [{"label":"Electricity", "value":91.6, "color":"#1f77b4"},{"label":"Natural Gas", "value":77.56, "color":"#aec7e8"}];
+
+                    var vis = d3.select("#pie_chart6")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "LEED_Summary_-_EAp2-2._Advisory_Messages"></a>
+          <h3>LEED Summary - EAp2-2. Advisory Messages</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Message</th>
+                
+                    <th>Value</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Number of hours heating loads not met
+                        </td>
+                    
+                        <td>
+                          146.5
+                        </td>
+                    
+                        <td>
+                          hr
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Number of hours cooling loads not met
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          hr
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Number of hours not met
+                        </td>
+                    
+                        <td>
+                          146.5
+                        </td>
+                    
+                        <td>
+                          hr
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart7")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Space_Type_Details"></a>
+          <h3>Space Type Details</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Description</th>
+                
+                    <th>Definition Value</th>
+                
+                    <th>Value Unit</th>
+                
+                    <th>Multiplier</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          <b><i><font color = Blue >ASHRAE 189.1-2009 ClimateZone 4-8 MediumOffice </font></i></b>
+                        </td>
+                    
+                        <td>
+                          (1 spaces and 1 thermal zones)
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          MediumOffice PeopDef
+                        </td>
+                    
+                        <td>
+                          0.0050
+                        </td>
+                    
+                        <td>
+                          people/ft^2
+                        </td>
+                    
+                        <td>
+                          1.0
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          ASHRAE 189.1-2009 ClimateZone 4-8 MediumOffice ElecDef
+                        </td>
+                    
+                        <td>
+                          0.5400
+                        </td>
+                    
+                        <td>
+                          W/ft^2
+                        </td>
+                    
+                        <td>
+                          1.0
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          ASHRAE 189.1-2009 ClimateZone 4-8 MediumOffice LightsDef
+                        </td>
+                    
+                        <td>
+                          0.9000
+                        </td>
+                    
+                        <td>
+                          W/ft^2
+                        </td>
+                    
+                        <td>
+                          1.0
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          ASHRAE 189.1-2009 ClimateZone 4-8 MediumOffice Infil
+                        </td>
+                    
+                        <td>
+                          0.1500
+                        </td>
+                    
+                        <td>
+                          ach
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          MediumOffice Outdoor Air (outdoor air method Sum)
+                        </td>
+                    
+                        <td>
+                          22.8087
+                        </td>
+                    
+                        <td>
+                          cfm/person
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          <b><i><font color = Blue >Space Type 1 </font></i></b>
+                        </td>
+                    
+                        <td>
+                          (2 spaces and 2 thermal zones)
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          People Definition 1
+                        </td>
+                    
+                        <td>
+                          0.0046
+                        </td>
+                    
+                        <td>
+                          people/ft^2
+                        </td>
+                    
+                        <td>
+                          1.0
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Electric Equipment Definition 1
+                        </td>
+                    
+                        <td>
+                          0.4645
+                        </td>
+                    
+                        <td>
+                          W/ft^2
+                        </td>
+                    
+                        <td>
+                          1.0
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Lights Definition 1
+                        </td>
+                    
+                        <td>
+                          0.9290
+                        </td>
+                    
+                        <td>
+                          W/ft^2
+                        </td>
+                    
+                        <td>
+                          1.0
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart8")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Air_Loop_Summary"></a>
+          <h3>Air Loop Summary</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Object</th>
+                
+                    <th>Sizing</th>
+                
+                    <th>Sizing Units</th>
+                
+                    <th>Description</th>
+                
+                    <th>Value</th>
+                
+                    <th>Value Units</th>
+                
+                    <th>Count</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          <b><i><font color = Blue >Air Loop HVAC 1</font></i></b>
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          <i><font color = Blue >(supply)</font></i>
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:AirLoopHVAC:OutdoorAirSystem
+                        </td>
+                    
+                        <td>
+                          Autosized
+                        </td>
+                    
+                        <td>
+                          cfm
+                        </td>
+                    
+                        <td>
+                          Minimum Outdoor Air Flow Rate
+                        </td>
+                    
+                        <td>
+                          Autosized
+                        </td>
+                    
+                        <td>
+                          cfm
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:SetpointManager:MixedAir
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:Coil:Cooling:DX:SingleSpeed
+                        </td>
+                    
+                        <td>
+                          Autosized
+                        </td>
+                    
+                        <td>
+                          Btu/h
+                        </td>
+                    
+                        <td>
+                          Rated COP
+                        </td>
+                    
+                        <td>
+                          3.00
+                        </td>
+                    
+                        <td>
+                          COP
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:SetpointManager:MixedAir
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:Coil:Heating:Gas
+                        </td>
+                    
+                        <td>
+                          Autosized
+                        </td>
+                    
+                        <td>
+                          Btu/h
+                        </td>
+                    
+                        <td>
+                          Gas Burner Efficiency
+                        </td>
+                    
+                        <td>
+                          0.80
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:SetpointManager:MixedAir
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:Fan:ConstantVolume
+                        </td>
+                    
+                        <td>
+                          Autosized
+                        </td>
+                    
+                        <td>
+                          cfm
+                        </td>
+                    
+                        <td>
+                          Pressure Rise
+                        </td>
+                    
+                        <td>
+                          1.00
+                        </td>
+                    
+                        <td>
+                          inH_{2}O
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          OS:SetpointManager:SingleZone:Reheat
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          Control Zone
+                        </td>
+                    
+                        <td>
+                          Thermal Zone 1
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          <i><font color = Blue >(demand)</font></i>
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Thermal Zones
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          Total Floor Area
+                        </td>
+                    
+                        <td>
+                          3,229
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                        <td>
+                          1
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Thermal Zones
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          thermostat ranges for heating
+                        </td>
+                    
+                        <td>
+                          75.2 to 80.1
+                        </td>
+                    
+                        <td>
+                          F
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Thermal Zones
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          thermostat ranges for cooling
+                        </td>
+                    
+                        <td>
+                          60.1 to 69.8
+                        </td>
+                    
+                        <td>
+                          F
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Terminal Types Used
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          OS:AirTerminal:SingleDuct:Uncontrolled
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          1
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          <i><font color = Blue >(controls)</font></i>
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          HVAC Operation Schedule
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          Always On Discrete
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Night Cycle Setting
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          StayOff
+                        </td>
+                    
+                        <td>
+                          Choice
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Economizer Setting
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          NoEconomizer
+                        </td>
+                    
+                        <td>
+                          Choice
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Demand Controlled Ventilation Status
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          false
+                        </td>
+                    
+                        <td>
+                          Bool
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart9")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Plant_Loop_Summary"></a>
+          <h3>Plant Loop Summary</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Object</th>
+                
+                    <th>Sizing</th>
+                
+                    <th>Sizing Units</th>
+                
+                    <th>Description</th>
+                
+                    <th>Value</th>
+                
+                    <th>Value Units</th>
+                
+                    <th>Count</th>
+                
+              </tr>
+
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart10")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Zone_Equipment_Summary"></a>
+          <h3>Zone Equipment Summary</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Object</th>
+                
+                    <th>Sizing</th>
+                
+                    <th>Sizing Units</th>
+                
+                    <th>Description</th>
+                
+                    <th>Value</th>
+                
+                    <th>Value Units</th>
+                
+                    <th>Count</th>
+                
+              </tr>
+
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart11")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Conditioned_Window-Wall_Ratio_and_Skylight-Roof_Ratio"></a>
+          <h3>Conditioned Window-Wall Ratio and Skylight-Roof Ratio</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Description</th>
+                
+                    <th>Total</th>
+                
+                    <th>North</th>
+                
+                    <th>East</th>
+                
+                    <th>South</th>
+                
+                    <th>West</th>
+                
+                    <th>units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Gross Window-Wall Ratio
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Skylight-Roof Ratio
+                        </td>
+                    
+                        <td>
+                          0.0
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart12")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Construction_Summary_for_Base_Surfaces"></a>
+          <h3>Construction Summary for Base Surfaces</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Construction</th>
+                
+                    <th>Net Area</th>
+                
+                    <th>Area Units</th>
+                
+                    <th>Surface Count</th>
+                
+                    <th>R Value</th>
+                
+                    <th>R Value Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Exterior Roof
+                        </td>
+                    
+                        <td>
+                          4,306
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                        <td>
+                          4
+                        </td>
+                    
+                        <td>
+                          3.92
+                        </td>
+                    
+                        <td>
+                          ft^2*h*R/Btu
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Exterior Wall
+                        </td>
+                    
+                        <td>
+                          2,476
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                        <td>
+                          8
+                        </td>
+                    
+                        <td>
+                          12.38
+                        </td>
+                    
+                        <td>
+                          ft^2*h*R/Btu
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart13")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Construction_Summary_for_Fenestration"></a>
+          <h3>Construction Summary for Fenestration</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Construction</th>
+                
+                    <th>Area</th>
+                
+                    <th>Area Units</th>
+                
+                    <th>Surface Count</th>
+                
+                    <th>U-Factor</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Exterior Door
+                        </td>
+                    
+                        <td>
+                          43
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                        <td>
+                          1
+                        </td>
+                    
+                        <td>
+                          
+                        </td>
+                    
+                        <td>
+                          Btu/ft^2*h*R
+                        </td>
+                    
+                  </tr>
+              
+                  <tr>
+                    
+                        <td>
+                          Exterior Window
+                        </td>
+                    
+                        <td>
+                          65
+                        </td>
+                    
+                        <td>
+                          ft^2
+                        </td>
+                    
+                        <td>
+                          1
+                        </td>
+                    
+                        <td>
+                          0.5700
+                        </td>
+                    
+                        <td>
+                          Btu/ft^2*h*R
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart14")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Water_Use_Equipment_Summary"></a>
+          <h3>Water Use Equipment Summary</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Instance</th>
+                
+                    <th>Connection</th>
+                
+                    <th>Definition</th>
+                
+                    <th>Thermal Zone</th>
+                
+                    <th>Peak Flow Rate</th>
+                
+                    <th>Units</th>
+                
+              </tr>
+
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart15")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+          <a name= "Exterior_Lighting_Summary"></a>
+          <h3>Exterior Lighting Summary</h3>
+            <table class="table table-striped">
+              <tr>
+                
+                    <th>Description</th>
+                
+                    <th>Total Power</th>
+                
+                    <th>Power Units</th>
+                
+                    <th>Consumption</th>
+                
+                    <th>Consumption Units</th>
+                
+              </tr>
+
+              
+                  <tr>
+                    
+                        <td>
+                          Exterior Lighting Total
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          W
+                        </td>
+                    
+                        <td>
+                          0.00
+                        </td>
+                    
+                        <td>
+                          kWh
+                        </td>
+                    
+                  </tr>
+              
+
+            </table>
+
+              
+              
+              <p align="right"><a href="#top">top</a></p>
+
+                <script type="text/javascript">
+                    (function(){
+                    var w = 600,                        //width
+                            h = 500,                            //height
+                            r = 150,                            //radius
+                            color = d3.scale.category20c();     //builtin range of colors
+
+                            data = [];
+
+                    var vis = d3.select("#pie_chart16")
+                            .append("svg:svg")              //create the SVG element inside the <body>
+                            .data([data])                   //associate our data with the document
+                            .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
+                            .attr("height", h)
+                            .append("svg:g")                //make a group to hold our pie chart
+                            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+                    var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
+                            .outerRadius(r);
+
+                    var pie = d3.layout.pie()           //this will create arc data for us given a list of values
+                            .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+                    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+                            .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+                            .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+                            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+                            .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+                    arcs.append("svg:path")
+                            .attr("fill", function(d, i) { return data[i].color; } ) //set the color for each slice to be chosen from the color function defined above
+                            //.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+
+                            .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+                    arcs.append("svg:text")                                     //add a label to each slice
+                            .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+                                //we have to make sure to set these before calling arc.centroid
+                                d.innerRadius = r*1.5;
+                                d.outerRadius = r;
+                                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                            })
+                            .attr("text-anchor", "middle")                          //center the text on it's origin
+                            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+                    }());
+                </script>
+        
+
+    </div>
+    <br>
+
+
+  </body>
+</html>
+

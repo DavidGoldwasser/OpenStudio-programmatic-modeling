@@ -57,7 +57,7 @@ def populate_workflow(value_set,seed_model)
 
   # start of OpenStudio measures
 
-  # adding space_type_and_construction_set_wizard
+  # adding SpaceTypeAndConstructionSetWizard
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'buildingType', :desc => 'Building Type', :value => building_type}
@@ -66,8 +66,6 @@ def populate_workflow(value_set,seed_model)
   arguments << {:name => 'createConstructionSet', :desc => 'Create Construction Set?', :value => true}
   arguments << {:name => 'setBuildingDefaults', :desc => 'Set Building Defaults Using New Objects?', :value => true}
   measures << {
-      :name => 'space_type_and_construction_set_wizard',
-      :desc => 'Space Type And Construction Set Wizard',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'SpaceTypeAndConstructionSetWizard')}",
       :arguments => arguments,
       :variables => variables
@@ -75,47 +73,28 @@ def populate_workflow(value_set,seed_model)
 
   # no measure to add envelope and fenestration, it is in the selected seed model.
 
-  # adding assign_thermostats_basedon_standards_building_typeand_standards_space_type
-  measures << {
-      :name => 'assign_thermostats_basedon_standards_building_typeand_standards_space_type',
-      :desc => 'Assign Thermostats Basedon Standards Building Typeand Standards Space Type',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}",
-      :variables => [],
-      :arguments => []
-  }
+  # adding AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}"}
 
-  # adding add_sys3_pszac
-  arguments = [] # :value is just a value
-  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  # currently runs on whole building, could add argument to specify their specific zone
-  measures << {
-      :name => 'add_sys3_pszac',
-      :desc => 'Add Sys3 Pszac',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AddSys3PSZAC')}",
-      :arguments => arguments,
-      :variables => variables
-  }
+  # adding AddSys3PSZAC
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AddSys3PSZAC')}"}
 
   # adding add_component_to_model (this adds a window construction and hooks it up to the construction sets in the model)
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'construction', :desc => 'Choose Construction Component to Import.', :value => "Interior Window"}
   measures << {
-      :name => 'add_component_to_model',
-      :desc => 'Add Component to Model',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'add_component_to_model')}",
       :arguments => arguments,
       :variables => variables
   }
 
-  # adding set_building_location
+  # adding ChangeBuildingLocation
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../weather"}
   arguments << {:name => 'weather_file_name', :desc => 'Weather File Name', :value => WEATHER_FILE_NAME}
   measures << {
-      :name => 'change_building_location',
-      :desc => 'Change Building Location And Design Days',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'ChangeBuildingLocation')}",
       :arguments => arguments,
       :variables => variables
@@ -123,14 +102,12 @@ def populate_workflow(value_set,seed_model)
 
   # start of energy plus measures
 
-  # adding xcel_eda_tariff_selectionand_model_setup
+  # adding XcelEDATariffSelectionandModelSetup
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'elec_tar', :desc => 'Select an Electricity Tariff.', :value => "Secondary General"}
   arguments << {:name => 'gas_tar', :desc => 'Select a Gas Tariff.', :value => "Large CG"}
   measures << {
-      :name => 'xcel_eda_tariff_selectionand_model_setup',
-      :desc => 'Xcel EDA Tariff Selectionand Model Setup',
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEDATariffSelectionandModelSetup')}",
       :arguments => arguments,
       :variables => variables
@@ -138,14 +115,8 @@ def populate_workflow(value_set,seed_model)
 
   # start of reporting measures
 
-  # adding annual_end_use_breakdown
-  measures << {
-      :name => 'annual_end_use_breakdown',
-      :desc => 'Annual End Use Breakdown',
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}",
-      :variables => [],
-      :arguments => []
-  }
+  # adding AnnualEndUseBreakdown
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
 
   return measures
 
