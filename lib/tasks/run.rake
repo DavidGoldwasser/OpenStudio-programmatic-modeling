@@ -24,11 +24,19 @@ def create_json(value_set,seed_model,save_string)
     measure_json = JSON.parse(File.read(path_to_measure_json))
 
     # get name and description from measure.json if it doesn't already exist
-    if m[:name].nil?
+    if not m[:name]
       m[:name] = measure_json["name"]
     end
-    if m[:description].nil?
+    if not m[:description]
       m[:description] = measure_json["description"]
+    end
+
+    # make empty array for arguments and variables if not passed in
+    if not m[:arguments]
+      m[:arguments] = []
+    end
+    if not m[:variables]
+      m[:variables] = []
     end
 
     measure = a.workflow.add_measure_from_path(m[:name], m[:desc], m[:path])
@@ -116,11 +124,19 @@ def create_model(value_set,seed_model,save_string)
     measure_class = measure_json["classname"]
 
     # get name and description from measure.json if it doesn't already exist
-    if m[:name].nil?
+    if not m[:name]
       m[:name] = measure_json["name"]
     end
-    if m[:description].nil?
+    if not m[:description]
       m[:description] = measure_json["description"]
+    end
+
+    # make empty array for arguments and variables if not passed in
+    if not m[:arguments]
+      m[:arguments] = []
+    end
+    if not m[:variables]
+      m[:variables] = []
     end
 
     # create an instance of the measure
