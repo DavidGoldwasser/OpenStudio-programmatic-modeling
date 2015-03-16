@@ -162,13 +162,8 @@ def populate_workflow(value_set,seed_model)
     else
 
       # adding enable_ideal_air_loads_for_all_zones
-      measures << {
-          :name => 'enable_ideal_air_loads_for_all_zones',
-          :desc => 'Enable Ideal Air Loads For All Zones',
-          :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'EnableIdealAirLoadsForAllZones')}",
-          :variables => [],
-          :arguments => []
-      }
+      # this shows streamlined workflow item when no custom description and no arguments or variables
+      measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'EnableIdealAirLoadsForAllZones')}"}
 
   end
 
