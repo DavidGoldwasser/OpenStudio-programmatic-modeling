@@ -15,7 +15,7 @@ def workflow_create_jsons()
 
   value_sets.each do |value_set|
     # create json files
-    create_json(value_set,seed_model,"#{value_set[:building_type]}_#{value_set[:climate_zone]}")
+    create_json(value_set,seed_model,"#{value_set[:hvac_type]}_#{value_set[:climate_zone]}")
   end
 end
 
@@ -36,7 +36,9 @@ end
 def populate_value_sets()
   # jobs to run
   value_sets = []
-  value_sets << {:hvac_type => "AedgK12HvacDualDuctDoas", :climate_zone => "ASHRAE 169-2006-3A"}
+  value_sets << {:hvac_type => "AedgK12HvacDualDuctDoas", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgK12HvacFanCoilDoas", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgK12HvacGshpDoas", :climate_zone => "ASHRAE 169-2006-5B"}
 
   return value_sets
 end
@@ -56,21 +58,21 @@ def populate_workflow(value_set,seed_model)
   # adding AEDG K12 measures
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipment')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipmentControls')}"}
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12EnvelopeAndEntryInfiltration')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorWallConstruction')}"}  # todo had issues resolving matched surfaces
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12RoofConstruction')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorFloorConstruction')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorDoorConstruction')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorFinishes')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12FenestrationAndDaylightingControls')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorLighting')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorLightingControls')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12Kitchen')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12Swh')}"}
+  # todo had issues resolving matched surfaces issue on all measures that involve constructions
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorWallConstruction')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12RoofConstruction')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorFloorConstruction')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorDoorConstruction')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorFinishes')}"}
+  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12FenestrationAndDaylightingControls')}"}
 
   # need to supply inputs
+  #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12EnvelopeAndEntryInfiltration')}"}
   #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorLighting')}"}
-
   #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12SlabAndBasement')}"}
 
 
@@ -86,9 +88,35 @@ def populate_workflow(value_set,seed_model)
       arguments << {:name => 'costTotalHVACSystem', :desc => 'Total Cost for HVAC System ($).', :value => 0.0}
       arguments << {:name => 'remake_schedules', :desc => 'Apply recommended availability and ventilation schedules for air handlers?"', :value => true}
       measures << {
-          :name => 'aedg_k12_hvac_dual_duct_doas',
-          :desc => 'AEDG K12 Hvac Dual Duct Doas',
           :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12HvacDualDuctDoas')}",
+          :arguments => arguments,
+          :variables => variables
+      }
+
+    when "AedgK12HvacFanCoilDoas"
+
+      # adding aedg_k12_hvac_dual_duct_doas
+      arguments = [] # :value is just a value
+      variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
+      arguments << {:name => 'ceilingReturnPlenumSpaceType', :desc => 'This space type should be part of a ceiling return air plenum.', :value => nil} # this is an optional argument
+      arguments << {:name => 'costTotalHVACSystem', :desc => 'Total Cost for HVAC System ($).', :value => 0.0}
+      arguments << {:name => 'remake_schedules', :desc => 'Apply recommended availability and ventilation schedules for air handlers?"', :value => true}
+      measures << {
+          :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12HvacFanCoilDoas')}",
+          :arguments => arguments,
+          :variables => variables
+      }
+
+    when "AedgK12HvacGshpDoas"
+
+      # adding aedg_k12_hvac_dual_duct_doas
+      arguments = [] # :value is just a value
+      variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
+      arguments << {:name => 'ceilingReturnPlenumSpaceType', :desc => 'This space type should be part of a ceiling return air plenum.', :value => nil} # this is an optional argument
+      arguments << {:name => 'costTotalHVACSystem', :desc => 'Total Cost for HVAC System ($).', :value => 0.0}
+      arguments << {:name => 'remake_schedules', :desc => 'Apply recommended availability and ventilation schedules for air handlers?"', :value => true}
+      measures << {
+          :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12HvacGshpDoas')}",
           :arguments => arguments,
           :variables => variables
       }
