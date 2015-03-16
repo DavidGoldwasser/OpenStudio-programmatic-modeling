@@ -57,12 +57,12 @@ def populate_workflow(value_set,seed_model)
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipment')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ElectricEquipmentControls')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12EnvelopeAndEntryInfiltration')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorDoorConstruction')}"} # todo had issues resolving matched surfaces
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorFloorConstruction')}"}
-  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorWallConstruction')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorWallConstruction')}"}  # todo had issues resolving matched surfaces
   # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12RoofConstruction')}"}
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12FenestrationAndDaylightingControls')}"}
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorFinishes')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorFloorConstruction')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12ExteriorDoorConstruction')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorFinishes')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12FenestrationAndDaylightingControls')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorLighting')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12InteriorLightingControls')}"}
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12Kitchen')}"}
