@@ -262,10 +262,6 @@ def create_model(value_set,seed_model,save_string)
   puts "Saving #{output_file_path}"
   workspace.save(output_file_path,true)
 
-  # todo - look at ChangeBuildingLocation, it thinks epw it is in files, not weather? Can I save the folder like app does
-
-  # todo - reporting measures (will require E+ run)
-
 end
 
 # Command-line arguments in Rake: http://viget.com/extend/protip-passing-parameters-to-your-rake-tasks
