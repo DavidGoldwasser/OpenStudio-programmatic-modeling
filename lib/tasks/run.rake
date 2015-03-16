@@ -18,6 +18,19 @@ def create_json(value_set,seed_model,save_string)
 
   # add measures to analysis
   measures.each do |m|
+
+    # load the measure.json file
+    path_to_measure_json =  (Dir.pwd + "/" + m[:path] + "/measure.json")
+    measure_json = JSON.parse(File.read(path_to_measure_json))
+
+    # get name and description from measure.json if it doesn't already exist
+    if m[:name].nil?
+      m[:name] = measure_json["name"]
+    end
+    if m[:description].nil?
+      m[:description] = measure_json["description"]
+    end
+
     measure = a.workflow.add_measure_from_path(m[:name], m[:desc], m[:path])
     m[:arguments].each do |a|
       measure.argument_value(a[:name], a[:value])
@@ -97,11 +110,18 @@ def create_model(value_set,seed_model,save_string)
     # load the measure
     require_relative (Dir.pwd + "/" + m[:path] + "/measure.rb")
 
-    # get the measure class name from the JSON file
+    # load the measure.json file
     path_to_measure_json =  (Dir.pwd + "/" + m[:path] + "/measure.json")
-    temp = File.read(path_to_measure_json)
-    measure_json = JSON.parse(temp)
+    measure_json = JSON.parse(File.read(path_to_measure_json))
     measure_class = measure_json["classname"]
+
+    # get name and description from measure.json if it doesn't already exist
+    if m[:name].nil?
+      m[:name] = measure_json["name"]
+    end
+    if m[:description].nil?
+      m[:description] = measure_json["description"]
+    end
 
     # create an instance of the measure
     measure = eval(measure_class).new
