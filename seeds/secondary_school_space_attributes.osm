@@ -1,7 +1,7 @@
 
 OS:Version,
-  {186b95a2-ee8b-4830-9a28-f393a2b3115f}, !- Handle
-  1.6.0;                                  !- Version Identifier
+  {d38e9157-afcc-4eee-8d63-6314bf55a76e}, !- Handle
+  1.7.0;                                  !- Version Identifier
 
 OS:Rendering:Color,
   {d1e86687-6885-4070-81da-3a576f17ff5c}, !- Handle
@@ -997,7 +997,7 @@ OS:Building,
   ,                                       !- North Axis {deg}
   ,                                       !- Nominal Floor to Floor Height {m}
   {ac851e13-d2ab-404c-a5a0-0af2a90815fa}, !- Space Type Name
-  {33188a09-8fb9-4529-8bca-1e70f8542a08}, !- Default Construction Set Name
+  {80222b57-59c0-4179-bb7b-03462080a348}, !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   ,                                       !- Standards Number of Stories
   ,                                       !- Standards Number of Above Ground Stories
@@ -22513,11 +22513,11 @@ OS:ThermostatSetpoint:DualSetpoint,
 OS:DefaultConstructionSet,
   {33188a09-8fb9-4529-8bca-1e70f8542a08}, !- Handle
   DOE Ref 2004 - CZ5-6 - SecSchl,         !- Name
-  {d7039015-1384-47c0-a9f3-c9255a2966ee}, !- Default Exterior Surface Constructions Name
-  {d21e6be6-20cc-4a47-ab36-d4190e4ea20b}, !- Default Interior Surface Constructions Name
-  {3812b8d8-7642-4129-8194-6893f3b6596d}, !- Default Ground Contact Surface Constructions Name
-  {a6e9ad81-2908-42bb-bd13-f1b257e4f7fe}, !- Default Exterior SubSurface Constructions Name
-  {db81d7ef-2b01-4b25-8344-427fed3703c3}, !- Default Interior SubSurface Constructions Name
+  {0136ef36-4ae2-4864-9ef1-3908f118be96}, !- Default Exterior Surface Constructions Name
+  {b6a17919-6d4c-4bd4-a070-9f7889415501}, !- Default Interior Surface Constructions Name
+  {d86ad520-91f7-4dc6-a857-0741c3fe8c41}, !- Default Ground Contact Surface Constructions Name
+  {ea3841f8-e1b4-40b9-80a2-f01d7a8bf803}, !- Default Exterior SubSurface Constructions Name
+  {81706f30-1574-42cd-a47d-6beb2ad6c5ef}, !- Default Interior SubSurface Constructions Name
   {5c548f0a-92ab-45c3-828f-f20f8798ca20}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
@@ -22658,9 +22658,9 @@ OS:Material,
 OS:DefaultSurfaceConstructions,
   {d21e6be6-20cc-4a47-ab36-d4190e4ea20b}, !- Handle
   Default Surface Constructions 2,        !- Name
-  {7a9fb545-9100-4dec-a667-de4f0e4c7d03}, !- Floor Construction Name
+  {07cdfe67-39dd-4c9f-99ca-c576016c956e}, !- Floor Construction Name
   {02752cdd-cf09-4970-9dd0-6950494883c7}, !- Wall Construction Name
-  {24f7753e-d747-406b-b867-62235a51db0b}; !- Roof Ceiling Construction Name
+  {07cdfe67-39dd-4c9f-99ca-c576016c956e}; !- Roof Ceiling Construction Name
 
 OS:Construction,
   {7a9fb545-9100-4dec-a667-de4f0e4c7d03}, !- Handle
@@ -22986,4 +22986,86 @@ OS:Rendering:Color,
 OS:StandardsInformation:Material,
   {dbf99fc4-7478-435e-90d5-b3af49270c36}, !- Handle
   {b040665a-d37e-4993-9808-1bc757286cf9}; !- Material Name
+
+OS:DefaultConstructionSet,
+  {80222b57-59c0-4179-bb7b-03462080a348}, !- Handle
+  DOE Ref 2004 - CZ5-6 - SecSchl - temp ceiling/floor copy, !- Name
+  {d7039015-1384-47c0-a9f3-c9255a2966ee}, !- Default Exterior Surface Constructions Name
+  {d21e6be6-20cc-4a47-ab36-d4190e4ea20b}, !- Default Interior Surface Constructions Name
+  {3812b8d8-7642-4129-8194-6893f3b6596d}, !- Default Ground Contact Surface Constructions Name
+  {a6e9ad81-2908-42bb-bd13-f1b257e4f7fe}, !- Default Exterior SubSurface Constructions Name
+  {db81d7ef-2b01-4b25-8344-427fed3703c3}, !- Default Interior SubSurface Constructions Name
+  {5c548f0a-92ab-45c3-828f-f20f8798ca20}, !- Interior Partition Construction Name
+  ,                                       !- Space Shading Construction Name
+  ,                                       !- Building Shading Construction Name
+  ;                                       !- Site Shading Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {0136ef36-4ae2-4864-9ef1-3908f118be96}, !- Handle
+  Default Surface Constructions 4,        !- Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Floor Construction Name
+  {aac0f838-8f2c-40e0-9fc8-2c3e47a23ac8}, !- Wall Construction Name
+  {bfa7bc0a-8eb7-4bd6-9d17-26fc4ba07f1e}; !- Roof Ceiling Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {b6a17919-6d4c-4bd4-a070-9f7889415501}, !- Handle
+  Default Surface Constructions 5,        !- Name
+  {7a9fb545-9100-4dec-a667-de4f0e4c7d03}, !- Floor Construction Name
+  {02752cdd-cf09-4970-9dd0-6950494883c7}, !- Wall Construction Name
+  {24f7753e-d747-406b-b867-62235a51db0b}; !- Roof Ceiling Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {d86ad520-91f7-4dc6-a857-0741c3fe8c41}, !- Handle
+  Default Surface Constructions 6,        !- Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Floor Construction Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}, !- Wall Construction Name
+  {ddfb4bb1-b106-4ef2-83cd-04678fa3bcc9}; !- Roof Ceiling Construction Name
+
+OS:DefaultSubSurfaceConstructions,
+  {ea3841f8-e1b4-40b9-80a2-f01d7a8bf803}, !- Handle
+  Default Sub Surface Constructions 3,    !- Name
+  {b2fe6b06-681f-4dd4-be7c-310777b2bb25}, !- Fixed Window Construction Name
+  {b2fe6b06-681f-4dd4-be7c-310777b2bb25}, !- Operable Window Construction Name
+  {2ca5928d-4f62-4a47-831c-10f9bad2cd0f}, !- Door Construction Name
+  ,                                       !- Glass Door Construction Name
+  ,                                       !- Overhead Door Construction Name
+  ,                                       !- Skylight Construction Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Tubular Daylight Dome Construction Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}; !- Tubular Daylight Diffuser Construction Name
+
+OS:DefaultSubSurfaceConstructions,
+  {81706f30-1574-42cd-a47d-6beb2ad6c5ef}, !- Handle
+  Default Sub Surface Constructions 4,    !- Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Fixed Window Construction Name
+  {a5258207-eba6-43bf-b00d-e9034fbe6477}, !- Operable Window Construction Name
+  {78d4033c-811c-422f-a1a7-63daf6c58618}, !- Door Construction Name
+  ,                                       !- Glass Door Construction Name
+  ,                                       !- Overhead Door Construction Name
+  ,                                       !- Skylight Construction Name
+  ,                                       !- Tubular Daylight Dome Construction Name
+  ;                                       !- Tubular Daylight Diffuser Construction Name
+
+OS:Construction,
+  {07cdfe67-39dd-4c9f-99ca-c576016c956e}, !- Handle
+  Temp Concrete Ceiling Floor,            !- Name
+  ,                                       !- Surface Rendering Name
+  {299a1cfb-327a-4427-83cc-862fee148597}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {334ad258-ba72-46f9-b6b5-1af913f9c15b}, !- Handle
+  {07cdfe67-39dd-4c9f-99ca-c576016c956e}, !- Construction Name
+  ,                                       !- Intended Surface Type
+  ,                                       !- Standards Construction Type
+  ,                                       !- Perturbable Layer
+  ,                                       !- Perturbable Layer Type
+  ,                                       !- Other Perturbable Layer Type
+  ,                                       !- Construction Standard
+  ,                                       !- Construction Standard Source
+  ,                                       !- Fenestration Type
+  ,                                       !- Fenestration Assembly Context
+  ,                                       !- Fenestration Number of Panes
+  ,                                       !- Fenestration Frame Type
+  ,                                       !- Fenestration Divider Type
+  ,                                       !- Fenestration Tint
+  ;                                       !- Fenestration Gas Fill
 

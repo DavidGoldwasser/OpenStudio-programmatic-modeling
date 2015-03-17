@@ -1,4 +1,4 @@
-[openstudio.runmanager.RunManager] <-1> Time to load for uuid: {b37d6b00-9509-4b15-9d46-006a1914847e} 0
+[openstudio.runmanager.RunManager] <-1> Time to load for uuid: {b37d6b00-9509-4b15-9d46-006a1914847e} 1
 [openstudio.runmanager.RunManager] <-1> Time to parse tools for uuid: {b37d6b00-9509-4b15-9d46-006a1914847e} 0
 [openstudio.runmanager.RunManager] <-1> Time to parse params for uuid: {b37d6b00-9509-4b15-9d46-006a1914847e} 0
 [openstudio.runmanager.RunManager] <-1> Time to parse files for uuid: {b37d6b00-9509-4b15-9d46-006a1914847e} 0
@@ -18,7 +18,7 @@
 [openstudio.runmanager.RunManager] <-1> Time to parse tools for uuid: {4038f66a-6683-46ce-8af4-7d13dbd0b25f} 0
 [openstudio.runmanager.RunManager] <-1> Time to parse params for uuid: {4038f66a-6683-46ce-8af4-7d13dbd0b25f} 0
 [openstudio.runmanager.RunManager] <-1> Time to parse files for uuid: {4038f66a-6683-46ce-8af4-7d13dbd0b25f} 0
-[openstudio.LocalLibraryController] <-2> Creating LocalLibraryController with base app 000000000020F6F0
+[openstudio.LocalLibraryController] <-2> Creating LocalLibraryController with base app 00000000002AF5E0
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/69ad41bb-cdfe-4a4c-a385-9efaf35b7c27/06f8da63-d543-46b7-9785-e80361f2ae91' conflicts with other measure, other measure will be used instead
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/ef16c322-0300-404c-8b9b-c5f5dc2e74b8/20c9d927-3555-420f-bc87-7ac7e4ae6685' conflicts with other measure, other measure will be used instead
@@ -159,15 +159,15 @@
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/ef16c322-0300-404c-8b9b-c5f5dc2e74b8/20c9d927-3555-420f-bc87-7ac7e4ae6685' conflicts with other measure, other measure will be used instead
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/f540d66c-800f-4187-81ee-957891034d56/e92d3d75-dab2-487f-a28b-efcc4dd76a27' conflicts with other measure, other measure will be used instead
-[utilities.bcl.BCLMeasure] <-2> Loading measures in path: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/
-[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/CalibrationReports
-[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/CalibrationReports
-[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/ReplaceModel
-[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/ReplaceModel
-[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/ReportRequest
-[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/ReportRequest
-[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/StandardReports
-[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Program Files/OpenStudio 1.6.0/share/openstudio-1.6.0/pat/Measures/StandardReports
+[utilities.bcl.BCLMeasure] <-2> Loading measures in path: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/CalibrationReports
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/CalibrationReports
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReplaceModel
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReplaceModel
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReportRequest
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/ReportRequest
+[utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/StandardReports
+[utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio/openstudiocore/src/pat_app/Measures/StandardReports
 [utilities.bcl.BCLMeasure] <-2> Loading measures in path: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-measures/NREL working measures
 [utilities.bcl.BCLMeasure] <-2> Attempting to load measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-measures/NREL working measures/AddCostPerAreaToConstruction
 [utilities.bcl.BCLMeasure] <-2> Success loading measure: C:/Users/dgoldwas/Documents/GitHub/OpenStudio-measures/NREL working measures/AddCostPerAreaToConstruction
@@ -635,13 +635,48 @@
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/9f8b4a61-ef75-42b6-8cb9-b73fad1f794a/e9bbb3b1-2769-4af6-9367-a14d10fd96b5' conflicts with other measure, other measure will be used instead
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/ef16c322-0300-404c-8b9b-c5f5dc2e74b8/20c9d927-3555-420f-bc87-7ac7e4ae6685' conflicts with other measure, other measure will be used instead
 [openstudio.MeasureManager] <1> UUID of user measure at 'C:/Users/dgoldwas/BCL/f540d66c-800f-4187-81ee-957891034d56/e92d3d75-dab2-487f-a28b-efcc4dd76a27' conflicts with other measure, other measure will be used instead
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Partition', as there is no Material object referenced by the corresponding field.
+[utilities.idf.Workspace] <-1> Renamed Object of type 'OS:DefaultConstructionSet' and named 'DOE Ref 2004 - CZ5-6 - SecSchl' to 'DOE Ref 2004 - CZ5-6 - SecSchl 1' to avoid a name conflict upon WorkspaceObject addition.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtRoof IEAD ClimateZone 5-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtRoof IEAD ClimateZone 5-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 2 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtRoof IEAD ClimateZone 5-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtWall SteelFrame ClimateZone 5-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtWall SteelFrame ClimateZone 5-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 2 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtWall SteelFrame ClimateZone 5-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'ExtSlabCarpet 4in ClimateZone 1-8', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'ExtSlabCarpet 4in ClimateZone 1-8', as there is no Material object referenced by the corresponding field.
+[utilities.idf.Workspace] <-1> Renamed Object of type 'OS:DefaultSurfaceConstructions' and named 'Default Surface Constructions 1' to 'Default Surface Constructions 4' to avoid a name conflict upon WorkspaceObject addition.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Ceiling', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'Interior Ceiling', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 2 in Object of type 'OS:Construction' and named 'Interior Ceiling', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Wall', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'Interior Wall', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 2 in Object of type 'OS:Construction' and named 'Interior Wall', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Floor', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'Interior Floor', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 2 in Object of type 'OS:Construction' and named 'Interior Floor', as there is no Material object referenced by the corresponding field.
+[utilities.idf.Workspace] <-1> Renamed Object of type 'OS:DefaultSurfaceConstructions' and named 'Default Surface Constructions 2' to 'Default Surface Constructions 5' to avoid a name conflict upon WorkspaceObject addition.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'ExtSlabCarpet 4in ClimateZone 1-8', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'ExtSlabCarpet 4in ClimateZone 1-8', as there is no Material object referenced by the corresponding field.
+[utilities.idf.Workspace] <-1> Renamed Object of type 'OS:DefaultSurfaceConstructions' and named 'Default Surface Constructions 3' to 'Default Surface Constructions 6' to avoid a name conflict upon WorkspaceObject addition.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Window', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'ASHRAE 90.1-2004 ExtWindow ClimateZone 4-6', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Exterior Door', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 1 in Object of type 'OS:Construction' and named 'Exterior Door', as there is no Material object referenced by the corresponding field.
+[utilities.idf.Workspace] <-1> Renamed Object of type 'OS:DefaultSubSurfaceConstructions' and named 'Default Sub Surface Constructions 1' to 'Default Sub Surface Constructions 3' to avoid a name conflict upon WorkspaceObject addition.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Window', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Interior Door', as there is no Material object referenced by the corresponding field.
+[utilities.idf.Workspace] <-1> Renamed Object of type 'OS:DefaultSubSurfaceConstructions' and named 'Default Sub Surface Constructions 2' to 'Default Sub Surface Constructions 4' to avoid a name conflict upon WorkspaceObject addition.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Temp Concrete Ceiling Floor', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Temp Concrete Ceiling Floor', as there is no Material object referenced by the corresponding field.
+[openstudio.model.LayeredConstruction] <0> Skipping layer 0 in Object of type 'OS:Construction' and named 'Temp Concrete Ceiling Floor', as there is no Material object referenced by the corresponding field.
 [openstudio.project.ProjectDatabase] <-1> DB Message: cannot start a transaction within a transaction Unable to begin transaction
-[saveModel] <-2> Saved model to 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/in.osm'
-[saveModelTempDir] <-2> Copying C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources to C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes
-[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes'
-[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources'
-[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources/files'
-[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/run' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources/run'
-[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/scripts' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources/scripts'
-[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources/files' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/files'
-[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.Xp1588/resources/files'
+[saveModel] <-2> Saved model to 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/in.osm'
+[saveModelTempDir] <-2> Copying C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources to C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources/files'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/run' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources/run'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/scripts' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources/scripts'
+[copyDir] <-1> copyDir 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources/files' to 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/files'
+[synchDirStructures] <-1> Synching destination 'C:/Users/dgoldwas/Documents/GitHub/OpenStudio-programmatic-modeling/seeds/secondary_school_space_attributes/files' with source 'C:/Users/dgoldwas/AppData/Local/Temp/1/OpenStudio.A10448/resources/files'
