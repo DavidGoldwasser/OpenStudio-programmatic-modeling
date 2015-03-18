@@ -320,8 +320,12 @@ end
 namespace :workflow do
 
   # set constants
-  ANALYSIS_TYPE = 'single_run'
+  ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
   HOSTNAME = 'http://localhost:8080'
+
+  # todo - these are not currently being used, but will if I support other analysis types
+  SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
+  NUMBER_OF_SAMPLES = 1 # valid options are any positive integer
 
   desc 'make analysis jsons from specified workflow script'
   task :make_jsons do
