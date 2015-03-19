@@ -3,7 +3,7 @@
 MEASURES_ROOT_DIRECTORY = "../OpenStudio-measures/NREL working measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
 WEATHER_FILES_DIRECTORY = "weather"
-SEED_FILE_NAME = "empty_seed.osm"
+SEED_FILE_NAME = "empty_seed_office.osm"
 SEED_FILES_DIRECTORY = "seeds"
 
 def workflow_create_jsons()
@@ -79,16 +79,16 @@ def populate_workflow(value_set,seed_model)
   space_type_fraction = "{
     :DOE Ref 2004 - Office - BreakRoom => '0.02',
     :DOE Ref 2004 - Office - ClosedOffice => '0.24',
-    :DOE Ref 2004 - Office - Conference => '0.08'
-    :DOE Ref 2004 - Office - Corridor => '0.12'
-    :DOE Ref 2004 - Office - Elec/MechRoom => '0.02'
-    :DOE Ref 2004 - Office - IT_Room => '0.005'
-    :DOE Ref 2004 - Office - Lobby => '0.06'
-    :DOE Ref 2004 - Office - OpenOffice => '0..2'
-    :DOE Ref 2004 - Office - PrintRoom => '0.025'
-    :DOE Ref 2004 - Office - Restroom => '0.04'
-    :DOE Ref 2004 - Office - Stair => '0.03'
-    :DOE Ref 2004 - Office - Storage => '0.14'
+    :DOE Ref 2004 - Office - Conference => '0.08',
+    :DOE Ref 2004 - Office - Corridor => '0.12',
+    :DOE Ref 2004 - Office - Elec/MechRoom => '0.02',
+    :DOE Ref 2004 - Office - IT_Room => '0.005',
+    :DOE Ref 2004 - Office - Lobby => '0.06',
+    :DOE Ref 2004 - Office - OpenOffice => '0.2',
+    :DOE Ref 2004 - Office - PrintRoom => '0.025',
+    :DOE Ref 2004 - Office - Restroom => '0.04',
+    :DOE Ref 2004 - Office - Stair => '0.03',
+    :DOE Ref 2004 - Office - Storage => '0.14',
     :DOE Ref 2004 - Office - Vending => '0.02'
   }"
 
@@ -99,7 +99,7 @@ def populate_workflow(value_set,seed_model)
   variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'uniform', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0}}
   variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
   variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10}}
-  arguments << {:name => 'spaceTypeHashString', :desc => 'Hash of Space Types with Name as Key and Fraction as value.', :value => space_type_fraction}
+  arguments << {:name => 'spaceTypeHashString', :desc => 'Hash of Space Types with Name as Key and Fraction as value.', :value => space_type_fraction.gsub("\n","").gsub("\t","")}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioSlicedBySpaceType')}",
       :arguments => arguments,
