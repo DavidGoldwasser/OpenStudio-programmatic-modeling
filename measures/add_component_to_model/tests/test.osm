@@ -1,7 +1,7 @@
 
 OS:Version,
-  {f12bb75b-e86b-490b-b18f-d01cb01b5b48}, !- Handle
-  1.6.3;                                  !- Version Identifier
+  {b7041808-e4ce-4803-b4b5-2ad74ad69732}, !- Handle
+  1.7.0;                                  !- Version Identifier
 
 OS:ClimateZones,
   {7917a81b-1dd4-4d86-906d-c09b8b620a5c}, !- Handle
@@ -43,7 +43,7 @@ OS:Building,
   ,                                       !- North Axis {deg}
   ,                                       !- Nominal Floor to Floor Height {m}
   {8b04d098-ff15-4897-906b-c9b6c1a489fd}, !- Space Type Name
-  {54b0f7f9-c5bf-488f-8029-4f0830040ffc}, !- Default Construction Set Name
+  {3e743667-d3e9-4621-a7bf-4c04899cf64e}, !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   ,                                       !- Standards Number of Stories
   ,                                       !- Standards Number of Above Ground Stories
@@ -5161,30 +5161,30 @@ OS:Rendering:Color,
   211;                                    !- Rendering Blue Value
 
 OS:ComponentData,
-  {be17293c-c181-4b37-8a3a-69483c21d0b4}, !- Handle
+  {e2f22ca3-1a65-42a8-be36-178ad34e7db7}, !- Handle
   Component Data 1,                       !- Name
   {9b00f7db-dfbb-4589-918b-49c0841387b6}, !- UUID
   {35355221-4559-41f7-ae51-525cfde98291}, !- Version UUID
   1425408148,                             !- Creation Timestamp
   1425408148,                             !- Version Timestamp
-  {91723c78-62ac-43f0-9a58-f1138067703a}, !- Name of Object 1
-  {47e0ea39-db8d-443f-a578-b9c26b6693e0}, !- Name of Object 2
-  {af147a85-fcf9-45ba-8d19-2020dfd1af89}; !- Name of Object 3
+  {b023b503-1cc5-41bb-8a38-d3c1ddb31530}, !- Name of Object 1
+  {c292d53e-2a08-4817-9252-03a60d96a7ed}, !- Name of Object 2
+  {5a0f5c64-f09e-4e34-9da3-37ac38c66960}; !- Name of Object 3
 
 OS:Construction,
-  {91723c78-62ac-43f0-9a58-f1138067703a}, !- Handle
+  {b023b503-1cc5-41bb-8a38-d3c1ddb31530}, !- Handle
   Interior Window 1,                      !- Name
   ,                                       !- Surface Rendering Name
-  {47e0ea39-db8d-443f-a578-b9c26b6693e0}; !- Layer 1
+  {c292d53e-2a08-4817-9252-03a60d96a7ed}; !- Layer 1
 
 OS:StandardsInformation:Construction,
-  {af147a85-fcf9-45ba-8d19-2020dfd1af89}, !- Handle
-  {91723c78-62ac-43f0-9a58-f1138067703a}, !- Construction Name
+  {5a0f5c64-f09e-4e34-9da3-37ac38c66960}, !- Handle
+  {b023b503-1cc5-41bb-8a38-d3c1ddb31530}, !- Construction Name
   InteriorWindow,                         !- Intended Surface Type
   View;                                   !- Standards Construction Type
 
 OS:WindowMaterial:Glazing,
-  {47e0ea39-db8d-443f-a578-b9c26b6693e0}, !- Handle
+  {c292d53e-2a08-4817-9252-03a60d96a7ed}, !- Handle
   Clear 3mm 1,                            !- Name
   SpectralAverage,                        !- Optical Data Type
   ,                                       !- Window Glass Spectral Data Set Name
@@ -5203,12 +5203,12 @@ OS:WindowMaterial:Glazing,
   No;                                     !- Solar Diffusing
 
 OS:DefaultConstructionSet,
-  {54b0f7f9-c5bf-488f-8029-4f0830040ffc}, !- Handle
+  {3e743667-d3e9-4621-a7bf-4c04899cf64e}, !- Handle
   189.1-2009 - CZ5 - Office 1,            !- Name
   {f18a4737-ab59-480a-99bc-793566076558}, !- Default Exterior Surface Constructions Name
   {1886bff0-9434-4646-8de7-be67b8830b0c}, !- Default Interior Surface Constructions Name
   {313e2ce4-9250-4a0e-9dce-350f2f3da60c}, !- Default Ground Contact Surface Constructions Name
-  {20375d72-3aca-40f9-913d-869b096fe7a2}, !- Default Exterior SubSurface Constructions Name
+  {9950b729-ceb1-4378-8b8c-d5105ef85c5a}, !- Default Exterior SubSurface Constructions Name
   {7e17e84e-6e2e-4a8b-ab2d-838b9166c459}, !- Default Interior SubSurface Constructions Name
   {207bd307-4b18-439b-b75d-1e76c6e28f55}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
@@ -5216,10 +5216,10 @@ OS:DefaultConstructionSet,
   ;                                       !- Site Shading Construction Name
 
 OS:DefaultSubSurfaceConstructions,
-  {20375d72-3aca-40f9-913d-869b096fe7a2}, !- Handle
+  {9950b729-ceb1-4378-8b8c-d5105ef85c5a}, !- Handle
   Default Sub Surface Constructions 3,    !- Name
-  {91723c78-62ac-43f0-9a58-f1138067703a}, !- Fixed Window Construction Name
-  {91723c78-62ac-43f0-9a58-f1138067703a}, !- Operable Window Construction Name
+  {b023b503-1cc5-41bb-8a38-d3c1ddb31530}, !- Fixed Window Construction Name
+  {b023b503-1cc5-41bb-8a38-d3c1ddb31530}, !- Operable Window Construction Name
   {1447715c-a37e-4d19-9692-e3625eb76d78}, !- Door Construction Name
   ,                                       !- Glass Door Construction Name
   ,                                       !- Overhead Door Construction Name
