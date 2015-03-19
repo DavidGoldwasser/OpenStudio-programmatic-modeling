@@ -50,7 +50,7 @@ def populate_workflow(value_set,seed_model)
   building_type = value_set[:building_type]
   template = value_set[:template]
   climate_zone = value_set[:climate_zone]
-  total_bldg_area_ip = value_set[:total_bldg_area_ip]
+  total_bldg_area_ip = value_set[:area]
 
   # setup
   measures = []
