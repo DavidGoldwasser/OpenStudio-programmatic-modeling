@@ -124,7 +124,7 @@ def populate_workflow(value_set,seed_model)
   # adding AedgOfficeSwh
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  arguments << {:name => 'numberOfEmployees', :desc => 'Total Number of Employees.', :value => area/200.0}
+  arguments << {:name => 'numberOfEmployees', :desc => 'Total Number of Employees.', :value => (area/200.0).to_i}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgOfficeSwh')}",
       :arguments => arguments,
@@ -134,8 +134,8 @@ def populate_workflow(value_set,seed_model)
   # adding AedgSmallToMediumOfficeEnvelopeAndEntryInfiltration
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  arguments << {:name => 'infiltrationEnvelope', :desc => 'Envelope Infiltration Level (Not including Occupant Entry Infiltration)', :value => "AEDG K-12 - Target"}
-  arguments << {:name => 'infiltrationOccupant', :desc => 'Occupant Entry Infiltration Modeling Approach', :value => "Model Occupant Entry With a Vestibule if Recommended by K12 AEDG"}
+  arguments << {:name => 'infiltrationEnvelope', :desc => 'Envelope Infiltration Level (Not including Occupant Entry Infiltration)', :value => "AEDG Small To Medium Office - Target"}
+  arguments << {:name => 'infiltrationOccupant', :desc => 'Occupant Entry Infiltration Modeling Approach', :value => "Model Occupant Entry With a Vestibule if Recommended by Small to Medium Office AEDG"}
   arguments << {:name => 'story', :desc => 'Apply Occupant Entry Infiltration to ThermalZones on this floor.', :value => "Building Story 1"}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgSmallToMediumOfficeEnvelopeAndEntryInfiltration')}",
@@ -146,7 +146,7 @@ def populate_workflow(value_set,seed_model)
   # adding AedgSmallToMediumOfficeExteriorLighting
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  arguments << {:name => 'target', :desc => 'Exterior Lighting Target Performance', :value => "AEDG K-12 - Target"}
+  arguments << {:name => 'target', :desc => 'Exterior Lighting Target Performance', :value => "AEDG SmMdOff - Target"}
   arguments << {:name => 'lightingZone', :desc => 'Exterior Lighting Zone', :value => "2 - Residential, Mixed Use"}
   arguments << {:name => 'facadeLandscapeLighting', :desc => 'Wall Coverage Area for Decorative Facade Lighting (ft^2)', :value => area*0.05} # todo - update to calc with aspect ratio and num floors
   arguments << {:name => 'parkingDrivesLighting', :desc => 'Ground Coverage Area for Parking Lots and Drives Lighting (ft^2)', :value => area*1.5}
