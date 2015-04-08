@@ -3,7 +3,7 @@
 MEASURES_ROOT_DIRECTORY = "../OpenStudio-measures/NREL working measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
 WEATHER_FILES_DIRECTORY = "weather"
-SEED_FILE_NAME = "empty_seed_office.osm"
+SEED_FILE_NAME = "office_test_seed.osm"
 SEED_FILES_DIRECTORY = "seeds"
 
 def workflow_create_jsons()
@@ -36,12 +36,12 @@ end
 def populate_value_sets()
   # jobs to run
   value_sets = []
-  value_sets << {:hvac_type => "AedgOfficeHvacAshpDoas", :climate_zone => "ASHRAE 169-2006-5B", :area => 75000.0}
-  value_sets << {:hvac_type => "AedgOfficeHvacFanCoilDoas", :climate_zone => "ASHRAE 169-2006-5B", :area => 75000.0}
-  value_sets << {:hvac_type => "AedgOfficeHvacRadiantDoas", :climate_zone => "ASHRAE 169-2006-5B", :area => 75000.0}
-  value_sets << {:hvac_type => "AedgOfficeHvacVavChW", :climate_zone => "ASHRAE 169-2006-5B", :area => 75000.0}
-  value_sets << {:hvac_type => "AedgOfficeHvacVavDx", :climate_zone => "ASHRAE 169-2006-5B", :area => 75000.0}
-  value_sets << {:hvac_type => "AedgOfficeHvacWshpDoas", :climate_zone => "ASHRAE 169-2006-5B", :area => 75000.0}
+  value_sets << {:hvac_type => "AedgOfficeHvacAshpDoas", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgOfficeHvacFanCoilDoas", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgOfficeHvacRadiantDoas", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgOfficeHvacVavChW", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgOfficeHvacVavDx", :climate_zone => "ASHRAE 169-2006-5B"}
+  value_sets << {:hvac_type => "AedgOfficeHvacWshpDoas", :climate_zone => "ASHRAE 169-2006-5B"}
 
   # todo - to support other climate zones I want to be able to change/set the constructions and loads in the seed model based on the climate zone
 
@@ -54,57 +54,12 @@ def populate_workflow(value_set,seed_model)
   # break out value_set
   hvac_type = value_set[:hvac_type]
   climate_zone = value_set[:climate_zone]
-  area = value_set[:area]
+  area = 48000.0
 
   # setup
   measures = []
 
   # start of OpenStudio measures
-
-  # adding SpaceTypeAndConstructionSetWizard
-  arguments = [] # :value is just a value
-  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  arguments << {:name => 'buildingType', :desc => 'Building Type', :value => "Office"}
-  arguments << {:name => 'template', :desc => 'Template', :value => "DOE Ref 2004"}
-  arguments << {:name => 'climateZone', :desc => 'Climate Zone', :value => climate_zone}
-  arguments << {:name => 'createConstructionSet', :desc => 'Create Construction Set?', :value => true}
-  arguments << {:name => 'setBuildingDefaults', :desc => 'Set Building Defaults Using New Objects?', :value => true}
-  measures << {
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'SpaceTypeAndConstructionSetWizard')}",
-      :arguments => arguments,
-      :variables => variables
-  }
-
-  # populating space_type_fraction for BarAspectRatioSlicedBySpaceType
-  space_type_fraction = "{
-    :DOE Ref 2004 - Office - BreakRoom => '0.02',
-    :DOE Ref 2004 - Office - ClosedOffice => '0.24',
-    :DOE Ref 2004 - Office - Conference => '0.08',
-    :DOE Ref 2004 - Office - Corridor => '0.12',
-    :DOE Ref 2004 - Office - Elec/MechRoom => '0.02',
-    :DOE Ref 2004 - Office - IT_Room => '0.005',
-    :DOE Ref 2004 - Office - Lobby => '0.06',
-    :DOE Ref 2004 - Office - OpenOffice => '0.2',
-    :DOE Ref 2004 - Office - PrintRoom => '0.025',
-    :DOE Ref 2004 - Office - Restroom => '0.04',
-    :DOE Ref 2004 - Office - Stair => '0.03',
-    :DOE Ref 2004 - Office - Storage => '0.14',
-    :DOE Ref 2004 - Office - Vending => '0.02'
-  }"
-
-  # adding BarAspectRatioSlicedBySpaceType
-  arguments = [] # :value is just a value
-  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  arguments << {:name => 'total_bldg_area_ip', :desc => 'Total Building Floor Area (ft^2).', :value => area}
-  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'uniform', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0}}
-  variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
-  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10}}
-  arguments << {:name => 'spaceTypeHashString', :desc => 'Hash of Space Types with Name as Key and Fraction as value.', :value => space_type_fraction.gsub("\n","").gsub("\t","")}
-  measures << {
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioSlicedBySpaceType')}",
-      :arguments => arguments,
-      :variables => variables
-  }
 
   # adding assign_thermostats_basedon_standards_building_typeand_standards_space_type
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}"}
