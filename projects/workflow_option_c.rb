@@ -1,3 +1,13 @@
+# description of workflow_option_c
+# uses custom seed model with school geometry
+# runs space type and construction set wizard
+# adds thermostats
+# adding AddSys3PSZAC
+# add sub surface construction component to the model from local resources directory
+# add weather
+# add Xcel tariff
+# annual end use breakdown
+
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
