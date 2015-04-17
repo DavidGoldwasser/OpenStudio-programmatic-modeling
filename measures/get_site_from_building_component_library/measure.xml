@@ -1,0 +1,242 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>get_site_from_building_component_library</name>
+  <uid>a6dff045-6f62-4288-a3f0-a5549f4c292a</uid>
+  <version_id>81d29397-7b91-429f-bbb8-9474f733e6b3</version_id>
+  <xml_checksum>99E7000D</xml_checksum>
+  <class_name>GetSiteFromBuildingComponentLibrary</class_name>
+  <display_name> Get Site from Building Component Library</display_name>
+  <description>Populate choice list from BCL, then selected site will be brought into model. This will include the weather file, design days, and water main temperatures.</description>
+  <modeler_description>To start with measure will hard code a string to narrow the search. Then a shorter list than all weather files on BCL will be shown. In the future woudl be nice to select region based on climate zone set in building object.</modeler_description>
+  <arguments>
+    <argument>
+      <name>site</name>
+      <display_name>Pick Colorado Site Component from the BCL.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <choices>
+        <choice>
+          <value>e5366210-edc6-0131-644f-48e0eb16a403</value>
+          <display_name>ALAMOSA CO [724620 TMY2-23061] Site</display_name>
+        </choice>
+        <choice>
+          <value>e3ea5080-edc6-0131-6427-48e0eb16a403</value>
+          <display_name>Akron Washington Co Ap CO [724698 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>e66b5a10-edc6-0131-6473-48e0eb16a403</value>
+          <display_name>Alamosa San Luis Valley Rgnl CO [724620 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>e7c42300-edc6-0131-649d-48e0eb16a403</value>
+          <display_name>Aspen Pitkin Co Sar CO [724676 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>e8ad2110-edc6-0131-64b9-48e0eb16a403</value>
+          <display_name>Aurora Buckley Field Angb CO [724695 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>ebe51130-edc6-0131-651b-48e0eb16a403</value>
+          <display_name>BOULDER CO [724699 TMY2-94018] Site</display_name>
+        </choice>
+        <choice>
+          <value>eb9e73c0-edc6-0131-6513-48e0eb16a403</value>
+          <display_name>Broomfield Jeffco Boulder S CO [724699 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>ef0601b0-edc6-0131-657d-48e0eb16a403</value>
+          <display_name>COLORADO SPRINGS CO [724660 TMY2-93037] Site</display_name>
+        </choice>
+        <choice>
+          <value>ec06ddb0-edc6-0131-651f-48e0eb16a403</value>
+          <display_name>Colorado Springs CO [724660 TMY--93037] Site</display_name>
+        </choice>
+        <choice>
+          <value>ee58b600-edc6-0131-6567-48e0eb16a403</value>
+          <display_name>Colorado Springs Muni Ap CO [724660 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>f00c4250-edc6-0131-659b-48e0eb16a403</value>
+          <display_name>Cortez Montezuma Co CO [724767 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>f133ffb0-edc6-0131-65bd-48e0eb16a403</value>
+          <display_name>Craig Moffat CO [725700 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>faaf0780-edc6-0131-66e1-48e0eb16a403</value>
+          <display_name>Denver Centennial Golden Nr CO [724666 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>f56870f0-edc6-0131-663f-48e0eb16a403</value>
+          <display_name>Denver Intl Ap CO [725650 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>f2652100-edc6-0131-65e1-48e0eb16a403</value>
+          <display_name>Denver-Stapleton CO [724690 TMY--23062] Site</display_name>
+        </choice>
+        <choice>
+          <value>f5ee30b0-edc6-0131-664f-48e0eb16a403</value>
+          <display_name>Durango La Plata Co CO [724625 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>f69d5a40-edc6-0131-6665-48e0eb16a403</value>
+          <display_name>EAGLE CO [724675 TMY2-23063] Site</display_name>
+        </choice>
+        <choice>
+          <value>f7cb5150-edc6-0131-6689-48e0eb16a403</value>
+          <display_name>Eagle CO [724675 TMY--23063] Site</display_name>
+        </choice>
+        <choice>
+          <value>f95dae00-edc6-0131-66b9-48e0eb16a403</value>
+          <display_name>Eagle County Ap CO [724675 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>fa379ad0-edc6-0131-66d3-48e0eb16a403</value>
+          <display_name>Fort Collins Awos CO [724769 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>fe024ea0-edc6-0131-6747-48e0eb16a403</value>
+          <display_name>GRAND JUNCTION CO [724760 TMY2-23066] Site</display_name>
+        </choice>
+        <choice>
+          <value>fb9d4710-edc6-0131-66ff-48e0eb16a403</value>
+          <display_name>Grand Junction CO [724760 TMY--23066] Site</display_name>
+        </choice>
+        <choice>
+          <value>fd5191e0-edc6-0131-6731-48e0eb16a403</value>
+          <display_name>Grand Junction Walker Field CO [724760 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>ff3f05d0-edc6-0131-676d-48e0eb16a403</value>
+          <display_name>Greeley Weld Awos CO [724768 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>00561cf0-edc7-0131-678f-48e0eb16a403</value>
+          <display_name>Gunnison Co Awos CO [724677 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>00f963a0-edc7-0131-67a3-48e0eb16a403</value>
+          <display_name>Hayden Yampa Awos CO [725715 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>01ba40c0-edc7-0131-67bb-48e0eb16a403</value>
+          <display_name>La Junta Municipal Ap CO [724635 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>028a8ad0-edc7-0131-67d3-48e0eb16a403</value>
+          <display_name>Lamar Municipal CO [724636 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>030c0ef0-edc7-0131-67e3-48e0eb16a403</value>
+          <display_name>Leadville Lake Co CO [724673 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>035d38c0-edc7-0131-67ed-48e0eb16a403</value>
+          <display_name>Limon CO [724665 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>043f5170-edc7-0131-6807-48e0eb16a403</value>
+          <display_name>Montrose Co Arpt CO [724765 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>05be4d80-edc7-0131-6833-48e0eb16a403</value>
+          <display_name>PUEBLO CO [724640 TMY2-93058] Site</display_name>
+        </choice>
+        <choice>
+          <value>06d40b80-edc7-0131-6853-48e0eb16a403</value>
+          <display_name>Pueblo CO [724640 TMY--93058] Site</display_name>
+        </choice>
+        <choice>
+          <value>07c35030-edc7-0131-686f-48e0eb16a403</value>
+          <display_name>Pueblo Memorial Ap CO [724640 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>084524d0-edc7-0131-687f-48e0eb16a403</value>
+          <display_name>Rifle Garfield Rgnl CO [725717 TMY3] Site</display_name>
+        </choice>
+        <choice>
+          <value>08ecbbe0-edc7-0131-6893-48e0eb16a403</value>
+          <display_name>Trinidad Las Animas County Ap CO [724645 TMY3] Site</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>Whole Building.Space Types</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C4F35230</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.7.2</identifier>
+        <min_compatible>1.7.2</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>02568804</checksum>
+    </file>
+    <file>
+      <filename>get_site_from_building_component_library_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>5F9EC989</checksum>
+    </file>
+  </files>
+</measure>

@@ -1,0 +1,102 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>get_exterior_wall_construction_from_bcl</name>
+  <uid>cf590c23-06f1-4c87-9441-c6cb80f5d4ab</uid>
+  <version_id>0a076bdc-5550-47e9-945c-8f7d99f63e65</version_id>
+  <xml_checksum>EEDB3226</xml_checksum>
+  <class_name>GetExteriorWallConstructionFromBCL</class_name>
+  <display_name> Get Exterior Wall Construction From BCL</display_name>
+  <description>This will look at the type of exterior walls used on yoru model, and will populate a choice list with those types of walls from the Building Component Library. The selected Construction will replace all exterior walls in your model.</description>
+  <modeler_description>If your model contains more than one type of exterior walls then both will be included in the search. Also try to search attributes for climate zone, but may have to map naming to match between our templates and what is on BCL for climate zones. </modeler_description>
+  <arguments>
+    <argument>
+      <name>construction</name>
+      <display_name>Pick An Exterior Wall Construction from BCL.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <choices>
+        <choice>
+          <value></value>
+          <display_name>*BCL authentication failed*</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Opaque</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>get_exterior_wall_construction_from_bcl_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>39121013</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>3BBC1F33</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.7.2</identifier>
+        <min_compatible>1.7.2</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>78BE4D2C</checksum>
+    </file>
+  </files>
+</measure>
