@@ -21,7 +21,7 @@
   ],
   "name_xml": "add_component_to_model",
   "uid": "9d066804-85a4-436e-addd-3e7e27ccfa16",
-  "version_id": "9ae5c842-5a93-42ae-bbbc-58c8a6440d77",
+  "version_id": "f45995e5-c442-4bda-ac80-492d989f5884",
   "modeler_description": "Once I figure out what kind of component I'll rename and update the description, will probably ",
   "description": "This is a proof of concept to pull a component into the model from the resources directory of the measure. Not sure if it will just pull the component in, or if wl attempt to hook it up.",
   "tags": [

@@ -1,0 +1,29 @@
+{
+  "classname": "GetExteriorWallConstructionFromBCL",
+  "name": "get_exterior_wall_construction_from_bcl",
+  "display_name": "Get Exterior Wall Construction From Bcl",
+  "measure_type": "RubyMeasure",
+  "arguments": [
+    {
+      "local_variable": "construction",
+      "variable_type": "Choice",
+      "name": "construction",
+      "display_name": "Pick An Exterior Wall Construction from BCL",
+      "units": null,
+      "description": null,
+      "choices": [
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "name_xml": "get_exterior_wall_construction_from_bcl",
+  "uid": "cf590c23-06f1-4c87-9441-c6cb80f5d4ab",
+  "version_id": "0a076bdc-5550-47e9-945c-8f7d99f63e65",
+  "modeler_description": "If your model contains more than one type of exterior walls then both will be included in the search. Also try to search attributes for climate zone, but may have to map naming to match between our templates and what is on BCL for climate zones. ",
+  "description": "This will look at the type of exterior walls used on yoru model, and will populate a choice list with those types of walls from the Building Component Library. The selected Construction will replace all exterior walls in your model.",
+  "tags": [
+    "Envelope.Opaque"
+  ]
+}
