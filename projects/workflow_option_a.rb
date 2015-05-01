@@ -1,3 +1,14 @@
+# description of workflow_option_a
+# uses empty seed model
+# runs space type and construction set wizard
+# runs bar aspect ratio making building where all spaces use the default building space type
+# adds fenestration
+# adds thermostats
+# adds ideal air loads or AEDG HVAC system depending on the building type
+# add weather
+# add Xcel tariff
+# annual end use breakdown
+
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
