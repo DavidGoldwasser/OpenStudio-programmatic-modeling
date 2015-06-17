@@ -13,7 +13,7 @@ Sample Code to programmatically create OpenStudio models by stringing measures t
 
 ## Instructions
 
-* Install Repo 2.0 based on instructions in the run tests section of the [OpenStudio Measure Training documentation](http://nrel.github.io/OpenStudio-user-documentation/measures/measure_writing_guide/#running-the-measure-tests) .
+* Install Ruby 2.0 based on instructions in the run tests section of the [OpenStudio Measure Training documentation](http://nrel.github.io/OpenStudio-user-documentation/measures/measure_writing_guide/#running-the-measure-tests) .
 * Also make site folder in ruby has path to OpenStudio (For now this is needed to run measures locally)
 
 * Clone this repository to your computer.
