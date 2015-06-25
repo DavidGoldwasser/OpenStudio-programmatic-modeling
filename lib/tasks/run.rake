@@ -321,7 +321,9 @@ namespace :workflow do
 
   # set constants
   ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
-  HOSTNAME = 'http://localhost:8080'
+  #HOSTNAME = 'http://localhost:8080'
+  HOSTNAME = 'http://bball-130553.nrel.gov:8080' #nrel24a
+  #HOSTNAME = 'http://bball-130590.nrel.gov:8080' # nrel24b
 
   # todo - these are not currently being used, but will if I support other analysis types
   SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
