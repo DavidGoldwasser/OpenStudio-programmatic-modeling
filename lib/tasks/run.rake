@@ -66,14 +66,17 @@ def create_json(value_set,seed_model,save_string)
 
   # add in the other libraries
   # use this if the measures have shared resources
-  #a.libraries.add("#{MEASURES_ROOT_DIRECTORY}/lib", { library_name: 'lib'})
+  a.libraries.add("lib/resources", { library_name: 'resources'})
 
   # Save the analysis JSON
   formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
   zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
 
-  # set the analysis type here as well.
+  # set the analysis attributes here
+  # todo - add code to overwrite defaults with settings from selected workflow script
   a.analysis_type = ANALYSIS_TYPE
+  a.algorithm.set_attribute('sample_method', SAMPLE_METHOD)
+  a.algorithm.set_attribute('number_of_samples', NUMBER_OF_SAMPLES)
 
   # save files
   a.save formulation_file
@@ -320,7 +323,6 @@ end
 namespace :workflow do
 
   # set constants
-  # todo - which of these should be here and which should be within project script?
   server_dns = 'nrel24a'
   case server_dns
     when 'vagrant'
@@ -333,9 +335,9 @@ namespace :workflow do
       # can use this to pass in other server such as aws
       HOSTNAME = server_dns
   end
-  ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
+  ANALYSIS_TYPE = 'lhs' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
   SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
-  NUMBER_OF_SAMPLES = 1 # valid options are any positive integer
+  NUMBER_OF_SAMPLES = 100 # valid options are any positive integer
 
   desc 'make analysis jsons from specified workflow script'
   task :make_jsons do

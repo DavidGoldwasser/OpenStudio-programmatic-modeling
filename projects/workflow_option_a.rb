@@ -9,16 +9,11 @@
 # add Xcel tariff
 # annual end use breakdown
 
+# objects to add or extend to analysis json process
+# todo - output_variables (can add later)
+# todo - problem/algorithm/objective_functions (can add later)
 
-# todo - objects to add or extend to analysis json process
-# todo - output_variables
-# todo - problem/algorithm/sample_method
-# todo - problem/algorithm/number_of_samples
-# todo - problem/algorithm/objective_functions
-# todo - variables/uncertainty_description (need to extend for more fields)
-# todo - analysis_type
-
-# todo - add place to upload shared resources directory
+# todo - expose arguments in workflow to set analysis type and characteristics (have default in run.rake)
 
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
@@ -99,9 +94,10 @@ def populate_workflow(value_set,seed_model)
   arguments << {:name => 'total_bldg_area_ip', :desc => 'Total Building Floor Area (ft^2).', :value => total_bldg_area_ip}
   arguments << {:name => 'surface_matching', :desc => 'Surface Matching', :value => true}
   arguments << {:name => 'make_zones', :desc => 'Make Zones', :value => true}
-  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'uniform', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0}}
-  variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
-  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10}}
+  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'normal', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0, standard_deviation: 3.0}}
+  arguments << {:name => 'num_floors', :desc => 'Number of Floors.', :value => 2}
+  #variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
+  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'normal', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 3.0}}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioStudy')}",
       :arguments => arguments,
@@ -110,10 +106,10 @@ def populate_workflow(value_set,seed_model)
 
   # populate hash for wwr measure
   wwr_hash = {}
-  wwr_hash["North"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4}
-  wwr_hash["East"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15}
-  wwr_hash["South"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4}
-  wwr_hash["West"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15}
+  wwr_hash["North"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4, standard_deviation: 0.5}
+  wwr_hash["East"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15, standard_deviation: 0.5}
+  wwr_hash["South"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4, standard_deviation: 0.5}
+  wwr_hash["West"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15, standard_deviation: 0.5}
 
   # loop through instances for wwr
   # note: measure description and variable names need to be unique for each instance
