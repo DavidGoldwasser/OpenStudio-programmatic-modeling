@@ -41,7 +41,11 @@ def create_json(value_set,seed_model,save_string)
 
     measure = a.workflow.add_measure_from_path(m[:name], m[:desc], m[:path])
     m[:arguments].each do |a|
-      measure.argument_value(a[:name], a[:value])
+      if a[:value].is_a?(Hash)
+        measure.argument_value(a[:name], a[:value][:static_value])
+      else
+        measure.argument_value(a[:name], a[:value])
+      end
     end
     m[:variables].each do |v|
       measure.make_variable(v[:name], v[:desc], v[:value])
@@ -181,7 +185,11 @@ def create_model(value_set,seed_model,save_string)
     # get argument values
     args_hash = {}
     m[:arguments].each do |a|
-      args_hash[a[:name]] = a[:value]
+      if a[:value].is_a?(Hash)
+        args_hash[a[:name]] = a[:value][:static_value]
+      else
+        args_hash[a[:name]] = a[:value]
+      end
     end
     m[:variables].each do |v|
       # todo - add logic to use something other than static value when argument is variable

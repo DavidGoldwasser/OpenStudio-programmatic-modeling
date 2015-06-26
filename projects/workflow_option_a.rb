@@ -117,7 +117,7 @@ def populate_workflow(value_set,seed_model)
     # adding bar_aspect_ratio_study
     arguments = [] # :value is just a value
     variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-    variables << {:name => 'wwr', :desc => "#{facade}|Window to Wall Ratio (fraction)", :value => wwr} # keep name unique if used as variable
+    arguments << {:name => 'wwr', :desc => "#{facade}|Window to Wall Ratio (fraction)", :value => wwr} # keep name unique if used as variable
     arguments << {:name => 'sillHeight', :desc => "Sill Height (in)", :value => 30.0}
     arguments << {:name => 'facade', :desc => 'Cardinal Direction.', :value => facade}
     measures << {
