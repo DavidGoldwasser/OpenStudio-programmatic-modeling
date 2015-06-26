@@ -342,7 +342,7 @@ namespace :workflow do
   end
 
   desc 'queue the jsons already in the analysis directory'
-  task :queue do
+  task :queue_populate do
 
     analysis_jsons = Dir["analysis/**/*.json"]
     puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
@@ -363,9 +363,33 @@ namespace :workflow do
   end
 
   desc 'start the run queue'
-  task :start do
+  task :queue_start do
     api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
     api.run_batch_run_across_analyses(nil, nil, ANALYSIS_TYPE)
+  end
+
+  desc 'run pre made analysis json'
+  task :run_jsons do
+
+    analysis_jsons = Dir["analysis/**/*.json"]
+    puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
+
+    # loop through jsons found in the directory
+    analysis_jsons.each do |json|
+      save_string = json.downcase.gsub('.json','') # remove the extension
+      formulation_file = "#{save_string}.json"
+      zip_file = "#{save_string}.zip"
+      if File.exist?(formulation_file) && File.exist?(zip_file)
+        puts "Running #{save_string}"
+        api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
+        j = JSON.parse(File.read(json), symbolize_names: true)
+        analysis_type = j[:analysis][:problem][:analysis_type]
+        api.run(json, zip_file, analysis_type.to_s)
+      else
+        puts "Could not file JSON or ZIP for #{save_string}"
+      end
+    end
+
   end
 
 end
