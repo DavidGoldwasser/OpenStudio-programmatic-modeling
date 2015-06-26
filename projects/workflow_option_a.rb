@@ -9,6 +9,17 @@
 # add Xcel tariff
 # annual end use breakdown
 
+
+# todo - objects to add or extend to analysis json process
+# todo - output_variables
+# todo - problem/algorithm/sample_method
+# todo - problem/algorithm/number_of_samples
+# todo - problem/algorithm/objective_functions
+# todo - variables/uncertainty_description (need to extend for more fields)
+# todo - analysis_type
+
+# todo - add place to upload shared resources directory
+
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
