@@ -5,7 +5,10 @@ def create_json(value_set,seed_model,save_string)
 
   # populate outputs
   outputs = [
-      {}
+      {display_name: 'Total Natural Gas Intensity', display_short_name: 'NG EUI', name: 'standard_report_legacy.total_natural_gas', units: 'MJ/m2', objective_function: true, objective_function_target: 140.0, visualize: true, export: true},
+      {display_name: 'Total Electricity Intensity', display_short_name: 'Elec EUI', name: 'standard_report_legacy.total_electricity', units: 'MJ/m2', objective_function: true, objective_function_target: 590.0, scaling_factor: 5.0, visualize: true, export: true},
+      {display_name: 'Unmet Cooling Hours', display_short_name: 'Unmet Cooling Hours', name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_cooling', units: 'hrs', objective_function: true, visualize: true, export: true},
+      {display_name: 'Unmet Heating Hours', display_short_name: 'Unmet Heating Hours', name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_heating', units: 'hrs', objective_function: true, visualize: true, export: true},
   ]
 
   weather_files = [

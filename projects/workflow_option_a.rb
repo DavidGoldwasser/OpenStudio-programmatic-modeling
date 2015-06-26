@@ -9,10 +9,6 @@
 # add Xcel tariff
 # annual end use breakdown
 
-# objects to add or extend to analysis json process
-# todo - output_variables (can add later)
-# todo - problem/algorithm/objective_functions (can add later)
-
 # todo - expose arguments in workflow to set analysis type and characteristics (have default in run.rake)
 
 # set constants
