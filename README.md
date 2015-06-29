@@ -70,11 +70,14 @@ rake workflow:make_models
 * This Populates the analysis_local directory with OSM and IDF files.
 * In the current state this requires OpenStudio. In the future this will use the openstudio-analysis gem instead.
 
-### rake workflow:queue
-* This will push all the files in the analysis directory up to a server in the location configured in the run.rake file
+### rake workflow:queue_populate
+* This will push all the files in the analysis directory up to a server in the location configured in the run.rake file. This only sets up a single datapoint analysis.
 
-### rake workflow:start
+### rake workflow:queue_start
 * This will start all of the jobs that hare already been put in the queue on the server.
+
+### rake workflow:run_jsons
+* This will take all analysis json files and start an analysis. It can be used for multi-datapoint analyses. It is currently setup to create an analysis for each analysis json it finds. 
 
 ## Configuring the run.rake file
 Currently the "lib/tasks/run.rake" file is used to determine the type of analysis. This will probably be moved to a better location for user editing, or maybe will be in each .rb file in the project directory. These are the only constants in the file that should be edited as needed.
