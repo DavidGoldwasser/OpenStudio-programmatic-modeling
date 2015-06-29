@@ -8,13 +8,21 @@ require 'fileutils'
 
 require 'minitest/autorun'
 
-class AnnualEndUseBreakdown_Test < MiniTest::Test
+class AnnualEndUseBreakdown_Test < MiniTest::Unit::TestCase
     
   # paths to expected test files, includes osm and eplusout.sql
   def modelPath
     return "#{File.dirname(__FILE__)}/ExampleModel.osm"
   end
-  
+
+  def workspacePath
+    return "#{File.dirname(__FILE__)}/ExampleModel/ModelToIdf/EnergyPlusPreProcess-0/out.idf"
+  end
+
+  def epwPath
+    return './files/USA_CO_Golden-NREL.724666_TMY3.epw'
+  end
+
   def runDir
     return "#{File.dirname(__FILE__)}/ExampleModel/"
   end
@@ -26,27 +34,47 @@ class AnnualEndUseBreakdown_Test < MiniTest::Test
   def reportPath
     return "./report.html"
   end
-  
+
   # create test files if they do not exist
   def setup
 
     if File.exist?(reportPath())
       FileUtils.rm(reportPath())
     end
-    
+
     assert(File.exist?(modelPath()))
-    
+
+    if !File.exist?(runDir())
+      FileUtils.mkdir_p(runDir())
+    end
     assert(File.exist?(runDir()))
-    
-    if not File.exist?(sqlPath())
+
+    if !File.exist?(sqlPath())
       puts "Running EnergyPlus"
-      
+
       co = OpenStudio::Runmanager::ConfigOptions.new(true)
       co.findTools(false, true, false, true)
-      
+
+      vt = OpenStudio::OSVersion::VersionTranslator.new
+      model = vt.loadModel(modelPath())
+      assert(model.is_initialized)
+      model = model.get
+
+      # make sure output requests are in pre-run model, this will happen automatically in PAT
+      var = OpenStudio::Model::OutputVariable.new('Site Outdoor Air Drybulb Temperature', model)
+      var.setReportingFrequency('Monthly')
+
+      var = OpenStudio::Model::OutputVariable.new('Zone Air Temperature', model)
+      var.setReportingFrequency('Hourly')
+
+      var = OpenStudio::Model::OutputVariable.new('Zone Air Relative Humidity', model)
+      var.setReportingFrequency('Hourly')
+
+      model.save(OpenStudio::Path.new(runDir() + '/in.osm'), true)
+
       wf = OpenStudio::Runmanager::Workflow.new("modeltoidf->energypluspreprocess->energyplus")
       wf.add(co.getTools())
-      job = wf.create(OpenStudio::Path.new(runDir()), OpenStudio::Path.new(modelPath()))
+      job = wf.create(OpenStudio::Path.new(runDir()), OpenStudio::Path.new(runDir() + '/in.osm'), OpenStudio::Path.new(epwPath()))
 
       rm = OpenStudio::Runmanager::RunManager.new
       rm.enqueue(job, true)
@@ -70,8 +98,9 @@ class AnnualEndUseBreakdown_Test < MiniTest::Test
   
   # the actual test
   def test_AnnualEndUseBreakdown
-     
+
     assert(File.exist?(modelPath()))
+    assert(File.exist?(workspacePath()))
     assert(File.exist?(sqlPath()))
      
     # create an instance of the measure
@@ -79,17 +108,29 @@ class AnnualEndUseBreakdown_Test < MiniTest::Test
     
     # create an instance of a runner
     runner = OpenStudio::Ruleset::OSRunner.new
-    
+
+    # set up runner, this will happen automatically when measure is run in PAT
+    runner.setLastOpenStudioModelPath(OpenStudio::Path.new(modelPath))
+    runner.setLastEnergyPlusWorkspacePath(OpenStudio::Path.new(workspacePath))
+    runner.setLastEnergyPlusSqlFilePath(OpenStudio::Path.new(sqlPath))
+
     # get arguments and test that they are what we are expecting
     arguments = measure.arguments()
-    assert_equal(0, arguments.size)
-    
-    # set up runner, this will happen automatically when measure is run in PAT
-    runner.setLastOpenStudioModelPath(OpenStudio::Path.new(modelPath))    
-    runner.setLastEnergyPlusSqlFilePath(OpenStudio::Path.new(sqlPath))    
-       
-    # set argument values to good values and run the measure
-    argument_map = OpenStudio::Ruleset::OSArgumentMap.new
+    argument_map = OpenStudio::Ruleset.convertOSArgumentVectorToMap(arguments)
+
+    # create hash of argument values
+    args_hash = {}
+
+    # populate argument with specified hash value if specified
+    arguments.each do |arg|
+      temp_arg_var = arg.clone
+      if args_hash[arg.name]
+        assert(temp_arg_var.setValue(args_hash[arg.name]))
+      end
+      argument_map[arg.name] = temp_arg_var
+    end
+
+    # run the measure
     measure.run(runner, argument_map)
     result = runner.result
     show_output(result)
