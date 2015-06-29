@@ -3,48 +3,6 @@ def create_json(value_set,seed_model,save_string)
 
   measures = populate_workflow(value_set,seed_model)
 
-  # populate outputs
-  outputs = []
-  outputs << {
-      display_name: 'Total Natural Gas Intensity',
-      display_short_name: 'NG EUI',
-      name: 'standard_report_legacy.total_natural_gas',
-      units: 'MJ/m2',
-      objective_function: true,
-      objective_function_target: 140.0,
-      visualize: true,
-      export: true
-      }
-  outputs << {
-      display_name: 'Total Electricity Intensity',
-      display_short_name: 'Elec EUI',
-      name: 'standard_report_legacy.total_electricity',
-      units: 'MJ/m2',
-      objective_function: true,
-      objective_function_target: 590.0,
-      scaling_factor: 5.0,
-      visualize: true,
-      export: true
-      }
-  outputs << {
-      display_name: 'Unmet Cooling Hours',
-      display_short_name: 'Unmet Cooling Hours',
-      name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_cooling',
-      units: 'hrs',
-      objective_function: true,
-      visualize: true,
-      export: true
-      }
-  outputs << {
-      display_name: 'Unmet Heating Hours',
-      display_short_name: 'Unmet Heating Hours',
-      name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_heating',
-      units: 'hrs',
-      objective_function: true,
-      visualize: true,
-      export: true
-      }
-
       weather_files = [
       "#{WEATHER_FILES_DIRECTORY}/*"
   ]
@@ -90,7 +48,7 @@ def create_json(value_set,seed_model,save_string)
   end
 
   # add output to analysis
-  outputs.each do |o|
+  OUTPUTS.each do |o|
     a.add_output(o)
   end
 
@@ -380,9 +338,6 @@ namespace :workflow do
       # can use this to pass in other server such as aws
       HOSTNAME = server_dns
   end
-  ANALYSIS_TYPE = 'lhs' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
-  SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
-  NUMBER_OF_SAMPLES = 100 # valid options are any positive integer
 
   desc 'make analysis jsons from specified workflow script'
   task :make_jsons do

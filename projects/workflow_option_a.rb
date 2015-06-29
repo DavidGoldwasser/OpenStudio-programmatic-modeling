@@ -9,14 +9,57 @@
 # add Xcel tariff
 # annual end use breakdown
 
-# todo - expose arguments in workflow to set analysis type and characteristics (have default in run.rake)
-
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
 WEATHER_FILES_DIRECTORY = "weather"
 SEED_FILE_NAME = "empty_seed.osm"
 SEED_FILES_DIRECTORY = "seeds"
+OUTPUTS = []
+ANALYSIS_TYPE = 'lhs' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
+SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
+NUMBER_OF_SAMPLES = 100 # valid options are any positive integer
+
+# populate outputs
+OUTPUTS << {
+    display_name: 'Total Natural Gas Intensity',
+    display_short_name: 'NG EUI',
+    name: 'standard_report_legacy.total_natural_gas',
+    units: 'MJ/m2',
+    objective_function: true,
+    objective_function_target: 140.0,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Total Electricity Intensity',
+    display_short_name: 'Elec EUI',
+    name: 'standard_report_legacy.total_electricity',
+    units: 'MJ/m2',
+    objective_function: true,
+    objective_function_target: 590.0,
+    scaling_factor: 5.0,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Unmet Cooling Hours',
+    display_short_name: 'Unmet Cooling Hours',
+    name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_cooling',
+    units: 'hrs',
+    objective_function: true,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Unmet Heating Hours',
+    display_short_name: 'Unmet Heating Hours',
+    name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_heating',
+    units: 'hrs',
+    objective_function: true,
+    visualize: true,
+    export: true
+}
 
 def workflow_create_jsons()
   puts "Creating JSON and zip file for workflow option a"
@@ -91,9 +134,8 @@ def populate_workflow(value_set,seed_model)
   arguments << {:name => 'surface_matching', :desc => 'Surface Matching', :value => true}
   arguments << {:name => 'make_zones', :desc => 'Make Zones', :value => true}
   variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'normal', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0, standard_deviation: 1.0}}
-  arguments << {:name => 'num_floors', :desc => 'Number of Floors.', :value => 2}
-  #variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
-  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'normal', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 0.8}}
+  arguments << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
+  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'normal', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 3.0}}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioStudy')}",
       :arguments => arguments,
