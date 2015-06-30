@@ -15,9 +15,9 @@ WEATHER_FILES_DIRECTORY = "weather"
 SEED_FILE_NAME = "secondary_school_geometry_only.osm"
 SEED_FILES_DIRECTORY = "seeds"
 OUTPUTS = []
-ANALYSIS_TYPE = 'lhs' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
+ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
 SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
-NUMBER_OF_SAMPLES = 100 # valid options are any positive integer
+NUMBER_OF_SAMPLES = 1 # valid options are any positive integer
 
 # populate outputs
 OUTPUTS << {
@@ -171,7 +171,7 @@ def populate_workflow(value_set,seed_model)
   # start of reporting measures
 
   # adding AnnualEndUseBreakdown
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
 
   return measures
 

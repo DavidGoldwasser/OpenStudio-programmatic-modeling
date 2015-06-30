@@ -365,7 +365,7 @@ namespace :workflow do
       if File.exist?(formulation_file) && File.exist?(zip_file)
         puts "Running #{save_string}"
         api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
-        api.queue_single_run(formulation_file, zip_file, ANALYSIS_TYPE)
+        api.queue_single_run(formulation_file, zip_file, 'single_run')
       else
         puts "Could not file JSON or ZIP for #{save_string}"
       end
@@ -375,7 +375,7 @@ namespace :workflow do
   desc 'start the run queue'
   task :queue_start do
     api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
-    api.run_batch_run_across_analyses(nil, nil, ANALYSIS_TYPE)
+    api.run_batch_run_across_analyses(nil, nil, 'single_run')
   end
 
   desc 'run pre made analysis json'

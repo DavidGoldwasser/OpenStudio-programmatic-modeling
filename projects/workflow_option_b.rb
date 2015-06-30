@@ -17,7 +17,7 @@ SEED_FILES_DIRECTORY = "seeds"
 OUTPUTS = []
 ANALYSIS_TYPE = 'lhs' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
 SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
-NUMBER_OF_SAMPLES = 100 # valid options are any positive integer
+NUMBER_OF_SAMPLES = 20 # valid options are any positive integer
 
 # populate outputs
 OUTPUTS << {
@@ -159,9 +159,9 @@ def populate_workflow(value_set,seed_model)
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'total_bldg_area_ip', :desc => 'Total Building Floor Area (ft^2).', :value => total_bldg_area_ip}
-  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'uniform', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0}}
-  variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
-  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10}}
+  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'normal', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0, standard_deviation: 1.0}}
+  arguments << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'normal', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
+  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'normal', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 3.0}}
   arguments << {:name => 'spaceTypeHashString', :desc => 'Hash of Space Types with Name as Key and Fraction as value.', :value => space_type_fraction}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioSlicedBySpaceType')}",
@@ -171,10 +171,10 @@ def populate_workflow(value_set,seed_model)
 
   # populate hash for wwr measure
   wwr_hash = {}
-  wwr_hash["North"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4}
-  wwr_hash["East"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15}
-  wwr_hash["South"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4}
-  wwr_hash["West"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15}
+  wwr_hash["North"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4, standard_deviation: 0.5}
+  wwr_hash["East"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15, standard_deviation: 0.5}
+  wwr_hash["South"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4, standard_deviation: 0.5}
+  wwr_hash["West"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15, standard_deviation: 0.5}
 
   # loop through instances for wwr
   # note: measure description and variable names need to be unique for each instance
@@ -182,7 +182,7 @@ def populate_workflow(value_set,seed_model)
     # adding bar_aspect_ratio_study
     arguments = [] # :value is just a value
     variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-    variables << {:name => 'wwr', :desc => "#{facade}|Window to Wall Ratio (fraction)", :value => wwr} # keep name unique if used as variable
+    arguments << {:name => 'wwr', :desc => "#{facade}|Window to Wall Ratio (fraction)", :value => wwr} # keep name unique if used as variable
     arguments << {:name => 'sillHeight', :desc => "Sill Height (in)", :value => 30.0}
     arguments << {:name => 'facade', :desc => 'Cardinal Direction.', :value => facade}
     measures << {
@@ -251,7 +251,7 @@ def populate_workflow(value_set,seed_model)
   # start of reporting measures
 
   # adding annual_end_use_breakdown
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
 
   return measures
 
