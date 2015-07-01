@@ -141,9 +141,9 @@ def populate_workflow(value_set,seed_model)
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'total_bldg_area_ip', :desc => 'Total Building Floor Area (ft^2).', :value => area}
-  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'uniform', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0, standard_deviation: 1.5}}
-  variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2, standard_deviation: 2.0}}
-  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 2.0}}
+  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'normal', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0, standard_deviation: 1.5}}
+  arguments << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'normal', minimum: 1, maximum: 10, mean: 2, static_value: 2, standard_deviation: 2.0}}
+  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'normal', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 2.0}}
   arguments << {:name => 'spaceTypeHashString', :desc => 'Hash of Space Types with Name as Key and Fraction as value.', :value => space_type_fraction.gsub("\n","").gsub("\t","")}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioSlicedBySpaceType')}",
