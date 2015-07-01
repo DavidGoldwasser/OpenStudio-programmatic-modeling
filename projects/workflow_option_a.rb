@@ -1,12 +1,67 @@
+# description of workflow_option_b
+# uses empty seed model
+# runs space type and construction set wizard
+# runs bar aspect ratio sliced by space type (use default set of ratios by building type)
+# adds fenestration
+# adds thermostats
+# adds ideal air loads or AEDG HVAC system depending on the building type
+# add weather
+# annual end use breakdown
+
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
 WEATHER_FILES_DIRECTORY = "weather"
 SEED_FILE_NAME = "empty_seed.osm"
 SEED_FILES_DIRECTORY = "seeds"
+OUTPUTS = []
+ANALYSIS_TYPE = 'lhs' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
+SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
+NUMBER_OF_SAMPLES = 20 # valid options are any positive integer
+
+# populate outputs
+OUTPUTS << {
+    display_name: 'Total Natural Gas Intensity',
+    display_short_name: 'NG EUI',
+    name: 'standard_report_legacy.total_natural_gas',
+    units: 'MJ/m2',
+    objective_function: true,
+    objective_function_target: 140.0,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Total Electricity Intensity',
+    display_short_name: 'Elec EUI',
+    name: 'standard_report_legacy.total_electricity',
+    units: 'MJ/m2',
+    objective_function: true,
+    objective_function_target: 590.0,
+    scaling_factor: 5.0,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Unmet Cooling Hours',
+    display_short_name: 'Unmet Cooling Hours',
+    name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_cooling',
+    units: 'hrs',
+    objective_function: true,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Unmet Heating Hours',
+    display_short_name: 'Unmet Heating Hours',
+    name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_heating',
+    units: 'hrs',
+    objective_function: true,
+    visualize: true,
+    export: true
+}
 
 def workflow_create_jsons()
-  puts "Creating JSON and zip file for workflow option a"
+  puts "Creating JSON and zip file for workflow option b"
 
   # jobs to run
   value_sets = populate_value_sets
@@ -19,7 +74,7 @@ def workflow_create_jsons()
 end
 
 def workflow_create_models()
-  puts "Creating JSON and zip file for workflow option a"
+  puts "Creating JSON and zip file for workflow option b"
 
   # jobs to run
   value_sets = populate_value_sets
@@ -35,10 +90,38 @@ end
 def populate_value_sets()
   # jobs to run
   value_sets = []
-  value_sets << {:building_type => "Office", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "LargeHotel", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "Warehouse", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0}
-  value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0}
+
+  # this argument wants a string that it will convert to a hash
+  space_type_fraction = "{
+    :DOE Ref 2004 - Office - Corridor => '0.3',
+    :DOE Ref 2004 - Office - Conference => '0.2',
+    :DOE Ref 2004 - Office - ClosedOffice => '0.5'
+  }"
+  value_sets << {:building_type => "Office", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0, :space_type_fraction => space_type_fraction.gsub("\n","").gsub("\t","")}
+
+  space_type_fraction = "{
+    :DOE Ref 2004 - LrgHotel - GuestRoom => '0.5',
+    :DOE Ref 2004 - LrgHotel - Corridor => '0.2',
+    :DOE Ref 2004 - LrgHotel - Kitchen => '0.05',
+    :DOE Ref 2004 - LrgHotel - Lobby => '0.25'
+  }"
+  value_sets << {:building_type => "LargeHotel", :template => "DOE Ref 2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0, :space_type_fraction => space_type_fraction.gsub("\n","").gsub("\t","")}
+
+  space_type_fraction = "{
+    :DOE Ref 1980-2004 - Warehouse - Bulk => '0.75',
+    :DOE Ref 1980-2004 - Warehouse - Fine => '0.2',
+    :DOE Ref 1980-2004 - Warehouse - Office => '0.05'
+  }"
+  value_sets << {:building_type => "Warehouse", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-5B", :area => 50000.0, :space_type_fraction => space_type_fraction.gsub("\n","").gsub("\t","")}
+
+  space_type_fraction = "{
+    :DOE Ref 1980-2004 - SecSchl - Classroom => '0.5',
+    :DOE Ref 1980-2004 - SecSchl - Corridor => '0.2',
+    :DOE Ref 1980-2004 - SecSchl - Cafeteria => '0.1',
+    :DOE Ref 1980-2004 - SecSchl - Office => '0.1',
+    :DOE Ref 1980-2004 - SecSchl - Lobby => '0.1'
+  }"
+  value_sets << {:building_type => "SecondarySchool", :template => "DOE Ref 1980-2004", :climate_zone => "ASHRAE 169-2006-3A", :area => 50000.0, :space_type_fraction => space_type_fraction.gsub("\n","").gsub("\t","")}
 
   return value_sets
 end
@@ -51,6 +134,7 @@ def populate_workflow(value_set,seed_model)
   template = value_set[:template]
   climate_zone = value_set[:climate_zone]
   total_bldg_area_ip = value_set[:area]
+  space_type_fraction = value_set[:space_type_fraction]
 
   # setup
   measures = []
@@ -71,27 +155,26 @@ def populate_workflow(value_set,seed_model)
       :variables => variables
   }
 
-  # adding BarAspectRatioStudy
+  # adding BarAspectRatioSlicedBySpaceType
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   arguments << {:name => 'total_bldg_area_ip', :desc => 'Total Building Floor Area (ft^2).', :value => total_bldg_area_ip}
-  arguments << {:name => 'surface_matching', :desc => 'Surface Matching', :value => true}
-  arguments << {:name => 'make_zones', :desc => 'Make Zones', :value => true}
-  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'uniform', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0}}
-  variables << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'uniform', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
-  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'uniform', minimum: 8, maximum: 20, mean: 10, static_value: 10}}
+  variables << {:name => 'ns_to_ew_ratio', :desc => 'Ratio of North/South Facade Length Relative to East/West Facade Length.', :value => {type: 'normal', minimum: 0.2, maximum: 5.0, mean: 2.0, static_value: 2.0, standard_deviation: 1.0}}
+  arguments << {:name => 'num_floors', :desc => 'Number of Floors.', :value => {type: 'normal', minimum: 1, maximum: 10, mean: 2, static_value: 2}}
+  variables << {:name => 'floor_to_floor_height_ip', :desc => 'Floor to Floor Height.', :value => {type: 'normal', minimum: 8, maximum: 20, mean: 10, static_value: 10, standard_deviation: 3.0}}
+  arguments << {:name => 'spaceTypeHashString', :desc => 'Hash of Space Types with Name as Key and Fraction as value.', :value => space_type_fraction}
   measures << {
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioStudy')}",
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'BarAspectRatioSlicedBySpaceType')}",
       :arguments => arguments,
       :variables => variables
   }
 
   # populate hash for wwr measure
   wwr_hash = {}
-  wwr_hash["North"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4}
-  wwr_hash["East"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15}
-  wwr_hash["South"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4}
-  wwr_hash["West"] = {type: 'uniform', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15}
+  wwr_hash["North"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4, standard_deviation: 0.5}
+  wwr_hash["East"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15, standard_deviation: 0.5}
+  wwr_hash["South"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.4, static_value: 0.4, standard_deviation: 0.5}
+  wwr_hash["West"] = {type: 'normal', minimum: 0, maximum: 0.6, mean: 0.15, static_value: 0.15, standard_deviation: 0.5}
 
   # loop through instances for wwr
   # note: measure description and variable names need to be unique for each instance
@@ -99,7 +182,7 @@ def populate_workflow(value_set,seed_model)
     # adding bar_aspect_ratio_study
     arguments = [] # :value is just a value
     variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-    variables << {:name => 'wwr', :desc => "#{facade}|Window to Wall Ratio (fraction)", :value => wwr} # keep name unique if used as variable
+    arguments << {:name => 'wwr', :desc => "#{facade}|Window to Wall Ratio (fraction)", :value => wwr} # keep name unique if used as variable
     arguments << {:name => 'sillHeight', :desc => "Sill Height (in)", :value => 30.0}
     arguments << {:name => 'facade', :desc => 'Cardinal Direction.', :value => facade}
     measures << {
@@ -111,7 +194,7 @@ def populate_workflow(value_set,seed_model)
     }
   end
 
-  # adding assign_thermostats_basedon_standards_building_typeand_standards_space_type
+  # adding AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType
   measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AssignThermostatsBasedonStandardsBuildingTypeandStandardsSpaceType')}"}
 
   # use case statement to choose HVAC based on building type
@@ -148,7 +231,6 @@ def populate_workflow(value_set,seed_model)
     else
 
       # adding EnableIdealAirLoadsForAllZones
-      # this shows streamlined workflow item when no custom description and no arguments or variables
       measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'EnableIdealAirLoadsForAllZones')}"}
 
   end
@@ -166,21 +248,10 @@ def populate_workflow(value_set,seed_model)
 
   # start of energy plus measures
 
-  # adding XcelEDATariffSelectionandModelSetup
-  arguments = [] # :value is just a value
-  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  arguments << {:name => 'elec_tar', :desc => 'Select an Electricity Tariff.', :value => "Secondary General"}
-  arguments << {:name => 'gas_tar', :desc => 'Select a Gas Tariff.', :value => "Large CG"}
-  measures << {
-      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'XcelEDATariffSelectionandModelSetup')}",
-      :arguments => arguments,
-      :variables => variables
-  }
-
   # start of reporting measures
 
   # adding annual_end_use_breakdown
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
 
   return measures
 

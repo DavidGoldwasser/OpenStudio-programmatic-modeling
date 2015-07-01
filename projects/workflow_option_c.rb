@@ -1,9 +1,64 @@
+# description of workflow_option_c
+# uses custom seed model with school geometry
+# runs space type and construction set wizard
+# adds thermostats
+# adding AddSys3PSZAC
+# add sub surface construction component to the model from local resources directory
+# add weather
+# add Xcel tariff
+# annual end use breakdown
+
 # set constants
 MEASURES_ROOT_DIRECTORY = "measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
 WEATHER_FILES_DIRECTORY = "weather"
 SEED_FILE_NAME = "secondary_school_geometry_only.osm"
 SEED_FILES_DIRECTORY = "seeds"
+OUTPUTS = []
+ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
+SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
+NUMBER_OF_SAMPLES = 1 # valid options are any positive integer
+
+# populate outputs
+OUTPUTS << {
+    display_name: 'Total Natural Gas Intensity',
+    display_short_name: 'NG EUI',
+    name: 'standard_report_legacy.total_natural_gas',
+    units: 'MJ/m2',
+    objective_function: true,
+    objective_function_target: 140.0,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Total Electricity Intensity',
+    display_short_name: 'Elec EUI',
+    name: 'standard_report_legacy.total_electricity',
+    units: 'MJ/m2',
+    objective_function: true,
+    objective_function_target: 590.0,
+    scaling_factor: 5.0,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Unmet Cooling Hours',
+    display_short_name: 'Unmet Cooling Hours',
+    name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_cooling',
+    units: 'hrs',
+    objective_function: true,
+    visualize: true,
+    export: true
+}
+OUTPUTS << {
+    display_name: 'Unmet Heating Hours',
+    display_short_name: 'Unmet Heating Hours',
+    name: 'standard_report_legacy.time_setpoint_not_met_during_occupied_heating',
+    units: 'hrs',
+    objective_function: true,
+    visualize: true,
+    export: true
+}
 
 def workflow_create_jsons()
   puts "Creating JSON and zip file for workflow option c"
@@ -116,7 +171,7 @@ def populate_workflow(value_set,seed_model)
   # start of reporting measures
 
   # adding AnnualEndUseBreakdown
-  measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
+  # measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AnnualEndUseBreakdown')}"}
 
   return measures
 

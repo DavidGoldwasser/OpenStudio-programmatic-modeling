@@ -3,11 +3,6 @@ def create_json(value_set,seed_model,save_string)
 
   measures = populate_workflow(value_set,seed_model)
 
-  # populate outputs
-  outputs = [
-      {}
-  ]
-
   weather_files = [
       "#{WEATHER_FILES_DIRECTORY}/*"
   ]
@@ -41,7 +36,11 @@ def create_json(value_set,seed_model,save_string)
 
     measure = a.workflow.add_measure_from_path(m[:name], m[:desc], m[:path])
     m[:arguments].each do |a|
-      measure.argument_value(a[:name], a[:value])
+      if a[:value].is_a?(Hash)
+        measure.argument_value(a[:name], a[:value][:static_value])
+      else
+        measure.argument_value(a[:name], a[:value])
+      end
     end
     m[:variables].each do |v|
       measure.make_variable(v[:name], v[:desc], v[:value])
@@ -49,7 +48,7 @@ def create_json(value_set,seed_model,save_string)
   end
 
   # add output to analysis
-  outputs.each do |o|
+  OUTPUTS.each do |o|
     a.add_output(o)
   end
 
@@ -66,14 +65,17 @@ def create_json(value_set,seed_model,save_string)
 
   # add in the other libraries
   # use this if the measures have shared resources
-  #a.libraries.add("#{MEASURES_ROOT_DIRECTORY}/lib", { library_name: 'lib'})
+  a.libraries.add("lib/resources", { library_name: 'resources'})
 
   # Save the analysis JSON
   formulation_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.json"
   zip_file = "analysis/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}/#{save_string.downcase.squeeze(' ').gsub(' ', '_')}.zip"
 
-  # set the analysis type here as well.
+  # set the analysis attributes here
+  # todo - add code to overwrite defaults with settings from selected workflow script
   a.analysis_type = ANALYSIS_TYPE
+  a.algorithm.set_attribute('sample_method', SAMPLE_METHOD)
+  a.algorithm.set_attribute('number_of_samples', NUMBER_OF_SAMPLES)
 
   # save files
   a.save formulation_file
@@ -178,7 +180,11 @@ def create_model(value_set,seed_model,save_string)
     # get argument values
     args_hash = {}
     m[:arguments].each do |a|
-      args_hash[a[:name]] = a[:value]
+      if a[:value].is_a?(Hash)
+        args_hash[a[:name]] = a[:value][:static_value]
+      else
+        args_hash[a[:name]] = a[:value]
+      end
     end
     m[:variables].each do |v|
       # todo - add logic to use something other than static value when argument is variable
@@ -320,12 +326,18 @@ end
 namespace :workflow do
 
   # set constants
-  ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
-  HOSTNAME = 'http://localhost:8080'
-
-  # todo - these are not currently being used, but will if I support other analysis types
-  SAMPLE_METHOD = 'all_variables' # valid options [individual_variables,all_variables]
-  NUMBER_OF_SAMPLES = 1 # valid options are any positive integer
+  server_dns = 'nrel24a'
+  case server_dns
+    when 'vagrant'
+      HOSTNAME = 'http://localhost:8080'
+    when 'nrel24a'
+      HOSTNAME = 'http://bball-130553.nrel.gov:8080'
+    when 'nrel24b'
+      HOSTNAME = 'http://bball-130590.nrel.gov:8080'
+    else
+      # can use this to pass in other server such as aws
+      HOSTNAME = server_dns
+  end
 
   desc 'make analysis jsons from specified workflow script'
   task :make_jsons do
@@ -340,7 +352,7 @@ namespace :workflow do
   end
 
   desc 'queue the jsons already in the analysis directory'
-  task :queue do
+  task :queue_populate do
 
     analysis_jsons = Dir["analysis/**/*.json"]
     puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
@@ -353,7 +365,7 @@ namespace :workflow do
       if File.exist?(formulation_file) && File.exist?(zip_file)
         puts "Running #{save_string}"
         api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
-        api.queue_single_run(formulation_file, zip_file, ANALYSIS_TYPE)
+        api.queue_single_run(formulation_file, zip_file, 'single_run')
       else
         puts "Could not file JSON or ZIP for #{save_string}"
       end
@@ -361,9 +373,33 @@ namespace :workflow do
   end
 
   desc 'start the run queue'
-  task :start do
+  task :queue_start do
     api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
-    api.run_batch_run_across_analyses(nil, nil, ANALYSIS_TYPE)
+    api.run_batch_run_across_analyses(nil, nil, 'single_run')
+  end
+
+  desc 'run pre made analysis json'
+  task :run_jsons do
+
+    analysis_jsons = Dir["analysis/**/*.json"]
+    puts "found #{analysis_jsons.size} jsons in #{Dir.pwd}"
+
+    # loop through jsons found in the directory
+    analysis_jsons.each do |json|
+      save_string = json.downcase.gsub('.json','') # remove the extension
+      formulation_file = "#{save_string}.json"
+      zip_file = "#{save_string}.zip"
+      if File.exist?(formulation_file) && File.exist?(zip_file)
+        puts "Running #{save_string}"
+        api = OpenStudio::Analysis::ServerApi.new( { hostname: HOSTNAME } )
+        j = JSON.parse(File.read(json), symbolize_names: true)
+        analysis_type = j[:analysis][:problem][:analysis_type]
+        api.run(json, zip_file, analysis_type.to_s)
+      else
+        puts "Could not file JSON or ZIP for #{save_string}"
+      end
+    end
+
   end
 
 end
