@@ -11563,3 +11563,6 @@ status: "200 OK"
 connection: "close"
 transfer-encoding: "chunked"
 content-type: "application/json; charset=utf-8"
+I, [2015-07-02T11:59:11.577663 #5976]  INFO -- : post http://bball-130553.nrel.gov:8080/projects.json
+D, [2015-07-02T11:59:11.578663 #5976] DEBUG -- request: User-Agent: "Faraday v0.9.1"
+Content-Type: "application/json"
