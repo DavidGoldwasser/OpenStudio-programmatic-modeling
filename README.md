@@ -78,12 +78,3 @@ rake workflow:make_models
 
 ### rake workflow:run_jsons
 * This will take all analysis json files and start an analysis. It can be used for multi-datapoint analyses. It is currently setup to create an analysis for each analysis json it finds. 
-
-## Configuring the run.rake file
-Currently the "lib/tasks/run.rake" file is used to determine the type of analysis. This will probably be moved to a better location for user editing, or maybe will be in each .rb file in the project directory. These are the only constants in the file that should be edited as needed.
-
-```ruby
-# set constants
-ANALYSIS_TYPE = 'single_run'
-HOSTNAME = 'http://localhost:8080'
-```
