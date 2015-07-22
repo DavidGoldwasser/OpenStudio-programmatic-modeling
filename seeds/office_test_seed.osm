@@ -1,6 +1,6 @@
 
 OS:Version,
-  {30e48a18-e2fb-4217-8f3b-266fc3f44533}, !- Handle
+  {97ccaf60-b3ff-4ebd-a5e0-fc75abd44b37}, !- Handle
   1.7.0;                                  !- Version Identifier
 
 OS:ClimateZones,
@@ -8858,7 +8858,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {73c31b60-ffc6-4105-bc16-403d9bfa9899}, !- Handle
-  Thermal Zone 1,                         !- Name
+  Thermal Zone: Space 301 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -8939,7 +8939,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {9f432f53-e5f8-4b67-b6fb-51c759f80018}, !- Handle
-  Thermal Zone 2,                         !- Name
+  Thermal Zone: Space 401 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9020,7 +9020,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {deb024d9-916b-491d-a799-469e09f2991c}, !- Handle
-  Thermal Zone 3,                         !- Name
+  Thermal Zone: Space 101 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9101,7 +9101,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {b1c13b2d-355e-419f-9f25-fe4c840cecb8}, !- Handle
-  Thermal Zone 4,                         !- Name
+  Thermal Zone: Space 108 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9182,7 +9182,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {12114e2e-1a75-4609-9557-0d283b4f854b}, !- Handle
-  Thermal Zone 5,                         !- Name
+  Thermal Zone: Space 208 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9265,7 +9265,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {6156cf7f-bbb8-48d8-a3f3-d9e37e1f31cf}, !- Handle
-  Thermal Zone 6,                         !- Name
+  Thermal Zone: Space 308 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9347,7 +9347,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {65da8dba-1867-411b-94e9-98c374e40f1d}, !- Handle
-  Thermal Zone 7,                         !- Name
+  Thermal Zone: Space 408 - Plus,         !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9430,7 +9430,7 @@ OS:Rendering:Color,
 
 OS:ThermalZone,
   {b812af7c-8de7-454b-8236-d496bf7bbe75}, !- Handle
-  Thermal Zone 8,                         !- Name
+  Thermal Zone: Space 107,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9504,7 +9504,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {c3e8fb74-a994-4699-93b0-feef081c40c6}, !- Handle
-  Thermal Zone 9,                         !- Name
+  Thermal Zone: Space 405,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9578,7 +9578,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {63002726-b3ce-4441-88a9-b7ef26811954}, !- Handle
-  Thermal Zone 10,                        !- Name
+  Thermal Zone: Space 407,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9652,7 +9652,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {0ee64bed-d58e-4a12-adcb-870ef957599d}, !- Handle
-  Thermal Zone 11,                        !- Name
+  Thermal Zone: Space 106,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9727,7 +9727,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {625d333e-bcc7-4726-bfcf-32a9f786f258}, !- Handle
-  Thermal Zone 12,                        !- Name
+  Thermal Zone: Space 406,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9801,7 +9801,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {c2e08378-a309-46b7-a6ca-b910ea7d15df}, !- Handle
-  Thermal Zone 13,                        !- Name
+  Thermal Zone: Space 202,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9876,7 +9876,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {769dc9c4-b08b-4748-80f9-722603dca3a1}, !- Handle
-  Thermal Zone 14,                        !- Name
+  Thermal Zone: Space 204,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -9950,7 +9950,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {71f66f9f-8f0a-41ee-a6e9-fac8dc9034b1}, !- Handle
-  Thermal Zone 15,                        !- Name
+  Thermal Zone: Space 307,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10024,7 +10024,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {8e316828-fd07-461e-bd4c-c15d49123d94}, !- Handle
-  Thermal Zone 16,                        !- Name
+  Thermal Zone: Space 206,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10098,7 +10098,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {c22de7af-e68a-4b75-8e56-f8244d280f6b}, !- Handle
-  Thermal Zone 17,                        !- Name
+  Thermal Zone: Space 203,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10172,7 +10172,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {8c66dfe2-e503-4ffe-ae0a-dd0943ea2b6e}, !- Handle
-  Thermal Zone 18,                        !- Name
+  Thermal Zone: Space 105,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10246,7 +10246,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {2a3e2911-5844-4b33-8583-63524cee4f05}, !- Handle
-  Thermal Zone 19,                        !- Name
+  Thermal Zone: Space 104,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10320,7 +10320,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {ecf183ef-d3d6-4515-bf53-3ed6bfbf4114}, !- Handle
-  Thermal Zone 20,                        !- Name
+  Thermal Zone: Space 306,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10394,7 +10394,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {149e2237-c4e4-410f-9141-63d6e4d185ea}, !- Handle
-  Thermal Zone 21,                        !- Name
+  Thermal Zone: Space 205,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10468,7 +10468,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {ca0d2276-f96c-49cb-ad83-a53f057cbc3f}, !- Handle
-  Thermal Zone 22,                        !- Name
+  Thermal Zone: Space 207,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10542,7 +10542,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {6f20bfd1-dcdf-4e93-8961-d025bd029d0b}, !- Handle
-  Thermal Zone 23,                        !- Name
+  Thermal Zone: Space 103,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10616,7 +10616,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {dc13f294-ac41-4749-9e64-06e1b7aefccf}, !- Handle
-  Thermal Zone 24,                        !- Name
+  Thermal Zone: Space 305,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}
@@ -10690,7 +10690,7 @@ OS:ZoneHVAC:EquipmentList,
 
 OS:ThermalZone,
   {6cb60501-b622-4e7a-a872-991be1229d3b}, !- Handle
-  Thermal Zone 25,                        !- Name
+  Thermal Zone: Space 201,                !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
   ,                                       !- Volume {m3}

@@ -219,9 +219,10 @@ def populate_workflow(value_set,seed_model)
   # adding set_building_location
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
-  # one weather dir is for make_models, the other is for cloud run.
+  # this is for cloud run
   arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../weather"}
-  #arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../../OpenStudio-programmatic-modeling/weather"}
+  # this is for local run
+  # arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../../OpenStudio-programmatic-modeling/weather"}
   arguments << {:name => 'weather_file_name', :desc => 'Weather File Name', :value => WEATHER_FILE_NAME}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'ChangeBuildingLocation')}",
