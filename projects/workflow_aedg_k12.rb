@@ -220,9 +220,9 @@ def populate_workflow(value_set,seed_model)
   arguments = [] # :value is just a value
   variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
   # this is for cloud run
-  arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../weather"}
+  # arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../weather"}
   # this is for local run
-  # arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../../OpenStudio-programmatic-modeling/weather"}
+  arguments << {:name => 'weather_directory', :desc => 'Weather Directory', :value => "../../../OpenStudio-programmatic-modeling/weather"}
   arguments << {:name => 'weather_file_name', :desc => 'Weather File Name', :value => WEATHER_FILE_NAME}
   measures << {
       :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'ChangeBuildingLocation')}",
@@ -232,7 +232,22 @@ def populate_workflow(value_set,seed_model)
 
   # start of energy plus measures
 
-  #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12SlabAndBasement')}"}
+=begin
+  # adding slab and basement
+  arguments = [] # :value is just a value
+  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
+  arguments << {:name => 'target', :desc => 'Slab and Basement Insulation Performance', :value => "AEDG K-12 - Target"}
+  arguments << {:name => 'slabOrBasement', :desc => 'Model Ground Condition', :value => "Slab"}
+  arguments << {:name => 'heatedSlab', :desc => 'Heated Slab? (Check this if you plan to add a Radiant System)', :value => false}
+  arguments << {:name => 'climateZone', :desc => 'Weather Directory', :value => "5"}
+  arguments << {:name => 'apRatio', :desc => 'Slab area to perimeter ratio (ft^2/ft).Range is 5.0 ft to 72.0 ft.', :value => 32.5}
+  arguments << {:name => 'costTotalSlabBasementInsulation', :desc => 'Total cost related to slab and basement insulation ($)', :value => 0.0}
+  measures << {
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgK12SlabAndBasement')}",
+      :arguments => arguments,
+      :variables => variables
+  }
+=end
 
   # adding XcelEDATariffSelectionandModelSetup
   arguments = [] # :value is just a value
