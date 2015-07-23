@@ -3,7 +3,8 @@
 MEASURES_ROOT_DIRECTORY = "../OpenStudio-measures/NREL working measures"
 WEATHER_FILE_NAME = "USA_CO_Denver.Intl.AP.725650_TMY3.epw"
 WEATHER_FILES_DIRECTORY = "weather"
-SEED_FILE_NAME = "office_test_seed.osm"
+#SEED_FILE_NAME = "office_test_seed.osm"
+SEED_FILE_NAME = "office_test_seed_with_weather.osm"
 SEED_FILES_DIRECTORY = "seeds"
 OUTPUTS = []
 ANALYSIS_TYPE = 'single_run' # valid options [batch_run,lhs,optim,regenoud,nsga_nrel,preflight,sequential_search,single_run]
@@ -268,7 +269,20 @@ def populate_workflow(value_set,seed_model)
 
   # start of energy plus measures
 
-  #measures << {:path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgSmallToMediumOfficeSlabAndBasement')}"}
+  # adding slab and basement
+  arguments = [] # :value is just a value
+  variables = [] # :value needs to be a hash {type: nil,  minimum: nil, maximum: nil, mean: nil, status_value: nil}
+  arguments << {:name => 'target', :desc => 'Slab and Basement Insulation Performance', :value => "AEDG Small To Medium Office - Target"}
+  arguments << {:name => 'slabOrBasement', :desc => 'Model Ground Condition', :value => "Slab"}
+  arguments << {:name => 'heatedSlab', :desc => 'Heated Slab? (Check this if you plan to add a Radiant System)', :value => false}
+  arguments << {:name => 'climateZone', :desc => 'Weather Directory', :value => "5"}
+  arguments << {:name => 'apRatio', :desc => 'Slab area to perimeter ratio (ft^2/ft).Range is 5.0 ft to 72.0 ft.', :value => 32.5}
+  arguments << {:name => 'costTotalSlabBasementInsulation', :desc => 'Total cost related to slab and basement insulation ($)', :value => 0.0}
+  measures << {
+      :path => "#{File.join(MEASURES_ROOT_DIRECTORY, 'AedgSmallToMediumOfficeSlabAndBasement')}",
+      :arguments => arguments,
+      :variables => variables
+  }
 
   # adding XcelEDATariffSelectionandModelSetup
   arguments = [] # :value is just a value
