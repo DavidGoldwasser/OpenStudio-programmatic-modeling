@@ -326,7 +326,7 @@ end
 namespace :workflow do
 
   # set constants
-  server_dns = 'nrel24a'
+  server_dns = 'nrel24b'
   case server_dns
     when 'vagrant'
       HOSTNAME = 'http://localhost:8080'

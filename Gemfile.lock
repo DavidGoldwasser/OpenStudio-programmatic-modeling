@@ -109,3 +109,6 @@ DEPENDENCIES
   openstudio-workflow!
   rake (~> 10.4.2)
   rubyzip
+
+BUNDLED WITH
+   1.10.6
